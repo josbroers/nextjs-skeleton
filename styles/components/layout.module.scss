@@ -1,0 +1,8 @@
+.main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(100vh - 86px);
+	padding: calc(var(--spacer) * 4) 0;
+}

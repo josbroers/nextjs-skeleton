@@ -1,20 +1,42 @@
 {
-  "name": "nextjs-starter-kit",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "eslint": "7",
-    "eslint-config-next": "12.0.0"
-  }
+	"name": "nextjs-starter-kit",
+	"version": "0.1.0",
+	"private": true,
+	"author": "Jos Broers",
+	"license": "MIT",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"analyze": "cross-env ANALYZE=true next build",
+		"find:unused": "next-unused",
+		"depcheck": "depcheck"
+	},
+	"dependencies": {
+		"@next/bundle-analyzer": "^12.0.0",
+		"cross-env": "^7.0.3",
+		"next": "12.0.0",
+		"next-pwa": "^5.4.0",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.33",
+		"depcheck": "^1.4.2",
+		"eslint": "7",
+		"eslint-config-next": "12.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"next-unused": "^0.0.6",
+		"prettier": "^2.4.1",
+		"sass": "^1.43.3",
+		"stylelint": "^14.0.1",
+		"stylelint-color-format": "^1.1.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-recommended": "^6.0.0",
+		"stylelint-config-sass-guidelines": "^8.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-selector-no-empty": "^1.0.8",
+		"typescript": "^4.4.4"
+	}
 }
