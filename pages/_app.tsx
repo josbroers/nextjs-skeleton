@@ -13,12 +13,12 @@ const TagManager = dynamic(() => import("../components/TagManager"), {
 })
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-	const [location, setLocation] = useState(undefined)
+	const [location, setLocation] = useState("")
 	const router = useRouter()
 
 	useEffect(() => {
 		if (router.route === "/_error") {
-			setLocation(undefined)
+			setLocation("")
 		} else if (window.location.href !== location) {
 			setLocation(window.location.href)
 		}
