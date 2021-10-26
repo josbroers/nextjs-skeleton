@@ -1,15 +1,32 @@
+import { useState, useEffect } from "react"
 import "@styles/main.scss"
 import Layout from "@components/Layout"
 import type { AppProps } from "next/app"
 import Script from "next/script"
 import { GTM_ID } from "@lib/gtm"
 import dynamic from "next/dynamic"
+import Head from "next/head"
+import { useRouter } from "next/router"
 
-const TagManager = dynamic(() => import("../components/TagManager"))
+const TagManager = dynamic(() => import("../components/TagManager"), {
+	ssr: false,
+})
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+	const [location, setLocation] = useState(undefined)
+	const router = useRouter()
+
+	useEffect(() => {
+		if (router.route === "/_error") {
+			setLocation(undefined)
+		} else if (window.location.href !== location) {
+			setLocation(window.location.href)
+		}
+	}, [location, router])
+
 	const main = (
 		<Layout>
+			<Head>{location ? <link rel="canonical" href={location} /> : ""}</Head>
 			<Component {...pageProps} />
 		</Layout>
 	)
