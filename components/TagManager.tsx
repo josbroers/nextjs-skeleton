@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { Pageview } from "@lib/gtm"
 
 type Data = {
-	children: React.ReactNode
+	children: any
 }
 
 const TagManager = ({ children }: Data) => {

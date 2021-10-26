@@ -5,7 +5,7 @@ import Script from "next/script"
 import { GTM_ID } from "@lib/gtm"
 import dynamic from "next/dynamic"
 
-const GoogleTagManager = dynamic(() => import("@components/TagManager"), { ssr: false })
+const TagManager = dynamic(() => import("../components/TagManager"))
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	const main = (
@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 				})(window,document,'script','dataLayer', '${GTM_ID}');`}
 			</Script>
-			<GoogleTagManager>{main}</GoogleTagManager>
+			<TagManager>{main}</TagManager>
 		</>
 	)
 }
