@@ -11,6 +11,7 @@ const runtimeCaching = require("next-pwa/cache")
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
+	swcMinify: true,
 	reactStrictMode: true,
 	trailingSlash: true,
 	sassOptions: {
@@ -26,6 +27,17 @@ const nextConfig = {
 		runtimeCaching,
 		disable: process.env.NODE_ENV === "development",
 		dest: "public",
+	},
+	webpack: (config, { dev, isServer }) => {
+		if (!dev && !isServer) {
+			Object.assign(config.resolve.alias, {
+				react: "preact/compat",
+				"react-dom/test-utils": "preact/test-utils",
+				"react-dom": "preact/compat",
+			})
+		}
+
+		return config
 	},
 }
 

@@ -8,7 +8,7 @@ const Home = () => (
 			<title>Next.js Starter Kit!</title>
 			<meta
 				name="description"
-				content="A simple and highly customizable starter kit for any Next.js application. Featuring ESLint, Preact, Prettier, Sass, Stylelint, TypeScript and much more!"
+				content="A simple and highly customizable starter kit for any Next.js application."
 			/>
 		</Head>
 		<main className={styles.main}>
