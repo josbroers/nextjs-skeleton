@@ -28,6 +28,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 	if (sitemap) {
 		res.write(sitemap)
 		res.end()
+
 		return {
 			props: {},
 		}
@@ -46,11 +47,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 			],
 		},
 	})
+
 	const pipeline = smStream.pipe(createGzip())
 
 	try {
 		await addUrls(smStream)
 		smStream.end()
+
 		const resp = await streamToPromise(pipeline)
 
 		/* Cache the result */

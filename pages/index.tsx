@@ -15,15 +15,13 @@ const Home = () => {
 				<meta property="og:title" content={title} />
 				<meta property="og:description" content={description} />
 			</Head>
-			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Welcome to the{" "}
-					<a href="https://github.com/JosBroers/nextjs-starter-kit">Next.js Starter Kit!</a>
-				</h1>
-				<p className={styles.description}>
-					Get started by editing <Code content="pages/index.js" />
-				</p>
-			</main>
+			<h1 className={styles.title}>
+				Welcome to the{" "}
+				<a href="https://github.com/JosBroers/nextjs-starter-kit">Next.js Starter Kit!</a>
+			</h1>
+			<p className={styles.description}>
+				Get started by editing <Code content="pages/index.js" />
+			</p>
 		</div>
 	)
 }

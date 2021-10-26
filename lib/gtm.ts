@@ -6,7 +6,11 @@ declare global {
 	}
 }
 
-export const Pageview = (url: string) => {
+type Data = {
+	url: string
+}
+
+export const Pageview = ({ url }: Data) => {
 	window.dataLayer.push({
 		event: "pageview",
 		page: url,
