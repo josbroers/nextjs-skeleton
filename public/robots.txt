@@ -1,0 +1,4 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Sitemap: https://www.nextjs-starter-kit.jobrodo.nl/sitemap.xml

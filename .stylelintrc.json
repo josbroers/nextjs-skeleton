@@ -1,0 +1,17 @@
+{
+	"extends": [
+		"stylelint-config-recommended",
+		"stylelint-config-sass-guidelines",
+		"stylelint-config-prettier"
+	],
+	"plugins": ["stylelint-order", "stylelint-color-format", "stylelint-selector-no-empty"],
+	"rules": {
+		"order/order": ["custom-properties", "declarations"],
+		"indentation": "tab",
+		"plugin/stylelint-selector-no-empty": true,
+		"max-nesting-depth": 4,
+		"color-format/format": {
+			"format": "rgb"
+		}
+	}
+}
