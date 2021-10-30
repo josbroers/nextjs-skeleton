@@ -10,6 +10,9 @@ interface Data {
 const defaultProps: Data = {
 	target: "_self",
 	rel: "external",
+	href: "",
+	children: "",
+	title: "",
 }
 
 const ExternalLink = (props: Data) => {
