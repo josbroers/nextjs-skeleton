@@ -3,10 +3,12 @@ import styles from "@styles/pages/home.module.scss"
 import Container from "@components/Container"
 import ExternalLink from "@components/ExternalLink"
 import Meta from "@components/Meta"
+import Schema from "@components/Schema"
 
 const Home = () => (
 	<Container>
 		<Meta />
+		<Schema />
 		<h1 className={styles.title}>
 			Welcome to the{" "}
 			<ExternalLink
