@@ -11,16 +11,16 @@
 	@include breakpoint(md) {
 		font-size: rem-calc(65px);
 	}
+}
 
-	a {
-		color: var(--color-blue-100);
-		text-decoration: none;
+.cta-link {
+	color: var(--color-blue-100);
+	text-decoration: none;
 
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: underline;
-		}
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
 	}
 }
 
@@ -31,5 +31,9 @@
 
 	@include breakpoint(md) {
 		font-size: rem-calc(25px);
+	}
+
+	code {
+		font-size: rem-calc(19px);
 	}
 }

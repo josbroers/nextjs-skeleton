@@ -2,6 +2,7 @@ import Head from "next/head"
 import Code from "@components/Code"
 import styles from "@styles/pages/home.module.scss"
 import Container from "@components/Container"
+import ExternalLink from "@components/ExternalLink"
 
 const Home = () => {
 	const title =
@@ -18,7 +19,13 @@ const Home = () => {
 			</Head>
 			<h1 className={styles.title}>
 				Welcome to the{" "}
-				<a href="https://github.com/JosBroers/nextjs-starter-kit">Next.js Starter Kit!</a>
+				<ExternalLink
+					href="https://github.com/JosBroers/nextjs-starter-kit"
+					title="Next.js starter kiton GitHub"
+					className={styles["cta-link"]}
+				>
+					Next.js Starter Kit!
+				</ExternalLink>
 			</h1>
 			<p className={styles.description}>
 				Get started by editing <Code content="pages/index.js" />

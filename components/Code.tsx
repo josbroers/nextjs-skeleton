@@ -4,6 +4,6 @@ type Data = {
 	content: string
 }
 
-const Code = ({ content }: Data) => <code className={styles.code}>{content}</code>
+const Code = ({ content }: Data) => <code className={styles.code}>`{content}`</code>
 
 export default Code
