@@ -7,7 +7,8 @@ const Footer = () => (
 	<footer className={styles.footer}>
 		<ExternalLink
 			href="https://github.com/JosBroers/nextjs-starter-kit"
-			target="blank"
+			target="_blank"
+			rel="noreferrer"
 			title="View repository on Github"
 			className={styles.footer__link}
 		>
