@@ -1,34 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Starter Kit
 
-## Getting Started
+This Next.js starter kit was bootstrapped with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) and has the following features:
 
-First, run the development server:
+- [ESLint](https://eslint.org/)
+- [Google Tag Manager](https://tagmanager.google.com/#/homeeslint)
+- [Next-PWA](https://www.npmjs.com/package/next-pwa)
+- [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
+- [Preact](https://preactjs.com/)
+- [Prettier](https://prettier.io/)
+- [Sass](https://sass-lang.com/)
+- [Stylelint](https://stylelint.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-```bash
-npm run dev
-# or
-yarn dev
+## Table of contents
+
+- [Next.js Starter Kit](#nextjs-starter-kit)
+  - [Table of contents](#table-of-contents)
+  - [1. Setup](#1-setup)
+    - [1.1 Node.js](#11-nodejs)
+    - [1.2 Installing dependencies](#12-installing-dependencies)
+    - [1.3 TypeScript](#13-typescript)
+    - [1.4 Preact](#14-preact)
+  - [2. Scripts](#2-scripts)
+  - [3. Security](#3-security)
+  - [4. Styling](#4-styling)
+  - [5. Search engine optimization](#5-search-engine-optimization)
+  - [6. Environment variables](#6-environment-variables)
+  - [7. Vercel CLI](#7-vercel-cli)
+
+## 1. Setup
+
+### 1.1 Node.js
+
+First install the Node.js with `nvm use` version listed in `.nvmrc`. Use a Node Version Manager such as [NVM for Mac](https://github.com/nvm-sh/nvm) or [NVM for Windows](https://github.com/coreybutler/nvm-windows).
+
+### 1.2 Installing dependencies
+
+After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing.
+
+### 1.3 TypeScript
+
+This starter kit uses **TypeScript** out of the box. If you don't feel comfortable using it or don't need it, just rename all the files to their JavaScript equivalent (`.js` and `.jsx`) and uninstall TypeScript and all the @types listed in the `package.json`.
+
+### 1.4 Preact
+
+Besides TypeScript this starter kit uses **Preact** over React for production builds. This results in smaller build and the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below in `next.config.js` and uninstall the package.
+
+```js
+webpack: (config, { dev, isServer }) => {
+	if (!dev && !isServer) {
+		Object.assign(config.resolve.alias, {
+			react: "preact/compat",
+			"react-dom/test-utils": "preact/test-utils",
+			"react-dom": "preact/compat",
+		})
+	}
+
+	return config
+},
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. Scripts
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Use `yarn` or `yarn install` to install the dependencies
+- Use `yarn dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
+- To build the application for production, use `yarn build`
+- To start a production server, use `yarn start`
+- To export application as static HTML, use `next build && next export`
+- For checking on unused imports, use `yarn find:unused`
+- For analyzing the chunks and modules, use `yarn analyze`
+- For analyzing dependencies in the project, use `yarn depcheck`
+- For updating the `.nvmrc` file with the current Node.js version, use `yarn node`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 3. Security
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+By default Next.js doesn't provide all the **security headers** which results in a vulnerable application. I've added the default security headers listed in the [Next.js docs](https://nextjs.org/docs/advanced-features/security-headers). To test your application for security headers, visit [securityheaders.com](https://securityheaders.com/)
 
-## Learn More
+## 4. Styling
 
-To learn more about Next.js, take a look at the following resources:
+With Next.js there's a lot of options to style your projects. This starter kit uses **Sass** and **Sass Modules**, but use whatever works best for you. For example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
+- [CSS (or Sass) Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
+- [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)
+- [styled-components](https://styled-components.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Material-UI](https://mui.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 5. Search engine optimization
 
-## Deploy on Vercel
+Coming soon...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 6. Environment variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js has built-in support for environment variables and the option to expose variables to the browser by prefixing with `NEXT_PUBLIC_`. In this starter kit we use a variable for the Google Tag Manager container-ID: `NEXT_PUBLIC_GTM`. Setup this variable inside a `.env` file to start using Google Tag Manager.
+
+## 7. Vercel CLI
+
+Whenever possible, I recommend deploying to [Vercel](https://vercel.com/). It's free, easy to use and gets you running within minutes (hint: This template was deployed via **Vercel**). A few commands to get you started:
+
+- Install Vercel CLI with `npm install -g vercel`
+- Connect a project with `vercel link` and configure credentials accordingly
+- Use `vercel env pull` to get the environment variables
+- Use `vercel dev` to deploy a local test server at http://localhost:3000
+- Use `vercel` to deploy a preview build
+- Use `vercel --prod` to deploy a production build
