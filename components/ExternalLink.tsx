@@ -1,15 +1,22 @@
 interface Data {
-	target?: "self" | "blank"
+	target?: "_self" | "_blank" | "_parent" | "_top"
 	href: string
 	children: React.ReactNode
 	title: string
 	className?: any
+	rel?: "nofollow" | "noreferrer" | "external"
+}
+
+const defaultProps: Data = {
+	target: "_self",
+	rel: "external",
+	href: "",
+	children: "",
+	title: "",
 }
 
 const ExternalLink = (props: Data) => {
-	const { href, children, title, className } = props
-	const target = props.target === "blank" ? "_blank" : "_self"
-	const rel = props.target === "blank" ? "noreferrer" : ""
+	const { href, children, title, className, target, rel } = props
 
 	return (
 		<a href={href} title={title} rel={rel} className={className} target={target}>
@@ -17,5 +24,7 @@ const ExternalLink = (props: Data) => {
 		</a>
 	)
 }
+
+ExternalLink.defaultProps = defaultProps
 
 export default ExternalLink

@@ -6,7 +6,8 @@
 			"@lib/*": ["lib/*"],
 			"@styles/*": ["styles/*"],
 			"@public/*": ["public/*"],
-			"@icons/*": ["icons/*"]
+			"@icons/*": ["icons/*"],
+			"@data/*": ["data/*"]
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
