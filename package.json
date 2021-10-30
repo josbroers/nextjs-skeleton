@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-starter-kit",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"private": true,
 	"author": "Jos Broers",
 	"license": "MIT",
@@ -11,13 +11,15 @@
 		"lint": "next lint",
 		"analyze": "cross-env ANALYZE=true next build",
 		"find:unused": "next-unused",
-		"depcheck": "depcheck"
+		"depcheck": "depcheck",
+		"node": "node -v > .nvmrc"
 	},
 	"dependencies": {
 		"@next/bundle-analyzer": "^12.0.0",
 		"cross-env": "^7.0.3",
 		"next": "12.0.0",
 		"next-pwa": "^5.4.0",
+		"normalize.css": "^8.0.1",
 		"preact": "^10.5.15",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",

@@ -1,7 +1,7 @@
 import type { NextFetchEvent, NextRequest } from "next/server"
 import { NextResponse } from "next/server"
 
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+const Middleware = (req: NextRequest, ev: NextFetchEvent) => {
 	const ContentSecurityPolicy = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com;
@@ -25,3 +25,5 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
 
 	return response
 }
+
+export default Middleware
