@@ -25,6 +25,8 @@ This Next.js starter kit was bootstrapped with [create-next-app](https://nextjs.
   - [3. Security](#3-security)
   - [4. Styling](#4-styling)
   - [5. Search engine optimization](#5-search-engine-optimization)
+    - [5.1 Meta](#51-meta)
+    - [5.2 Schema](#52-schema)
   - [6. Environment variables](#6-environment-variables)
   - [7. Vercel CLI](#7-vercel-cli)
 
@@ -89,7 +91,13 @@ With Next.js there's a lot of options to style your projects. This starter kit u
 
 ## 5. Search engine optimization
 
-Coming soon...
+### 5.1 Meta
+
+I've created a `Meta.tsx` component which adds all the properties required regarding SEO. You can setup default props or feed it dynamically with data.
+
+### 5.2 Schema
+
+I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also setup default props or feed it dynamically with data.
 
 ## 6. Environment variables
 
