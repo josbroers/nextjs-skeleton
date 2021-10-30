@@ -5,8 +5,6 @@ const Document = () => {
 	return (
 		<Html lang="en">
 			<Head>
-				<meta name="robots" content="all" />
-				<link rel="icon" href="/favicon.ico" />
 				{GTM_ID ? (
 					<>
 						<link rel="dns-prefetch" href="https://www.googletagmanager.com/" crossOrigin="" />
