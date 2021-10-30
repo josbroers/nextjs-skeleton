@@ -13,7 +13,17 @@ type Data = {
 	imageAltText?: string
 	twitterCard?: string
 	canonical?: string
-} & typeof defaultProps
+}
+
+const defaultProps: Data = {
+	title: options.title,
+	keywords: options.keywords,
+	description: options.description,
+	imageAltText: options.imageAltText,
+	type: options.type,
+	siteName: options.siteName,
+	twitterCard: options.twitterCard,
+}
 
 const Meta = (props: Data) => {
 	const { title, keywords, description, type, siteName, imageAltText, twitterCard } = props
@@ -69,14 +79,6 @@ const Meta = (props: Data) => {
 	)
 }
 
-Meta.defaultProps = {
-	title: options.title,
-	keywords: options.keywords,
-	description: options.description,
-	imageAltText: options.imageAltText,
-	type: options.type,
-	siteName: options.siteName,
-	twitterCard: options.twitterCard,
-}
+Meta.defaultProps = defaultProps
 
 export default Meta
