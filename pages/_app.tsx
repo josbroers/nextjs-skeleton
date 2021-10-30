@@ -3,14 +3,10 @@ import "@styles/main.scss"
 import Layout from "@components/Layout"
 import type { AppProps } from "next/app"
 import Script from "next/script"
-import { GTM_ID } from "@lib/gtm"
+import GTM_ID from "@lib/gtm"
 import dynamic from "next/dynamic"
 import Head from "next/head"
 import { useRouter } from "next/router"
-
-const TagManager = dynamic(() => import("../components/TagManager"), {
-	ssr: false,
-})
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	const [location, setLocation] = useState("")
@@ -44,7 +40,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 				})(window,document,'script','dataLayer', '${GTM_ID}');`}
 			</Script>
-			<TagManager>{main}</TagManager>
+			{main}
 		</>
 	)
 }
