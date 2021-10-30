@@ -1,7 +1,3 @@
-.container {
-	padding: 0 calc(var(--spacer) * 3);
-}
-
 .title,
 .description {
 	text-align: center;
@@ -31,7 +27,7 @@
 .description {
 	font-size: rem-calc(22px);
 	line-height: 1.5;
-	margin: calc(var(--spacer) * 6.5) 0;
+	margin: calc(var(--spacer) * 6.5) 0 0;
 
 	@include breakpoint(md) {
 		font-size: rem-calc(25px);

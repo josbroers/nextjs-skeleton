@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Code from "@components/Code"
 import styles from "@styles/pages/home.module.scss"
+import Container from "@components/Container"
 
 const Home = () => {
 	const title =
@@ -8,7 +9,7 @@ const Home = () => {
 	const description = "A simple and highly customizable starter kit for any Next.js application."
 
 	return (
-		<div className={styles.container}>
+		<Container>
 			<Head>
 				<title>{title}</title>
 				<meta name="description" content={description} />
@@ -22,7 +23,7 @@ const Home = () => {
 			<p className={styles.description}>
 				Get started by editing <Code content="pages/index.js" />
 			</p>
-		</div>
+		</Container>
 	)
 }
 
