@@ -17,12 +17,11 @@
 	"dependencies": {
 		"@next/bundle-analyzer": "^12.0.0",
 		"cross-env": "^7.0.3",
-		"next": "12.0.0",
-		"next-pwa": "^5.4.0",
+		"next": "^12.0.0",
 		"normalize.css": "^8.0.1",
 		"preact": "^10.5.15",
-		"react": "17.0.2",
-		"react-dom": "17.0.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
 		"sitemap": "^7.0.0",
 		"zlib": "^1.0.5"
 	},
@@ -31,7 +30,7 @@
 		"@types/react": "^17.0.33",
 		"depcheck": "^1.4.2",
 		"eslint": "<8.0.0",
-		"eslint-config-next": "12.0.0",
+		"eslint-config-next": "^12.0.0",
 		"eslint-config-prettier": "^8.3.0",
 		"next-unused": "^0.0.6",
 		"prettier": "^2.4.1",
@@ -44,5 +43,6 @@
 		"stylelint-order": "^5.0.0",
 		"stylelint-selector-no-empty": "^1.0.8",
 		"typescript": "^4.4.4"
-	}
+	},
+	"packageManager": "yarn@3.1.0"
 }

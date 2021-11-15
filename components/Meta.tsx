@@ -46,14 +46,12 @@ const Meta = (props: Data) => {
 		<Head>
 			<link rel="canonical" href={canonical} />
 			<link rel="icon" href="/favicon.ico" />
-			<link rel="manifest" href="/manifest.json" />
 			<title>{title}</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<meta charSet="utf-8" />
 			<meta name="robots" content="all" />
 			<meta name="keywords" content={keywords} />
 			<meta name="description" content={description} />
-			<meta name="application-name" content={siteName} />
 			<meta property="og:url" content={currentUrl} />
 			<meta property="og:type" content={type} />
 			<meta property="og:site_name" content={siteName} />
@@ -66,15 +64,6 @@ const Meta = (props: Data) => {
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={imageSource} />
 			<meta name="twitter:image:alt" content={imageAltText} />
-			<meta name="apple-mobile-web-app-capable" content="yes" />
-			<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-			<meta name="apple-mobile-web-app-title" content={siteName} />
-			<meta name="format-detection" content="telephone=no" />
-			<meta name="mobile-web-app-capable" content="yes" />
-			<meta name="msapplication-TileColor" content="#0070f3" />
-			<meta name="msapplication-tap-highlight" content="no" />
-			<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-			<meta name="theme-color" content="#0070f3" />
 		</Head>
 	)
 }
