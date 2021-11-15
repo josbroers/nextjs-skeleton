@@ -4,7 +4,6 @@ This Next.js starter kit was bootstrapped with [create-next-app](https://nextjs.
 
 - [ESLint](https://eslint.org/)
 - [Google Tag Manager](https://tagmanager.google.com/#/homeeslint)
-- [Next-PWA](https://www.npmjs.com/package/next-pwa)
 - [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
 - [Preact](https://preactjs.com/)
 - [Prettier](https://prettier.io/)
@@ -80,7 +79,7 @@ By default Next.js doesn't provide all the **security headers** which results in
 
 ## 4. Styling
 
-With Next.js there's a lot of options to style your projects. This starter kit uses **Sass** and **Sass Modules**, but use whatever works best for you. For example:
+With Next.js there's a lot of options to style your projects. This starter kit uses **Sass** and [**Foundation**](https://get.foundation/sites/docs/), but use whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
 - [CSS (or Sass) Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
