@@ -2,7 +2,13 @@
 	"cleanUrls": true,
 	"trailingSlash": true,
 	"redirects": [
-		{ "source": "/home", "destination": "/" },
-		{ "source": "/github", "destination": "https://github.com/JosBroers/nextjs-starter-kit" }
+		{
+			"source": "/home",
+			"destination": "/"
+		},
+		{
+			"source": "/github",
+			"destination": "https://github.com/JosBroers/nextjs-starter-kit"
+		}
 	]
 }

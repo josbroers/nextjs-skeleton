@@ -1,16 +1,23 @@
-import Footer from "./Footer"
-import styles from "@styles/components/layout.module.scss"
-import GoogleTagManager from "./GoogleTagManager"
+import Footer from './Footer'
+import styles from '@styles/components/layout.module.scss'
+import GoogleTagManager from './GoogleTagManager'
+import React from 'react'
 
 type Data = {
 	children: React.ReactNode
 }
 
-const Layout = ({ children }: Data) => (
+/**
+ * Default Layout
+ *
+ * @param children
+ * @constructor
+ */
+const Layout = ({children}: Data) => (
 	<>
-		<GoogleTagManager />
+		<GoogleTagManager/>
 		<main className={styles.main}>{children}</main>
-		<Footer />
+		<Footer/>
 	</>
 )
 
