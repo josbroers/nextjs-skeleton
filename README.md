@@ -11,6 +11,7 @@ and has the following features:
 - [Sass](https://sass-lang.com/)
 - [Stylelint](https://stylelint.io/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [ReactSVG](https://www.npmjs.com/package/react-svg)
 
 ## Table of contents
 

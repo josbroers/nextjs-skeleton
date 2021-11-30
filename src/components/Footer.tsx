@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import styles from '@styles/components/footer.module.scss'
-import github from '@public/github.svg'
 import ExternalLink from './ExternalLink'
+import {ReactSVG} from 'react-svg'
 
 /**
  * Renders the `<footer>` element
@@ -18,9 +17,7 @@ const Footer = () => (
 			className={styles.footer__link}
 		>
 			View project on
-			<span className={styles.footer__image}>
-				<Image src={github} alt="GitHub logo" width={20} height={20} />
-			</span>
+			<ReactSVG src="icons/github.svg" className={styles.footer__image} wrapper="span" />
 		</ExternalLink>
 	</footer>
 )
