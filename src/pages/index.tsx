@@ -1,12 +1,11 @@
 import Code from '@components/Code'
 import styles from '@styles/pages/home.module.scss'
-import Container from '@components/Container'
 import ExternalLink from '@components/ExternalLink'
 import Meta from '@components/Meta'
 import Schema from '@components/Schema'
 
 const Home = () => (
-	<Container>
+	<div className="container">
 		<Meta />
 		<Schema />
 		<h1 className={styles.title}>
@@ -22,7 +21,7 @@ const Home = () => (
 		<p className={styles.description}>
 			Get started by editing <Code content="pages/index.js" />
 		</p>
-	</Container>
+	</div>
 )
 
 export default Home

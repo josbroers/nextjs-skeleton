@@ -1,5 +1,4 @@
 .code {
-	color: var(--color-purple-100);
-	font-family: var(--font-mono);
+	@apply text-purple font-mono;
 	font-size: rem-calc(15px);
 }

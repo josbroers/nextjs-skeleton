@@ -1,35 +1,36 @@
 .title,
 .description {
-	text-align: center;
+	@apply text-center;
 }
 
 .title {
+	@apply font-bold;
+	margin: 0;
 	font-size: rem-calc(40px);
 	line-height: 1.15;
-	margin: 0;
 
-	@include breakpoint(md) {
+	@screen md {
 		font-size: rem-calc(65px);
 	}
 }
 
 .cta-link {
-	color: var(--color-blue-100);
-	text-decoration: none;
+	@apply text-blue;
 
+	&,
 	&:hover,
 	&:focus,
 	&:active {
-		text-decoration: underline;
+		@apply no-underline;
 	}
 }
 
 .description {
+	@apply leading-normal;
 	font-size: rem-calc(22px);
-	line-height: 1.5;
-	margin: calc(var(--spacer) * 6.5) 0 0;
+	margin: calc(theme('spacing') * 6.5) 0 0;
 
-	@include breakpoint(md) {
+	@screen md {
 		font-size: rem-calc(25px);
 	}
 

@@ -13,12 +13,11 @@ const nextConfig = {
 	trailingSlash: true,
 	sassOptions: {
 		prependData: `
-      @import "src/styles/modules/rem-calc.scss";
-      @import "src/styles/common/mixins.scss";
+      @import "~foundation-sites/scss/util/unit";
     `,
 	},
 	eslint: {
-		dirs: ['pages', 'components', 'lib', 'icons'],
+		dirs: ['src'],
 	},
 	webpack: (config, { dev, isServer }) => {
 		if (!dev && !isServer) {
