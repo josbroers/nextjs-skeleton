@@ -2,15 +2,28 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@components/*": ["components/*"],
-			"@lib/*": ["lib/*"],
-			"@styles/*": ["styles/*"],
-			"@public/*": ["public/*"],
-			"@icons/*": ["icons/*"],
-			"@data/*": ["data/*"]
+			"@components/*": [
+				"src/components/*"
+			],
+			"@lib/*": [
+				"src/lib/*"
+			],
+			"@styles/*": [
+				"src/styles/*"
+			],
+			"@public/*": [
+				"public/*"
+			],
+			"@data/*": [
+				"src/data/*"
+			]
 		},
 		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
@@ -24,6 +37,12 @@
 		"isolatedModules": true,
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }

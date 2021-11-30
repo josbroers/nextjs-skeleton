@@ -1,0 +1,40 @@
+.title,
+.description {
+	@apply text-center;
+}
+
+.title {
+	@apply font-bold;
+	margin: 0;
+	font-size: rem-calc(40px);
+	line-height: 1.15;
+
+	@screen md {
+		font-size: rem-calc(65px);
+	}
+}
+
+.cta-link {
+	@apply text-blue;
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		@apply no-underline;
+	}
+}
+
+.description {
+	@apply leading-normal;
+	font-size: rem-calc(22px);
+	margin: calc(theme('spacing') * 6.5) 0 0;
+
+	@screen md {
+		font-size: rem-calc(25px);
+	}
+
+	code {
+		font-size: rem-calc(19px);
+	}
+}

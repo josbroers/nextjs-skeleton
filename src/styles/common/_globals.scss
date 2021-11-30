@@ -1,0 +1,14 @@
+html,
+body {
+	@apply font-sans;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	@apply no-underline text-inherit;
+}
+
+* {
+	@apply box-border;
+}
