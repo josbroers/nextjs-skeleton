@@ -17,10 +17,11 @@ and has the following features:
 - [Next.js Starter Kit](#nextjs-starter-kit)
 	- [Table of contents](#table-of-contents)
 	- [1. Setup](#1-setup)
-		- [1.1 Node.js](#11-nodejs)
-		- [1.2 Installing dependencies](#12-installing-dependencies)
-		- [1.3 TypeScript](#13-typescript)
-		- [1.4 Preact](#14-preact)
+		- [1.1 How to install this template](#11-how-to-install-this-template)
+		- [1.2 Node.js](#12-nodejs)
+		- [1.3 Installing dependencies](#13-installing-dependencies)
+		- [1.4 TypeScript](#14-typescript)
+		- [1.5 Preact](#15-preact)
 	- [2. Scripts](#2-scripts)
 	- [3. Security](#3-security)
 	- [4. Styling](#4-styling)
@@ -32,22 +33,29 @@ and has the following features:
 
 ## 1. Setup
 
-### 1.1 Node.js
+### 1.1 How to install this template
+
+There are two ways to get started using this template. When you're using GitHub you can use the button "Use this
+template" or [following this link](https://github.com/JosBroers/nextjs-starter-kit/generate) to create a new repository
+based of this Next.js Starter Kit. Another way is to clone the repository, remove the `.git` directory and re-init git
+by connecting to the origin repository.
+
+### 1.2 Node.js
 
 First install the Node.js with `nvm use` version listed in `.nvmrc`. Use a Node Version Manager such
 as [NVM for Mac](https://github.com/nvm-sh/nvm) or [NVM for Windows](https://github.com/coreybutler/nvm-windows).
 
-### 1.2 Installing dependencies
+### 1.3 Installing dependencies
 
 After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing.
 
-### 1.3 TypeScript
+### 1.4 TypeScript
 
 This starter kit uses **TypeScript** out of the box. If you don't feel comfortable using it or don't need it, just
 rename all the files to their JavaScript equivalent (`.js` and `.jsx`) and uninstall TypeScript and all the @types
 listed in the `package.json`.
 
-### 1.4 Preact
+### 1.5 Preact
 
 Besides TypeScript this starter kit uses **Preact** over React for production builds. This results in smaller build and
 the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below
@@ -64,7 +72,7 @@ webpack: (config, {dev, isServer}) => {
 	}
 
 	return config
-},
+}
 ```
 
 ## 2. Scripts
