@@ -20,7 +20,7 @@ const nextConfig = {
 	eslint: {
 		dirs: ["pages", "components", "lib", "icons"],
 	},
-	webpack: (config, { dev, isServer }) => {
+	webpack: (config, {dev, isServer}) => {
 		if (!dev && !isServer) {
 			Object.assign(config.resolve.alias, {
 				react: "preact/compat",

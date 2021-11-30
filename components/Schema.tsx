@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react"
-import Head from "next/head"
-import options from "@data/seo.json"
+import { useEffect, useState } from 'react'
+import Head from 'next/head'
+import options from '@data/seo.json'
 
 type Data = {
-	siteName: string
+	siteName?: string
 	description?: string
-	inLanguage: string
+	inLanguage?: string
 	title?: string
-	siteDescription: string
+	siteDescription?: string
 }
 
 const defaultProps: Data = {
@@ -16,10 +16,16 @@ const defaultProps: Data = {
 	inLanguage: options.inLanguage,
 }
 
+/**
+ * Renders WebSite and WebPage schema
+ *
+ * @param props
+ * @constructor
+ */
 const Schema = (props: Data) => {
-	const { siteName, description, siteDescription, inLanguage, title } = props
-	const [currentUrl, setCurrentUrl] = useState("")
-	const [origin, setOrigin] = useState("")
+	const {siteName, description, siteDescription, inLanguage, title} = props,
+		[currentUrl, setCurrentUrl] = useState(''),
+		[origin, setOrigin] = useState('')
 
 	useEffect(() => {
 		if (window.location.href !== currentUrl) {
@@ -47,7 +53,7 @@ const Schema = (props: Data) => {
 				},
 				"inLanguage": "${inLanguage}"
 			}`
-			: ""
+			: ''
 
 	return (
 		<Head>

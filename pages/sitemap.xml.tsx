@@ -1,18 +1,34 @@
-import { SitemapStream, streamToPromise } from "sitemap"
-import { createGzip } from "zlib"
-import { GetServerSideProps } from "next"
+import {SitemapStream, streamToPromise} from 'sitemap'
+import {createGzip} from 'zlib'
+import {GetServerSideProps} from 'next'
 
+/**
+ * Default Sitemap component
+ *
+ * @constructor
+ */
 const Sitemap = () => <div>This should not be navigated to.</div>
 export default Sitemap
 
 let sitemap: any = null
 
+/**
+ * Add URLs to sitemap
+ *
+ * @param smStream
+ */
 const addUrls = async (smStream: SitemapStream) => {
 	smStream.write({
-		url: "",
+		url: '',
 	})
 }
 
+/**
+ * Build and render sitemap
+ *
+ * @param res
+ * @param req
+ */
 export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 	if (!req || !res) {
 		return {
@@ -20,11 +36,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 		}
 	}
 
-	res.setHeader("Content-Type", "application/xml")
-	res.setHeader("Content-Encoding", "gzip")
-	res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59")
+	res.setHeader('Content-Type', 'application/xml')
+	res.setHeader('Content-Encoding', 'gzip')
+	res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59')
 
-	// Check for cache first
+	/**
+	 * Return sitemap if cached
+	 */
 	if (sitemap) {
 		res.write(sitemap)
 		res.end()
@@ -35,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 	}
 
 	const smStream = new SitemapStream({
-		hostname: `https://www.${req.headers.host}/`,
+		hostname: `https://${req.headers.host}/`,
 		xmlns: {
 			news: true,
 			xhtml: true,
@@ -63,7 +81,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
 		res.end()
 	} catch (err) {
 		res.statusCode = 500
-		res.write("Sitemap could not be generated")
+		res.write('Sitemap could not be generated')
 		res.end()
 	}
 

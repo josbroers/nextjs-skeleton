@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react"
-import Head from "next/head"
-import router from "next/router"
-import options from "@data/seo.json"
+import { useEffect, useState } from 'react'
+import Head from 'next/head'
+import options from '@data/seo.json'
 
 type Data = {
 	title?: string
@@ -25,12 +24,18 @@ const defaultProps: Data = {
 	twitterCard: options.twitterCard,
 }
 
+/**
+ * Renders all relevant SEO `<meta>` and `<link>` elements
+ *
+ * @param props
+ * @constructor
+ */
 const Meta = (props: Data) => {
-	const { title, keywords, description, type, siteName, imageAltText, twitterCard } = props
-	const [currentUrl, setCurrentUrl] = useState("")
-	const [origin, setOrigin] = useState("")
-	const imageSource = props.imageSource ?? `${origin}/thumbnail.png`
-	const canonical = props.canonical ?? currentUrl
+	const { title, keywords, description, type, siteName, imageAltText, twitterCard } = props,
+		[currentUrl, setCurrentUrl] = useState(''),
+		[origin, setOrigin] = useState(''),
+		imageSource = props.imageSource ?? `${origin}/thumbnail.png`,
+		canonical = props.canonical ?? currentUrl
 
 	useEffect(() => {
 		if (window.location.href !== currentUrl) {

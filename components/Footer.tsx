@@ -1,8 +1,13 @@
-import Image from "next/image"
-import styles from "@styles/components/footer.module.scss"
-import github from "@public/github.svg"
-import ExternalLink from "./ExternalLink"
+import Image from 'next/image'
+import styles from '@styles/components/footer.module.scss'
+import github from '@public/github.svg'
+import ExternalLink from './ExternalLink'
 
+/**
+ * Renders the `<footer>` element
+ *
+ * @constructor
+ */
 const Footer = () => (
 	<footer className={styles.footer}>
 		<ExternalLink
