@@ -1,21 +1,19 @@
 .footer {
-	border-top: rem-calc(1px) solid var(--color-gray-200);
-	padding: calc(var(--spacer) * 3) 0;
+	@apply border-t border-gray-200;
+	padding: calc(theme('spacing') * 3) 0;
 
 	&,
 	&__link,
 	&__image span {
-		align-items: center;
-		display: flex;
-		justify-content: center;
+		@apply items-center flex justify-center;
 	}
 
 	&__image {
-		margin-left: calc(var(--spacer) / 2);
+		margin-left: calc(theme('spacing') / 2);
 
 		svg {
-			width: rem-calc(20px);
-			height: rem-calc(20px);
+			width: calc(theme('spacing') * 2);
+			height: calc(theme('spacing') * 2);
 		}
 	}
 }

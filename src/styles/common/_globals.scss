@@ -1,15 +1,14 @@
 html,
 body {
-	font-family: var(--font-sans);
+	@apply font-sans;
 	margin: 0;
 	padding: 0;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+	@apply no-underline text-inherit;
 }
 
 * {
-	box-sizing: border-box;
+	@apply box-border;
 }
