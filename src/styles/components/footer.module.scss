@@ -4,7 +4,7 @@
 
 	&,
 	&__link,
-	&__image {
+	&__image span {
 		align-items: center;
 		display: flex;
 		justify-content: center;
@@ -12,5 +12,10 @@
 
 	&__image {
 		margin-left: calc(var(--spacer) / 2);
+
+		svg {
+			width: rem-calc(20px);
+			height: rem-calc(20px);
+		}
 	}
 }

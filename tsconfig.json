@@ -14,9 +14,6 @@
 			"@public/*": [
 				"public/*"
 			],
-			"@icons/*": [
-				"src/icons/*"
-			],
 			"@data/*": [
 				"src/data/*"
 			]
