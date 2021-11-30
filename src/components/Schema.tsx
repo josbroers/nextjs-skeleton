@@ -23,7 +23,7 @@ const defaultProps: Data = {
  * @constructor
  */
 const Schema = (props: Data) => {
-	const {siteName, description, siteDescription, inLanguage, title} = props,
+	const { siteName, description, siteDescription, inLanguage, title } = props,
 		[currentUrl, setCurrentUrl] = useState(''),
 		[origin, setOrigin] = useState('')
 

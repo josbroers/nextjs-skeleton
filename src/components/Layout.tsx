@@ -13,11 +13,11 @@ type Data = {
  * @param children
  * @constructor
  */
-const Layout = ({children}: Data) => (
+const Layout = ({ children }: Data) => (
 	<>
-		<GoogleTagManager/>
+		<GoogleTagManager />
 		<main className={styles.main}>{children}</main>
-		<Footer/>
+		<Footer />
 	</>
 )
 
