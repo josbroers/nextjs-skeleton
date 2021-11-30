@@ -1,7 +1,7 @@
 // @ts-check
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-	enabled: process.env.ANALYZE === "true",
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
 })
 
 /**
@@ -13,19 +13,19 @@ const nextConfig = {
 	trailingSlash: true,
 	sassOptions: {
 		prependData: `
-      @import "./styles/modules/rem-calc.scss";
-      @import "./styles/common/mixins.scss";
+      @import "src/styles/modules/rem-calc.scss";
+      @import "src/styles/common/mixins.scss";
     `,
 	},
 	eslint: {
-		dirs: ["pages", "components", "lib", "icons"],
+		dirs: ['pages', 'components', 'lib', 'icons'],
 	},
-	webpack: (config, {dev, isServer}) => {
+	webpack: (config, { dev, isServer }) => {
 		if (!dev && !isServer) {
 			Object.assign(config.resolve.alias, {
-				react: "preact/compat",
-				"react-dom/test-utils": "preact/test-utils",
-				"react-dom": "preact/compat",
+				react: 'preact/compat',
+				'react-dom/test-utils': 'preact/test-utils',
+				'react-dom': 'preact/compat',
 			})
 		}
 

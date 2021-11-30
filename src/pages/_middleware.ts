@@ -1,5 +1,5 @@
 import type {NextFetchEvent, NextRequest} from 'next/server'
-import Response from '../lib/headers'
+import Response from '@lib/headers'
 
 /**
  * Middleware enables you to use code over configuration.
