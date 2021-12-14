@@ -1,8 +1,16 @@
 html,
 body {
-	@apply font-sans;
+	font-family: theme('fontFamily.inter'), theme('fontFamily.sans'), 'sans-serif';
 	margin: 0;
 	padding: 0;
+}
+
+@supports (font-variation-settings: normal) {
+	html,
+	body {
+		font-family: theme('fontFamily.interVar'), theme('fontFamily.inter'), theme('fontFamily.sans'),
+			'sans-serif';
+	}
 }
 
 a {

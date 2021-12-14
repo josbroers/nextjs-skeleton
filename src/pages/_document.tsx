@@ -10,7 +10,15 @@ import options from '@data/seo.json'
 const Document = () => {
 	return (
 		<Html lang={options.inLanguage}>
-			<Head />
+			<Head>
+				<link
+					rel="preload"
+					href="/fonts/Inter-roman.var.woff2"
+					type="font/woff2"
+					as="font"
+					crossOrigin=""
+				/>
+			</Head>
 			<body>
 				<Main />
 				<NextScript />
