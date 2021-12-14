@@ -34,5 +34,4 @@ const ExternalLink = (props: Data) => {
 }
 
 ExternalLink.defaultProps = defaultProps
-
 export default ExternalLink
