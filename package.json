@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-starter-kit",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"private": true,
 	"author": "Jos Broers",
 	"license": "MIT",
@@ -8,14 +8,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"analyze": "cross-env ANALYZE=true next build",
-		"find:unused": "next-unused",
-		"depcheck": "depcheck",
-		"node": "node -v > .nvmrc"
+		"lint": "next lint"
 	},
 	"dependencies": {
-		"@next/bundle-analyzer": "^12.0.0",
 		"cross-env": "^7.0.3",
 		"next": "^12.0.5",
 		"preact": "^10.5.15",
@@ -29,16 +24,18 @@
 		"@types/node": "^16.11.6",
 		"@types/react": "^17.0.33",
 		"autoprefixer": "^10.4.0",
-		"depcheck": "^1.4.2",
 		"eslint": "<8.0.0",
 		"eslint-config-next": "^12.0.0",
 		"eslint-config-prettier": "^8.3.0",
 		"foundation-sites": "^6.7.4",
-		"next-unused": "^0.0.6",
 		"postcss": "^8.4.4",
 		"prettier": "^2.4.1",
 		"sass": "^1.43.4",
 		"tailwindcss": "^2.2.19",
 		"typescript": "^4.4.4"
+	},
+	"volta": {
+		"node": "14.18.2",
+		"npm": "8.3.0"
 	}
 }

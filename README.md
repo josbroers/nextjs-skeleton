@@ -43,12 +43,12 @@ by connecting to the origin repository.
 
 ### 1.2 Node.js
 
-First install the Node.js with `nvm use` version listed in `.nvmrc`. Use a Node Version Manager such
-as [NVM for Mac](https://github.com/nvm-sh/nvm) or [NVM for Windows](https://github.com/coreybutler/nvm-windows).
+First install the Node.js and NPM version listed in `package.json`. Use the JavaScript Tool Manager [Volta](https://volta.sh/) or a Node Version Manager such
+as [NVM for Mac](https://github.com/nvm-sh/nvm).
 
 ### 1.3 Installing dependencies
 
-After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing.
+After successfully installing Node.js run `npm i` to install all the packages and then `npm run dev` to start developing.
 
 ### 1.4 TypeScript
 
@@ -78,15 +78,11 @@ webpack: (config, {dev, isServer}) => {
 
 ## 2. Scripts
 
-- Use `yarn` or `yarn install` to install the dependencies
-- Use `yarn dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
-- To build the application for production, use `yarn build`
-- To start a production server, use `yarn start`
+- Use `npm i` or `npm install` to install the dependencies
+- Use `npm run dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
+- To build the application for production, use `npm run build`
+- To start a production server, use `npm run start`
 - To export application as static HTML, use `next build && next export`
-- For checking on unused imports, use `yarn find:unused`
-- For analyzing the chunks and modules, use `yarn analyze`
-- For analyzing dependencies in the project, use `yarn depcheck`
-- For updating the `.nvmrc` file with the current Node.js version, use `yarn node`
 
 ## 3. Security
 
@@ -96,14 +92,11 @@ To test your application for security headers, visit [securityheaders.com](https
 
 ## 4. Styling
 
-With Next.js there's a lot of options to style your projects. This starter kit uses **Sass** and [**
-Foundation**](https://get.foundation/sites/docs/), but use whatever works best for you. For example:
+With Next.js there's a lot of options to style your projects. This starter kit uses **[Sass](https://sass-lang.com/) Modules**, **[Tailwind CSS](https://tailwindcss.com/)** and some unit functions from **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
-- [CSS (or Sass) Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
 - [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)
 - [styled-components](https://styled-components.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
 - [Material-UI](https://mui.com/)
 
 ## 5. Search engine optimization
