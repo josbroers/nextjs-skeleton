@@ -7,6 +7,9 @@ const nextConfig = {
 	swcMinify: true,
 	reactStrictMode: true,
 	trailingSlash: true,
+	images: {
+		formats: ['image/avif', 'image/webp'],
+	},
 	sassOptions: {
 		prependData: `
       @import "~foundation-sites/scss/util/unit";
