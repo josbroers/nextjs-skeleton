@@ -1,6 +1,6 @@
-import {SitemapStream, streamToPromise} from 'sitemap'
-import {createGzip} from 'zlib'
-import {GetServerSideProps} from 'next'
+import { SitemapStream, streamToPromise } from 'sitemap'
+import { createGzip } from 'zlib'
+import { GetServerSideProps } from 'next'
 
 /**
  * Default Sitemap component

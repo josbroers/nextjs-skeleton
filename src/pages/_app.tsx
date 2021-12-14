@@ -1,6 +1,6 @@
 import '@styles/main.scss'
 import Layout from '@components/Layout'
-import type {AppProps} from 'next/app'
+import type { AppProps } from 'next/app'
 
 /**
  * Next.js uses the App component to initialize pages.

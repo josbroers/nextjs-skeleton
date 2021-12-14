@@ -24,16 +24,10 @@ const defaultProps: Data = {
  * @constructor
  */
 const ExternalLink = (props: Data) => {
-	const {href, children, title, className, target, rel} = props
+	const { href, children, title, className, target, rel } = props
 
 	return (
-		<a
-			href={href}
-			title={title}
-			rel={rel}
-			className={className}
-			target={target}
-		>
+		<a href={href} title={title} rel={rel} className={className} target={target}>
 			{children}
 		</a>
 	)

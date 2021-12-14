@@ -1,6 +1,6 @@
 import styles from '@styles/components/footer.module.scss'
 import ExternalLink from './ExternalLink'
-import {ReactSVG} from 'react-svg'
+import { ReactSVG } from 'react-svg'
 
 /**
  * Renders the `<footer>` element
