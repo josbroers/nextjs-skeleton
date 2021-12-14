@@ -1,5 +1,20 @@
-import type {NextFetchEvent, NextRequest} from 'next/server'
-import Response from '@lib/headers'
+import type { NextFetchEvent, NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
+import Headers from '@lib/headers'
+
+/**
+ * Add security headers
+ * @constructor
+ */
+const Response = () => {
+	const response = NextResponse.next()
+
+	Object.entries(Headers).forEach(([key, value]) => {
+		response.headers.set(key, value)
+	})
+
+	return response
+}
 
 /**
  * Middleware enables you to use code over configuration.
@@ -8,7 +23,6 @@ import Response from '@lib/headers'
  * - Modify the response by rewriting
  * - Redirecting, adding headers
  * - Or even streaming HTML
- *
  * @param req
  * @param ev
  * @constructor
