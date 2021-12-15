@@ -15,7 +15,7 @@ const Home = () => (
 				title="Next.js starter kit on GitHub"
 				className={styles['cta-link']}
 			>
-				Next.js Starter Kit!
+				Next.js Skeleton!
 			</ExternalLink>
 		</h1>
 		<p className={styles.description}>
