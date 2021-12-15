@@ -1,5 +1,7 @@
 // @ts-check
 
+const withTM = require('next-transpile-modules')(['ui'])
+
 /**
  * @type {import('next').NextConfig}
  **/
@@ -31,4 +33,4 @@ const nextConfig = {
 	},
 }
 
-module.exports = nextConfig
+module.exports = withTM(nextConfig)

@@ -1,0 +1,10 @@
+{
+	"title": "Next.js Skeleton: ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
+	"keywords": "skeleton, starter theme, react, next.js, turborepo, pnpm, monorepo",
+	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js.",
+	"type": "website",
+	"siteName": "Next.js Skeleton",
+	"imageAltText": "Next.js wallpaper",
+	"twitterCard": "summary_large_image",
+	"inLanguage": "en"
+}
