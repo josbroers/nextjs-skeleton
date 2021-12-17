@@ -1,5 +1,5 @@
 import styles from '@styles/components/footer.module.scss'
-import ExternalLink from './ExternalLink'
+import ExternalLink from '@components/ExternalLink'
 import { ReactSVG } from 'react-svg'
 
 /**

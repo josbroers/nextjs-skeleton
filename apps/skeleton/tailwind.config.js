@@ -56,14 +56,7 @@ module.exports = {
 				'Segoe UI Emoji',
 				'Segoe UI Symbol',
 			],
-			mono: [
-				'Menlo',
-				'Consolas',
-				'Monaco',
-				'Liberation Mono',
-				'Lucida Console',
-				'monospace',
-			],
+			mono: ['Menlo', 'Consolas', 'Monaco', 'Liberation Mono', 'Lucida Console', 'monospace'],
 		},
 		spacing: '0.625rem', // 10px
 		extend: {},

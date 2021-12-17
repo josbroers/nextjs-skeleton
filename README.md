@@ -11,7 +11,6 @@ and has the following features:
 - [Preact](https://preactjs.com/)
 - [Prettier](https://prettier.io/)
 - [Sass](https://sass-lang.com/)
-- [Stylelint](https://stylelint.io/)
 - [Turborepo](https://turborepo.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ReactSVG](https://www.npmjs.com/package/react-svg)
@@ -20,17 +19,17 @@ and has the following features:
 
 - [Table of contents](#table-of-contents)
 - [1. Setup](#1-setup)
-	- [1.1 How to install this template](#11-how-to-install-this-template)
-	- [1.2 Node.js](#12-nodejs)
-	- [1.3 Installing dependencies](#13-installing-dependencies)
-	- [1.4 TypeScript](#14-typescript)
-	- [1.5 Preact](#15-preact)
+  - [1.1 How to install this template](#11-how-to-install-this-template)
+  - [1.2 Node.js](#12-nodejs)
+  - [1.3 Installing dependencies](#13-installing-dependencies)
+  - [1.4 TypeScript](#14-typescript)
+  - [1.5 Preact](#15-preact)
 - [2. Scripts](#2-scripts)
 - [3. Security](#3-security)
 - [4. Styling](#4-styling)
 - [5. Search engine optimization](#5-search-engine-optimization)
-	- [5.1 Meta](#51-meta)
-	- [5.2 Schema](#52-schema)
+  - [5.1 Meta](#51-meta)
+  - [5.2 Schema](#52-schema)
 - [6. Environment variables](#6-environment-variables)
 - [7. Vercel CLI](#7-vercel-cli)
 
@@ -40,8 +39,8 @@ and has the following features:
 
 There are two ways to get started using this skeleton. When you're using GitHub you can use the button "Use this
 template" or [following this link](https://github.com/SirRedDAB/nextjs-skeleton/generate) to create a new repository
-based of this skeleton. Another way is to clone the repository, remove the `.git` directory and re-init git
-by connecting to the origin repository.
+based of this skeleton. Another way is to clone the repository, remove the `.git` folder and re-init git by connecting
+to the origin repository.
 
 ### 1.2 Node.js
 
@@ -50,18 +49,18 @@ Manager [Volta](https://volta.sh/) or a Node Version Manager such as [NVM for Ma
 
 ### 1.3 Installing dependencies
 
-After successfully installing Node.js run `npm i` to install all the packages and then `npm run dev` to start
-developing.
+After successfully installing Node.js run `pnpm i` to install all the packages and then `pnpm dev` to start developing
+all apps. To build a specific app run the command inside that folder.
 
 ### 1.4 TypeScript
 
-This skeleton uses **TypeScript** out of the box. If you don't feel comfortable using it or don't need it, just
-rename all the files to their JavaScript equivalent (`.js` and `.jsx`) and uninstall TypeScript and all the @types
-listed in the `package.json`.
+This skeleton uses **TypeScript** out of the box. If you don't feel comfortable using it or don't need it, just rename
+all the files to their JavaScript equivalent (`.js` and `.jsx`) and uninstall TypeScript and all the `@types` listed in
+the `package.json`.
 
 ### 1.5 Preact
 
-Besides TypeScript this skeleton uses **Preact** over React for production builds. This results in smaller build and
+Besides TypeScript, this skeleton uses **Preact** over React for production builds. This results in smaller build and
 the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below
 in `next.config.js` and uninstall the package.
 
@@ -69,9 +68,9 @@ in `next.config.js` and uninstall the package.
 webpack: (config, { dev, isServer }) => {
 	if (!dev && !isServer) {
 		Object.assign(config.resolve.alias, {
-			react: "preact/compat",
-			"react-dom/test-utils": "preact/test-utils",
-			"react-dom": "preact/compat",
+			react: 'preact/compat',
+			'react-dom/test-utils': 'preact/test-utils',
+			'react-dom': 'preact/compat',
 		})
 	}
 
@@ -81,17 +80,17 @@ webpack: (config, { dev, isServer }) => {
 
 ## 2. Scripts
 
-- Use `npm i` or `npm install` to install the dependencies
-- Use `npm run dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
-- To build the application for production, use `npm run build`
-- To start a production server, use `npm run start`
+- Use `pnpm i` or `pnpm install` to install the dependencies
+- Use `pnpm dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
+- To build the application for production, use `pnpm build`
+- To start a production server, use `pnpm start`
 - To export application as static HTML, use `next build && next export`
 
 ## 3. Security
 
-By default Next doesn't provide all the **security headers** which results in a vulnerable application. I've added
-the default security headers listed in the [Next docs](https://nextjs.org/docs/advanced-features/security-headers).
-To test your application for security headers, visit [securityheaders.com](https://securityheaders.com/)
+By default, Next doesn't provide all the **security headers** which results in a vulnerable application. I've added the
+default security headers listed in the [Next docs](https://nextjs.org/docs/advanced-features/security-headers). To test
+your application for security headers, visit [securityheaders.com](https://securityheaders.com/)
 
 ## 4. Styling
 
@@ -109,13 +108,13 @@ For example:
 
 ### 5.1 Meta
 
-I've created a `Meta.tsx` component which adds all the properties required regarding SEO. You can setup default props or
-feed it dynamically with data.
+I've created a `Meta.tsx` component which adds all the properties required regarding SEO. You can set up default props
+or feed it dynamically with data.
 
 ### 5.2 Schema
 
-I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also setup
-default props or feed it dynamically with data.
+I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also set
+up default props or feed it dynamically with data.
 
 ## 6. Environment variables
 

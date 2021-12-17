@@ -1,4 +1,5 @@
 node_modules
 .next
 .vercel
-package-lock.json
+.turbo
+pnpm-lock.yaml

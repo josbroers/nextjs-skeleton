@@ -1,5 +1,16 @@
 {
-  "name": "ui",
-  "version": "1.0.0",
-  "license": "MIT"
+	"name": "ui",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "./index.tsx",
+	"types": "./index.tsx",
+	"scripts": {
+		"lint": "eslint \"*.tsx\""
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.37",
+		"@types/react-dom": "^17.0.11",
+		"tsconfig": "*",
+		"typescript": "^4.5.4"
+	}
 }

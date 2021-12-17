@@ -1,6 +1,6 @@
 import type { NextFetchEvent, NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
-import Headers from '@lib/headers'
+import Headers from '../../../../packages/lib/headers'
 
 /**
  * Add security headers

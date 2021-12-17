@@ -5,11 +5,21 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "turbo run build",
-		"dev": "turbo run dev --parallel",
-		"lint": "turbo run lint"
+		"dev": "turbo run dev --no-cache --parallel --continue",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"lint": "turbo run lint",
+		"prepare": "husky install",
+		"format": "prettier --write \"**/*.{ts,tsx,js,jsm,md,json}\""
 	},
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
 	"devDependencies": {
-		"turbo": "^1.0.12"
+		"eslint": "^7.32.0",
+		"husky": "^7.0.4",
+		"prettier": "^2.5.1",
+		"turbo": "latest"
 	},
 	"volta": {
 		"node": "14.18.2",
@@ -25,12 +35,6 @@
 				"outputs": [
 					".next/**"
 				]
-			},
-			"test": {
-				"dependsOn": [
-					"^build"
-				],
-				"outputs": []
 			},
 			"lint": {
 				"outputs": []
