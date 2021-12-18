@@ -43,7 +43,7 @@ to the origin repository.
 
 ### 1.2 Node.js
 
-First install the Node.js and npmp version listed in `package.json`. Use the JavaScript Tool
+First install the Node.js and yarn version listed in `package.json`. Use the JavaScript Tool
 Manager [Volta](https://volta.sh/) or a Node Version Manager such as [NVM for Mac](https://github.com/nvm-sh/nvm).
 
 ### 1.3 Installing dependencies

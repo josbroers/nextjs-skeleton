@@ -4,7 +4,6 @@ import {ReactSVG} from 'react-svg'
 
 /**
  * Renders the `<footer>` element
- *
  * @constructor
  */
 const Footer = () => (

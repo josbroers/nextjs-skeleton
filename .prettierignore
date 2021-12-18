@@ -2,4 +2,4 @@ node_modules
 .next
 .vercel
 .turbo
-pnpm-lock.yaml
+yarn.lock

@@ -6,7 +6,6 @@ type Data = {
 
 /**
  * Displays content as a short fragment of computer code
- *
  * @param content
  * @constructor
  */

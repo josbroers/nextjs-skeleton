@@ -15,7 +15,6 @@ export type Data = {
 
 /**
  * Renders all relevant SEO `<meta>` and `<link>` elements
- *
  * @param props
  * @constructor
  */

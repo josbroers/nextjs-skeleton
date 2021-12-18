@@ -19,7 +19,6 @@ const defaultProps: Data = {
 
 /**
  * Create an link for external URLs
- *
  * @param props
  * @constructor
  */

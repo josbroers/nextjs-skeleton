@@ -11,7 +11,6 @@ export type Data = {
 
 /**
  * Renders WebSite and WebPage schema
- *
  * @param props
  * @constructor
  */

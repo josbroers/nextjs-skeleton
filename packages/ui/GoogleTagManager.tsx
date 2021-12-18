@@ -7,7 +7,6 @@ type Data = {
 
 /**
  * Adds Google Tag Manager script and prefetch URLs
- *
  * @constructor
  */
 const GoogleTagManager = ({id}: Data) => (

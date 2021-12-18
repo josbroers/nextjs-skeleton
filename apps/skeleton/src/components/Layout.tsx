@@ -9,7 +9,6 @@ type Data = {
 
 /**
  * Default Layout
- *
  * @param children
  * @constructor
  */

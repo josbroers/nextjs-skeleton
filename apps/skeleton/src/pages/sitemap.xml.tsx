@@ -4,7 +4,6 @@ import {GetServerSideProps} from 'next'
 
 /**
  * Default Sitemap component
- *
  * @constructor
  */
 const Sitemap = () => <div>This should not be navigated to.</div>
@@ -14,7 +13,6 @@ let sitemap: any = null
 
 /**
  * Add URLs to sitemap
- *
  * @param smStream
  */
 const addUrls = async (smStream: SitemapStream) => {
@@ -25,7 +23,6 @@ const addUrls = async (smStream: SitemapStream) => {
 
 /**
  * Build and render sitemap
- *
  * @param res
  * @param req
  */
@@ -40,9 +37,7 @@ export const getServerSideProps: GetServerSideProps = async ({res, req}) => {
 	res.setHeader('Content-Encoding', 'gzip')
 	res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59')
 
-	/**
-	 * Return sitemap if cached
-	 */
+	// Return sitemap if cached
 	if (sitemap) {
 		res.write(sitemap)
 		res.end()
@@ -74,7 +69,7 @@ export const getServerSideProps: GetServerSideProps = async ({res, req}) => {
 
 		const resp = await streamToPromise(pipeline)
 
-		/* Cache the result */
+		// Cache the result
 		sitemap = resp
 
 		res.write(resp)

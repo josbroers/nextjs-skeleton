@@ -23,7 +23,7 @@
 	},
 	"volta": {
 		"node": "14.18.2",
-		"npm": "8.3.0"
+		"yarn": "1.22.17"
 	},
 	"turbo": {
 		"baseBranch": "origin/main",
