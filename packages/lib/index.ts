@@ -1,1 +1,1 @@
-export * from './headers'
+export {default as Headers} from './headers'

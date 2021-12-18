@@ -1,13 +1,13 @@
-import Code from '@components/Code'
+import {Code} from 'ui'
 import styles from '@styles/pages/home.module.scss'
-import ExternalLink from '@components/ExternalLink'
+import {ExternalLink} from 'ui'
 import Meta from '@components/Meta'
 import Schema from '@components/Schema'
 
 const Home = () => (
 	<div className="container">
-		<Meta />
-		<Schema />
+		<Meta/>
+		<Schema/>
 		<h1 className={styles.title}>
 			Welcome to the{' '}
 			<ExternalLink
@@ -19,7 +19,7 @@ const Home = () => (
 			</ExternalLink>
 		</h1>
 		<p className={styles.description}>
-			Get started by editing <Code content="pages/index.js" />
+			Get started by editing <Code content="pages/index.js"/>
 		</p>
 	</div>
 )

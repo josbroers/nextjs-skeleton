@@ -1,6 +1,6 @@
 import Footer from './Footer'
 import styles from '@styles/components/layout.module.scss'
-import GoogleTagManager from './GoogleTagManager'
+import {GoogleTagManager} from 'ui'
 import React from 'react'
 
 type Data = {
@@ -13,11 +13,11 @@ type Data = {
  * @param children
  * @constructor
  */
-const Layout = ({ children }: Data) => (
+const Layout = ({children}: Data) => (
 	<>
-		<GoogleTagManager />
+		{process.env.NEXT_PUBLIC_GTM && <GoogleTagManager id={process.env.NEXT_PUBLIC_GTM}/>}
 		<main className={styles.main}>{children}</main>
-		<Footer />
+		<Footer/>
 	</>
 )
 

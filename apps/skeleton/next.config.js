@@ -1,6 +1,6 @@
 // @ts-check
 
-const withTM = require('next-transpile-modules')(['ui'])
+const withTM = require('next-transpile-modules')(['ui', 'lib'])
 
 /**
  * @type {import('next').NextConfig}
@@ -20,7 +20,7 @@ const nextConfig = {
 	eslint: {
 		dirs: ['src'],
 	},
-	webpack: (config, { dev, isServer }) => {
+	webpack: (config, {dev, isServer}) => {
 		if (!dev && !isServer) {
 			Object.assign(config.resolve.alias, {
 				react: 'preact/compat',

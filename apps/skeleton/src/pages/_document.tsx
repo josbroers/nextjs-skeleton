@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import {Head, Html, Main, NextScript} from 'next/document'
 import options from '@data/seo.json'
 
 /**
@@ -20,8 +20,8 @@ const Document = () => {
 				/>
 			</Head>
 			<body>
-				<Main />
-				<NextScript />
+			<Main/>
+			<NextScript/>
 			</body>
 		</Html>
 	)

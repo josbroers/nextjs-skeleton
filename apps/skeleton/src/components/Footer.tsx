@@ -1,6 +1,6 @@
 import styles from '@styles/components/footer.module.scss'
-import ExternalLink from '@components/ExternalLink'
-import { ReactSVG } from 'react-svg'
+import {ExternalLink} from 'ui'
+import {ReactSVG} from 'react-svg'
 
 /**
  * Renders the `<footer>` element
@@ -17,7 +17,7 @@ const Footer = () => (
 			className={styles.footer__link}
 		>
 			View project on
-			<ReactSVG src="icons/github.svg" className={styles.footer__image} wrapper="span" />
+			<ReactSVG src="icons/github.svg" className={styles.footer__image} wrapper="span"/>
 		</ExternalLink>
 	</footer>
 )

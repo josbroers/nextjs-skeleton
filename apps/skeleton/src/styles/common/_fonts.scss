@@ -34,7 +34,7 @@ $font-inter-var: 'inter var';
 	font-weight: 200;
 	font-style: normal;
 	src: url('/fonts/Inter-ExtraLight.woff2') format('woff2'),
-		url('/fonts/Inter-ExtraLight.woff') format('woff');
+	url('/fonts/Inter-ExtraLight.woff') format('woff');
 }
 
 @font-face {
@@ -43,7 +43,7 @@ $font-inter-var: 'inter var';
 	font-weight: 300;
 	font-style: normal;
 	src: url('/fonts/Inter-Light.woff2') format('woff2'),
-		url('/fonts/Inter-Light.woff') format('woff');
+	url('/fonts/Inter-Light.woff') format('woff');
 }
 
 @font-face {
@@ -52,7 +52,7 @@ $font-inter-var: 'inter var';
 	font-weight: 400;
 	font-style: normal;
 	src: url('/fonts/Inter-Regular.woff2') format('woff2'),
-		url('/fonts/Inter-Regular.woff') format('woff');
+	url('/fonts/Inter-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -61,7 +61,7 @@ $font-inter-var: 'inter var';
 	font-weight: 500;
 	font-style: normal;
 	src: url('/fonts/Inter-Medium.woff2') format('woff2'),
-		url('/fonts/Inter-Medium.woff') format('woff');
+	url('/fonts/Inter-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -70,7 +70,7 @@ $font-inter-var: 'inter var';
 	font-weight: 600;
 	font-style: normal;
 	src: url('/fonts/Inter-SemiBold.woff2') format('woff2'),
-		url('/fonts/Inter-Semibold.woff') format('woff');
+	url('/fonts/Inter-Semibold.woff') format('woff');
 }
 
 @font-face {
@@ -87,7 +87,7 @@ $font-inter-var: 'inter var';
 	font-weight: 800;
 	font-style: normal;
 	src: url('/fonts/Inter-ExtraBold.woff2') format('woff2'),
-		url('/fonts/Inter-ExtraBold.woff') format('woff');
+	url('/fonts/Inter-ExtraBold.woff') format('woff');
 }
 
 @font-face {
@@ -96,7 +96,7 @@ $font-inter-var: 'inter var';
 	font-weight: 900;
 	font-style: normal;
 	src: url('/fonts/Inter-Black.woff2') format('woff2'),
-		url('/fonts/Inter-Black.woff') format('woff');
+	url('/fonts/Inter-Black.woff') format('woff');
 }
 
 // Fallback italic
@@ -106,7 +106,7 @@ $font-inter-var: 'inter var';
 	font-weight: 100;
 	font-style: italic;
 	src: url('/fonts/Inter-ThinItalic.woff2') format('woff2'),
-		url('/fonts/Inter-ThinItalic.woff') format('woff');
+	url('/fonts/Inter-ThinItalic.woff') format('woff');
 }
 
 @font-face {
@@ -115,7 +115,7 @@ $font-inter-var: 'inter var';
 	font-weight: 200;
 	font-style: italic;
 	src: url('/fonts/Inter-ExtraLightItalic.woff2') format('woff2'),
-		url('/fonts/Inter-ExtraLightItalic.woff') format('woff');
+	url('/fonts/Inter-ExtraLightItalic.woff') format('woff');
 }
 
 @font-face {
@@ -124,7 +124,7 @@ $font-inter-var: 'inter var';
 	font-weight: 300;
 	font-style: italic;
 	src: url('/fonts/Inter-LightItalic.woff2') format('woff2'),
-		url('/fonts/Inter-LightItalic.woff') format('woff');
+	url('/fonts/Inter-LightItalic.woff') format('woff');
 }
 
 @font-face {
@@ -133,7 +133,7 @@ $font-inter-var: 'inter var';
 	font-weight: 400;
 	font-style: italic;
 	src: url('/fonts/Inter-RegularItalic.woff2') format('woff2'),
-		url('/fonts/Inter-RegularItalic.woff') format('woff');
+	url('/fonts/Inter-RegularItalic.woff') format('woff');
 }
 
 @font-face {
@@ -142,7 +142,7 @@ $font-inter-var: 'inter var';
 	font-weight: 500;
 	font-style: italic;
 	src: url('/fonts/Inter-MediumItalic.woff2') format('woff2'),
-		url('/fonts/Inter-MediumItalic.woff') format('woff');
+	url('/fonts/Inter-MediumItalic.woff') format('woff');
 }
 
 @font-face {
@@ -151,7 +151,7 @@ $font-inter-var: 'inter var';
 	font-weight: 600;
 	font-style: italic;
 	src: url('/fonts/Inter-SemiBoldItalic.woff2') format('woff2'),
-		url('/fonts/Inter-SemiboldItalic.woff') format('woff');
+	url('/fonts/Inter-SemiboldItalic.woff') format('woff');
 }
 
 @font-face {
@@ -160,7 +160,7 @@ $font-inter-var: 'inter var';
 	font-weight: 700;
 	font-style: italic;
 	src: url('/fonts/Inter-BoldItalic.woff2') format('woff2'),
-		url('/fonts/Inter-BoldItalic.woff') format('woff');
+	url('/fonts/Inter-BoldItalic.woff') format('woff');
 }
 
 @font-face {
@@ -169,7 +169,7 @@ $font-inter-var: 'inter var';
 	font-weight: 800;
 	font-style: italic;
 	src: url('/fonts/Inter-ExtraBoldItalic.woff2') format('woff2'),
-		url('/fonts/Inter-ExtraBoldItalic.woff') format('woff');
+	url('/fonts/Inter-ExtraBoldItalic.woff') format('woff');
 }
 
 @font-face {
@@ -178,5 +178,5 @@ $font-inter-var: 'inter var';
 	font-weight: 900;
 	font-style: italic;
 	src: url('/fonts/Inter-BlackItalic.woff2') format('woff2'),
-		url('/fonts/Inter-BlackItalic.woff') format('woff');
+	url('/fonts/Inter-BlackItalic.woff') format('woff');
 }

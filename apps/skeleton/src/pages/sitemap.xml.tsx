@@ -1,6 +1,6 @@
-import { SitemapStream, streamToPromise } from 'sitemap'
-import { createGzip } from 'zlib'
-import { GetServerSideProps } from 'next'
+import {SitemapStream, streamToPromise} from 'sitemap'
+import {createGzip} from 'zlib'
+import {GetServerSideProps} from 'next'
 
 /**
  * Default Sitemap component
@@ -29,7 +29,7 @@ const addUrls = async (smStream: SitemapStream) => {
  * @param res
  * @param req
  */
-export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
+export const getServerSideProps: GetServerSideProps = async ({res, req}) => {
 	if (!req || !res) {
 		return {
 			props: {},

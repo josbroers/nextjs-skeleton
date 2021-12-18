@@ -7,7 +7,6 @@ and has the following features:
 - [ESLint](https://eslint.org/)
 - [Google Tag Manager](https://tagmanager.google.com/#/homeeslint)
 - [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
-- [pnpm](https://pnpm.io/)
 - [Preact](https://preactjs.com/)
 - [Prettier](https://prettier.io/)
 - [Sass](https://sass-lang.com/)
@@ -19,17 +18,17 @@ and has the following features:
 
 - [Table of contents](#table-of-contents)
 - [1. Setup](#1-setup)
-  - [1.1 How to install this template](#11-how-to-install-this-template)
-  - [1.2 Node.js](#12-nodejs)
-  - [1.3 Installing dependencies](#13-installing-dependencies)
-  - [1.4 TypeScript](#14-typescript)
-  - [1.5 Preact](#15-preact)
+	- [1.1 How to install this template](#11-how-to-install-this-template)
+	- [1.2 Node.js](#12-nodejs)
+	- [1.3 Installing dependencies](#13-installing-dependencies)
+	- [1.4 TypeScript](#14-typescript)
+	- [1.5 Preact](#15-preact)
 - [2. Scripts](#2-scripts)
 - [3. Security](#3-security)
 - [4. Styling](#4-styling)
 - [5. Search engine optimization](#5-search-engine-optimization)
-  - [5.1 Meta](#51-meta)
-  - [5.2 Schema](#52-schema)
+	- [5.1 Meta](#51-meta)
+	- [5.2 Schema](#52-schema)
 - [6. Environment variables](#6-environment-variables)
 - [7. Vercel CLI](#7-vercel-cli)
 
@@ -49,8 +48,8 @@ Manager [Volta](https://volta.sh/) or a Node Version Manager such as [NVM for Ma
 
 ### 1.3 Installing dependencies
 
-After successfully installing Node.js run `pnpm i` to install all the packages and then `pnpm dev` to start developing
-all apps. To build a specific app run the command inside that folder.
+After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing all
+apps. To build a specific app run the command inside that folder.
 
 ### 1.4 TypeScript
 
@@ -65,7 +64,7 @@ the same developer experience. Want to switch back to **React**? Simply delete o
 in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, { dev, isServer }) => {
+webpack: (config, {dev, isServer}) => {
 	if (!dev && !isServer) {
 		Object.assign(config.resolve.alias, {
 			react: 'preact/compat',
@@ -80,11 +79,10 @@ webpack: (config, { dev, isServer }) => {
 
 ## 2. Scripts
 
-- Use `pnpm i` or `pnpm install` to install the dependencies
-- Use `pnpm dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
-- To build the application for production, use `pnpm build`
-- To start a production server, use `pnpm start`
-- To export application as static HTML, use `next build && next export`
+- Use `yarn` or `yarn install` to install the dependencies
+- Use `yarn dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
+- To build the application for production, use `yarn build`
+- To start a production server, use `yarn start`
 
 ## 3. Security
 
