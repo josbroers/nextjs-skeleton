@@ -1,0 +1,11 @@
+// Import Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import Foundation functions
+@import '~foundation-sites/scss/util/unit';
+
+// Import default styling
+@import 'common/fonts';
+@import 'common/globals';

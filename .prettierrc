@@ -3,6 +3,5 @@
 	"trailingComma": "es5",
 	"singleQuote": true,
 	"arrowParens": "avoid",
-	"formatOnSave": true,
 	"printWidth": 100
 }

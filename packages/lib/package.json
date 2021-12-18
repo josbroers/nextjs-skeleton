@@ -1,0 +1,14 @@
+{
+	"name": "lib",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "./index.ts",
+	"types": "./index.ts",
+	"scripts": {
+		"lint": "eslint \"*.ts\""
+	},
+	"devDependencies": {
+		"tsconfig": "*",
+		"typescript": "^4.5.4"
+	}
+}
