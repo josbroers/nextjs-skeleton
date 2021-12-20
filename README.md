@@ -49,7 +49,7 @@ Manager [Volta](https://volta.sh/) or a Node Version Manager such as [NVM for Ma
 ### 1.3 Installing dependencies
 
 After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing all
-apps. To build a specific app run the command inside that folder.
+apps. To build a specific app add a scope to the yarn command, e.g: `yarn dev --scope=skeleton`.
 
 ### 1.4 TypeScript
 

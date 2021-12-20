@@ -13,8 +13,8 @@ module.exports = {
 			screens: {
 				sm: '100%',
 				md: '100%',
-				lg: '64rem', // 1024px
-				xl: '80rem', // 1280px
+				lg: '100%',
+				xl: '100%',
 			},
 		},
 		colors: {
