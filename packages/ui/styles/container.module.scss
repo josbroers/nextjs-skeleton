@@ -1,0 +1,13 @@
+.container {
+	&--small {
+		max-width: rem-calc(900px);
+	}
+
+	&--large {
+		max-width: rem-calc(1280px);
+	}
+
+	&--full {
+		max-width: 100%;
+	}
+}

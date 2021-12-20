@@ -15,7 +15,6 @@ const Footer = () => (
 			title="View repository on Github"
 			className={styles.footer__link}
 		>
-			View project on
 			<ReactSVG src="icons/github.svg" className={styles.footer__image} wrapper="span"/>
 		</ExternalLink>
 	</footer>

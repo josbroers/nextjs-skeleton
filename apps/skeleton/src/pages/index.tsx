@@ -3,9 +3,10 @@ import styles from '@styles/pages/home.module.scss'
 import {ExternalLink} from 'ui'
 import Meta from '@components/Meta'
 import Schema from '@components/Schema'
+import Container from "ui/Container";
 
 const Home = () => (
-	<div className="container">
+	<Container size={"small"}>
 		<Meta/>
 		<Schema/>
 		<h1 className={styles.title}>
@@ -19,9 +20,9 @@ const Home = () => (
 			</ExternalLink>
 		</h1>
 		<p className={styles.description}>
-			Get started by editing <Code content="pages/index.js"/>
+			Get started by editing <Code content="src/pages/index.tsx"/> in the skeleton app.
 		</p>
-	</div>
+	</Container>
 )
 
 export default Home

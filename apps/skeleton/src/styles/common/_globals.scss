@@ -8,8 +8,7 @@ body {
 @supports (font-variation-settings: normal) {
 	html,
 	body {
-		font-family: theme('fontFamily.interVar'), theme('fontFamily.inter'), theme('fontFamily.sans'),
-			'sans-serif';
+		font-family: theme('fontFamily.interVar'), theme('fontFamily.inter'), theme('fontFamily.sans'), 'sans-serif';
 	}
 }
 
@@ -19,4 +18,8 @@ a {
 
 * {
 	@apply box-border;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: -.04em;
 }

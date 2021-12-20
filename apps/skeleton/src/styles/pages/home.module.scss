@@ -4,13 +4,13 @@
 }
 
 .title {
-	@apply font-bold;
+	@apply font-extrabold;
 	margin: 0;
-	font-size: rem-calc(40px);
+	font-size: rem-calc(60px);
 	line-height: 1.15;
 
 	@screen md {
-		font-size: rem-calc(65px);
+		font-size: rem-calc(90px);
 	}
 }
 
@@ -30,11 +30,7 @@
 	font-size: rem-calc(22px);
 	margin: calc(theme('spacing') * 6.5) 0 0;
 
-	@screen md {
-		font-size: rem-calc(25px);
-	}
-
 	code {
-		font-size: rem-calc(19px);
+		font-size: rem-calc(22px);
 	}
 }
