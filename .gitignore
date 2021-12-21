@@ -15,6 +15,8 @@ build
 .DS_Store
 *.pem
 .idea
+sitemap.xml
+robots.txt
 
 # debug
 yarn-debug.log*

@@ -1,4 +1,0 @@
-# Allow all crawlers
-User-agent: *
-Allow: /
-Sitemap: https://nextjs-skeleton.jobrodo.nl/sitemap.xml
