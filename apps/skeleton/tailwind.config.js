@@ -1,4 +1,6 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors'),
+	forms = require('@tailwindcss/forms'),
+	lineClamp = require('@tailwindcss/line-clamp')
 
 module.exports = {
 	purge: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -64,5 +66,8 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		forms,
+		lineClamp
+	],
 }

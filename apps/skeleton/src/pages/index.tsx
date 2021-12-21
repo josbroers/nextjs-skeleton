@@ -12,9 +12,11 @@ const Home = () => (
 		<h1 className={styles.title}>
 			Welcome to the{' '}
 			<ExternalLink
-				href="https://github.com/JosBroers/nextjs-starter-kit"
+				href="/github"
 				title="Next.js starter kit on GitHub"
 				className={styles['cta-link']}
+				target="_blank"
+				rel="noreferrer"
 			>
 				Next.js Skeleton!
 			</ExternalLink>

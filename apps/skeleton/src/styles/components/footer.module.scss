@@ -1,19 +1,4 @@
 .footer {
-	@apply border-t border-gray-200;
+	@apply border-t border-gray-200 items-center flex justify-center;
 	padding: calc(theme('spacing') * 3) 0;
-
-	&,
-	&__link,
-	&__image span {
-		@apply items-center flex justify-center;
-	}
-
-	&__image {
-		margin-left: calc(theme('spacing') / 2);
-
-		svg {
-			width: calc(theme('spacing') * 2);
-			height: calc(theme('spacing') * 2);
-		}
-	}
 }

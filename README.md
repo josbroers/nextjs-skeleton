@@ -29,6 +29,7 @@ and has the following features:
 - [5. Search engine optimization](#5-search-engine-optimization)
 	- [5.1 Meta](#51-meta)
 	- [5.2 Schema](#52-schema)
+	- [5.3 Sitemap](#53-sitemap)
 - [6. Environment variables](#6-environment-variables)
 - [7. Vercel CLI](#7-vercel-cli)
 
@@ -64,12 +65,12 @@ the same developer experience. Want to switch back to **React**? Simply delete o
 in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, {dev, isServer}) => {
-	if (!dev && !isServer) {
+webpack: (config, {dev}) => {
+	if (!dev) {
 		Object.assign(config.resolve.alias, {
 			react: 'preact/compat',
 			'react-dom/test-utils': 'preact/test-utils',
-			'react-dom': 'preact/compat',
+			'react-dom': 'preact/compat'
 		})
 	}
 
@@ -113,6 +114,11 @@ or feed it dynamically with data.
 
 I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also set
 up default props or feed it dynamically with data.
+
+### 5.3 Sitemap
+
+On production builds we generate a sitemap for the application. To configure the sitemap we need to set
+the `WEBSITE_URL` environment variable.
 
 ## 6. Environment variables
 
