@@ -26,7 +26,7 @@ const nextConfig = {
 				react: 'preact/compat',
 				'react-dom/test-utils': 'preact/test-utils',
 				'react-dom': 'preact/compat'
-			});
+			})
 		}
 
 		config.module.rules.push({
@@ -35,7 +35,7 @@ const nextConfig = {
 			use: ['@svgr/webpack'],
 		})
 
-		return config;
+		return config
 	},
 	async redirects() {
 		return [

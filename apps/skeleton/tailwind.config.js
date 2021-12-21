@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors'),
-	forms = require('@tailwindcss/forms')
-lineClamp = require('@tailwindcss/line-clamp')
+	forms = require('@tailwindcss/forms'),
+	lineClamp = require('@tailwindcss/line-clamp')
 
 module.exports = {
 	purge: ['./src/**/*.{js,ts,jsx,tsx}'],

@@ -31,7 +31,7 @@ and has the following features:
 	- [5.2 Schema](#52-schema)
 	- [5.3 Sitemap](#53-sitemap)
 - [6. Environment variables](#6-environment-variables)
-- [8. Vercel CLI](#8-vercel-cli)
+- [7. Vercel CLI](#7-vercel-cli)
 
 ## 1. Setup
 
@@ -71,10 +71,10 @@ webpack: (config, {dev}) => {
 			react: 'preact/compat',
 			'react-dom/test-utils': 'preact/test-utils',
 			'react-dom': 'preact/compat'
-		});
+		})
 	}
 
-	return config;
+	return config
 }
 ```
 
@@ -117,8 +117,8 @@ up default props or feed it dynamically with data.
 
 ### 5.3 Sitemap
 
-On production builds we generate a sitemap for the application. To configure the sitemap we need to
-set the `WEBSITE_URL` environment variable.
+On production builds we generate a sitemap for the application. To configure the sitemap we need to set
+the `WEBSITE_URL` environment variable.
 
 ## 6. Environment variables
 
