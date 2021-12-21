@@ -20,16 +20,30 @@ const nextConfig = {
 	eslint: {
 		dirs: ['src'],
 	},
-	webpack: (config, {dev, isServer}) => {
-		if (!dev && !isServer) {
+	webpack: (config, {dev}) => {
+		if (!dev) {
 			Object.assign(config.resolve.alias, {
 				react: 'preact/compat',
 				'react-dom/test-utils': 'preact/test-utils',
-				'react-dom': 'preact/compat',
-			})
+				'react-dom': 'preact/compat'
+			});
 		}
 
-		return config
+		return config;
+	},
+	async redirects() {
+		return [
+			{
+				source: '/home',
+				destination: '/',
+				permanent: true,
+			},
+			{
+				source: '/github',
+				destination: 'https://github.com/SirRedDAB/nextjs-skeleton',
+				permanent: true,
+			},
+		]
 	},
 }
 

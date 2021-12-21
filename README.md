@@ -64,16 +64,16 @@ the same developer experience. Want to switch back to **React**? Simply delete o
 in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, {dev, isServer}) => {
-	if (!dev && !isServer) {
+webpack: (config, {dev}) => {
+	if (!dev) {
 		Object.assign(config.resolve.alias, {
 			react: 'preact/compat',
 			'react-dom/test-utils': 'preact/test-utils',
-			'react-dom': 'preact/compat',
-		})
+			'react-dom': 'preact/compat'
+		});
 	}
 
-	return config
+	return config;
 }
 ```
 

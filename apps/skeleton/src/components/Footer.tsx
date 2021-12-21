@@ -9,7 +9,7 @@ import {ReactSVG} from 'react-svg'
 const Footer = () => (
 	<footer className={styles.footer}>
 		<ExternalLink
-			href="https://github.com/JosBroers/nextjs-starter-kit"
+			href="/github"
 			target="_blank"
 			rel="noreferrer"
 			title="View repository on Github"
