@@ -1,6 +1,6 @@
 import styles from '@styles/components/footer.module.scss'
+import Github from "@public/icons/github.svg"
 import {ExternalLink} from 'ui'
-import {ReactSVG} from 'react-svg'
 
 /**
  * Renders the `<footer>` element
@@ -15,7 +15,7 @@ const Footer = () => (
 			title="View repository on Github"
 			className={styles.footer__link}
 		>
-			<ReactSVG src="icons/github.svg" className={styles.footer__image} wrapper="span"/>
+			<Github width={25} height={25}/>
 		</ExternalLink>
 	</footer>
 )
