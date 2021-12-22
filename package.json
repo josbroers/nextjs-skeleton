@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-skeleton",
-	"version": "0.5.1-canary.0",
+	"version": "v0.5.1-canary.0",
 	"private": true,
 	"license": "MIT",
 	"scripts": {
