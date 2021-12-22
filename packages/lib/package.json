@@ -1,6 +1,6 @@
 {
 	"name": "lib",
-	"version": "0.5.1-canary.1",
+	"version": "0.5.1",
 	"license": "MIT",
 	"main": "./index.ts",
 	"types": "./index.ts",
@@ -8,7 +8,7 @@
 		"lint": "eslint \"*.ts\""
 	},
 	"devDependencies": {
-		"tsconfig": "0.5.1-canary.1",
+		"tsconfig": "0.5.1",
 		"typescript": "^4.5.4"
 	}
 }
