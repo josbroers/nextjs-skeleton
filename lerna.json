@@ -1,0 +1,12 @@
+{
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"command": {
+		"version": {
+			"exact": true,
+			"no-git-tag-version": true,
+			"preid": "canary"
+		}
+	},
+	"version": "0.5.0"
+}
