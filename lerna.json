@@ -1,0 +1,17 @@
+{
+	"npmClient": "yarn",
+	"useWorkspaces": false,
+	"packages": [
+		".",
+		"apps/*",
+		"packages/*"
+	],
+	"command": {
+		"version": {
+			"exact": true,
+			"preid": "canary",
+			"no-push": true
+		}
+	},
+	"version": "0.5.1-canary.0"
+}
