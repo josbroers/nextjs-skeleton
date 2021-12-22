@@ -8,6 +8,11 @@ const defaultProps: Data = {
 	inLanguage: options.inLanguage,
 }
 
+/**
+ * Renders WebSite and WebPage schema
+ * @param props
+ * @constructor
+ */
 const Schema = (props: Data) => (
 	<DefaultSchema {...props}/>
 )
