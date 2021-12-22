@@ -12,8 +12,8 @@
 		"upgrade_all": "yarn upgrade-interactive --latest"
 	},
 	"workspaces": [
-		"apps/**/**",
-		"packages/**/**"
+		"apps/*",
+		"packages/*"
 	],
 	"devDependencies": {
 		"eslint": "^8.5.0",
