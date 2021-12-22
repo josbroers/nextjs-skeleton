@@ -8,17 +8,18 @@
 		"dev": "turbo run dev --no-cache --parallel --continue",
 		"clean": "turbo run clean && rm -rf node_modules",
 		"lint": "turbo run lint",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"upgrade_all": "yarn upgrade-interactive --latest"
 	},
 	"workspaces": [
 		"apps/*",
 		"packages/*"
 	],
 	"devDependencies": {
-		"eslint": "^7.32.0",
+		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"prettier": "^2.5.1",
-		"turbo": "latest"
+		"turbo": "1.0.19"
 	},
 	"volta": {
 		"node": "14.18.2",

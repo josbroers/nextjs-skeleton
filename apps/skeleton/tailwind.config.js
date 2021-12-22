@@ -3,8 +3,10 @@ const colors = require('tailwindcss/colors'),
 	lineClamp = require('@tailwindcss/line-clamp')
 
 module.exports = {
-	purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-	darkMode: false,
+	content: [
+		'./src/**/*.{js,ts,jsx,tsx,scss,css,html}',
+		'../../packages/ui/**/*.{js,ts,jsx,tsx,scss,css,html}'
+	],
 	theme: {
 		borderRadius: {
 			DEFAULT: '0.313rem', // 5px
@@ -25,7 +27,7 @@ module.exports = {
 			inherit: 'inherit',
 			black: colors.black,
 			white: colors.white,
-			gray: colors.trueGray,
+			gray: colors.neutral,
 			blue: '#0070F3',
 			purple: '#D400FF',
 		},
