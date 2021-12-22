@@ -1,6 +1,6 @@
 {
 	"name": "ui",
-	"version": "0.5.1-canary.1",
+	"version": "0.5.1",
 	"license": "MIT",
 	"main": "index.ts",
 	"scripts": {
@@ -10,7 +10,7 @@
 		"@types/react": "^17.0.37",
 		"@types/react-dom": "^17.0.11",
 		"next": "latest",
-		"tsconfig": "0.5.1-canary.1",
+		"tsconfig": "0.5.1",
 		"typescript": "^4.5.4"
 	}
 }
