@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-skeleton",
-	"version": "0.5.0",
+	"version": "0.5.1-canary.0",
 	"private": true,
 	"license": "MIT",
 	"scripts": {
@@ -10,7 +10,7 @@
 		"lint": "turbo run lint",
 		"prepare": "husky install",
 		"upgrade_all": "yarn upgrade-interactive --latest",
-		"lerna": "lerna version"
+		"lerna": "lerna version --no-git-tag-version"
 	},
 	"workspaces": [
 		"apps/*",
@@ -28,7 +28,7 @@
 		"yarn": "1.22.17"
 	},
 	"engines": {
-		"node": "14.18.2"
+		"node": ">=14.18.0"
 	},
 	"turbo": {
 		"baseBranch": "origin/main",

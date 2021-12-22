@@ -10,9 +10,8 @@
 		"version": {
 			"exact": true,
 			"preid": "canary",
-			"no-push": true,
-			"no-git-tag-version": true
+			"no-push": true
 		}
 	},
-	"version": "0.5.0"
+	"version": "0.5.1-canary.0"
 }
