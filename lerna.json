@@ -9,11 +9,7 @@
 	"command": {
 		"version": {
 			"exact": true,
-			"preid": "canary",
-			"no-push": true,
-			"no-commit-hooks": true,
-			"sign-git-commit": false,
-			"sign-git-tag": false
+			"preid": "canary"
 		}
 	},
 	"version": "0.5.2-canary.0"
