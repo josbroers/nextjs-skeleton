@@ -1,6 +1,6 @@
 {
 	"name": "@SirRedDAB/nextjs-skeleton",
-	"version": "0.5.1",
+	"version": "0.5.2-canary.0",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
