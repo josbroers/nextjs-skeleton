@@ -18,11 +18,10 @@ and has the following features:
 
 - [Table of contents](#table-of-contents)
 - [1. Setup](#1-setup)
-	- [1.1 How to install this template](#11-how-to-install-this-template)
-	- [1.2 Node.js](#12-nodejs)
-	- [1.3 Installing dependencies](#13-installing-dependencies)
-	- [1.4 TypeScript](#14-typescript)
-	- [1.5 Preact](#15-preact)
+	- [1.1 Node.js](#11-nodejs)
+	- [1.2 How to install this template](#12-how-to-install-this-template)
+	- [1.3 TypeScript](#13-typescript)
+	- [1.4 Preact](#14-preact)
 - [2. Scripts](#2-scripts)
 - [3. Security](#3-security)
 - [4. Styling](#4-styling)
@@ -35,37 +34,36 @@ and has the following features:
 
 ## 1. Setup
 
-### 1.1 How to install this template
-
-There are two ways to get started using this skeleton. When you're using GitHub you can use the button "Use this
-template" or [following this link](https://github.com/SirRedDAB/nextjs-skeleton/generate) to create a new repository
-based of this skeleton. Another way is to clone the repository, remove the `.git` folder and re-init git by connecting
-to the origin repository.
-
-### 1.2 Node.js
+### 1.1 Node.js
 
 First install the Node.js and yarn version listed in `package.json`. Use the JavaScript Tool
 Manager [Volta](https://volta.sh/) or a Node Version Manager such as [NVM for Mac](https://github.com/nvm-sh/nvm).
 
-### 1.3 Installing dependencies
+### 1.2 How to install this template
 
-After successfully installing Node.js run `yarn` to install all the packages and then `yarn dev` to start developing all
-apps. To build a specific app add a scope to the yarn command, e.g: `yarn dev --scope=skeleton`.
+After successfully installing Node.js you can create an app using this skeleton. We recommend creating a new app
+using `npx` or `yarn create`, which sets up everything automatically for you. To create a project, run:
 
-### 1.4 TypeScript
+```bash
+npx @SirRedDAB/nextjs-skeleton
+# or
+yarn create @SirRedDAB/nextjs-skeleton
+```
+
+### 1.3 TypeScript
 
 This skeleton uses **TypeScript** out of the box. If you don't feel comfortable using it or don't need it, just rename
 all the files to their JavaScript equivalent (`.js` and `.jsx`) and uninstall TypeScript and all the `@types` listed in
 the `package.json`.
 
-### 1.5 Preact
+### 1.4 Preact
 
 Besides TypeScript, this skeleton uses **Preact** over React for production builds. This results in smaller build and
 the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below
 in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, {dev}) => {
+webpack: (config, { dev }) => {
 	if (!dev) {
 		Object.assign(config.resolve.alias, {
 			react: 'preact/compat',
@@ -80,10 +78,12 @@ webpack: (config, {dev}) => {
 
 ## 2. Scripts
 
-- Use `yarn` or `yarn install` to install the dependencies
-- Use `yarn dev` to start a local dev server at [http://localhost:3000](http://localhost:3000)
+- Use `yarn dev` to start a local dev server for all projects
+- Use `yarn dev --scope=<app>` to start a local dev server for that project on
+	e.g: [http://localhost:3000](http://localhost:3000)
+- To test the code using ESLint, use `yarn lint`
 - To build the application for production, use `yarn build`
-- To start a production server, use `yarn start`
+- To start a production server, open an app folder and use `yarn start`
 
 ## 3. Security
 
