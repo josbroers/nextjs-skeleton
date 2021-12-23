@@ -1,4 +1,5 @@
 {
+	"version": "0.5.2-canary.2",
 	"npmClient": "yarn",
 	"useWorkspaces": false,
 	"packages": [
@@ -11,6 +12,5 @@
 			"exact": true,
 			"preid": "canary"
 		}
-	},
-	"version": "0.5.2-canary.2"
+	}
 }
