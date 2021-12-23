@@ -1,7 +1,8 @@
 {
-	"name": "skeleton",
+	"name": "nextjs-skeleton",
 	"version": "0.5.1",
 	"main": "index.js",
+	"author": "Jos Broers",
 	"license": "MIT",
 	"scripts": {
 		"dev": "next dev --port 3000",
