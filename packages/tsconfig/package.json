@@ -1,8 +1,9 @@
 {
 	"name": "tsconfig",
 	"version": "0.5.1",
-	"license": "MIT",
 	"main": "index.js",
+	"author": "Jos Broers",
+	"license": "MIT",
 	"files": [
 		"base.json",
 		"nextjs.json",
