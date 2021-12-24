@@ -1,17 +1,26 @@
 {
-	"name": "@SirRedDAB/nextjs-skeleton",
+	"name": "create-nextjs-skeleton",
 	"version": "0.5.2-canary.4",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
+	"description": "A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) and has the following features:",
+	"bugs": {
+		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
+	},
+	"main": "scripts/cli.js",
+	"keywords": [
+		"nextjs",
+		"skeleton"
+	],
+	"bin": {
+		"create-nextjs-skeleton": "scripts/cli.js"
+	},
+	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"repository": {
-		"url": "https://github.com/SirRedDAB/nextjs-skeleton",
+		"url": "git+https://github.com/SirRedDAB/nextjs-skeleton.git",
 		"type": "git"
 	},
-	"publishConfig": {
-		"@SirRedDAB:registry": "https://npm.pkg.github.com"
-	},
-	"bin": "./scripts/cli.js",
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --no-cache --parallel --continue",
