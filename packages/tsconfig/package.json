@@ -1,6 +1,6 @@
 {
 	"name": "tsconfig",
-	"version": "0.5.2-canary.4",
+	"version": "0.5.2-canary.5",
 	"main": "index.js",
 	"author": "Jos Broers",
 	"license": "MIT",
