@@ -4,19 +4,17 @@
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
-	"description": "A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) and has the following features:",
+	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
+	"main": "scripts/create-nextjs-skeleton.ts",
+	"bin": "scripts/create-nextjs-skeleton.ts",
+	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"bugs": {
 		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
 	},
-	"main": "scripts/cli.js",
 	"keywords": [
 		"nextjs",
 		"skeleton"
 	],
-	"bin": {
-		"create-nextjs-skeleton": "scripts/cli.js"
-	},
-	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"repository": {
 		"url": "git+https://github.com/SirRedDAB/nextjs-skeleton.git",
 		"type": "git"
@@ -35,6 +33,7 @@
 		"packages/*"
 	],
 	"devDependencies": {
+		"chalk": "^5.0.0",
 		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"json": "^11.0.0",
