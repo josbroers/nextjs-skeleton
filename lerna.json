@@ -1,5 +1,5 @@
 {
-	"version": "0.5.2-canary.5",
+	"version": "0.5.2-canary.6",
 	"npmClient": "yarn",
 	"useWorkspaces": false,
 	"packages": [
