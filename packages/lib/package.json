@@ -1,6 +1,6 @@
 {
 	"name": "lib",
-	"version": "0.5.2-canary.5",
+	"version": "0.5.2-canary.6",
 	"main": "./index.ts",
 	"types": "./index.ts",
 	"author": "Jos Broers",
@@ -9,7 +9,7 @@
 		"lint": "eslint \"*.ts\""
 	},
 	"devDependencies": {
-		"tsconfig": "0.5.2-canary.5",
+		"tsconfig": "0.5.2-canary.6",
 		"typescript": "^4.5.4"
 	}
 }
