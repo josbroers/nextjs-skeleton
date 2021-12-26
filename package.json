@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"private": true,
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
-	"main": "scripts/create-nextjs-skeleton.ts",
-	"bin": "scripts/create-nextjs-skeleton.ts",
+	"main": "scripts/create-nextjs-skeleton.mjs",
+	"bin": "scripts/create-nextjs-skeleton.mjs",
 	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"bugs": {
 		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
