@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-skeleton",
-	"version": "0.5.2-canary.6",
+	"version": "0.5.2",
 	"main": "index.js",
 	"author": "Jos Broers",
 	"license": "MIT",
@@ -12,10 +12,10 @@
 		"sitemap": "next-sitemap --config sitemap.js"
 	},
 	"dependencies": {
-		"lib": "0.5.2-canary.6",
+		"lib": "0.5.2",
 		"next": "latest",
 		"preact": "^10.6.4",
-		"ui": "0.5.2-canary.6"
+		"ui": "0.5.2"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "^6.1.2",
@@ -25,7 +25,7 @@
 		"@types/react": "^17.0.37",
 		"@types/react-dom": "^17.0.11",
 		"autoprefixer": "^10.4.0",
-		"config": "0.5.2-canary.6",
+		"config": "0.5.2",
 		"foundation-sites": "^6.7.4",
 		"next-sitemap": "^1.6.203",
 		"next-transpile-modules": "^9.0.0",
