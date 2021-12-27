@@ -1,6 +1,6 @@
 {
 	"name": "tsconfig",
-	"version": "0.5.4",
+	"version": "1.0.0",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"files": [
