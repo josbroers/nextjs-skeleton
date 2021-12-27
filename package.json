@@ -1,6 +1,6 @@
 {
 	"name": "create-nextjs-skeleton",
-	"version": "0.5.4",
+	"version": "1.0.0",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
@@ -34,7 +34,7 @@
 	],
 	"devDependencies": {
 		"chalk": "^5.0.0",
-		"config": "0.5.4",
+		"config": "1.0.0",
 		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"json": "^11.0.0",
