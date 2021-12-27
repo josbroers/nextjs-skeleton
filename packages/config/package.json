@@ -1,13 +1,12 @@
 {
 	"name": "config",
 	"version": "0.5.3",
-	"main": "index.js",
 	"author": "Jos Broers",
 	"license": "MIT",
-	"files": [
-		"eslint-preset.js"
-	],
+	"main": "index.js",
 	"devDependencies": {
+		"@tailwindcss/forms": "^0.4.0",
+		"@tailwindcss/line-clamp": "^0.3.0",
 		"eslint-config-next": "^12.0.7",
 		"eslint-config-prettier": "^8.3.0",
 		"typescript": "^4.5.4"

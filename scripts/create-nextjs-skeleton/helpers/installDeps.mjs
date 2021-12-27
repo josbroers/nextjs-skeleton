@@ -7,7 +7,7 @@ const packageJson = {
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --no-cache --parallel --continue",
-		"clean": "rm -rf node_modules && rm yarn.lock",
+		"clean": "turbo run clean && sh scripts/clean.sh",
 		"lint": "turbo run lint",
 		"prepare": "husky install",
 		"upgrade_all": "yarn upgrade-interactive --latest",
@@ -17,6 +17,7 @@ const packageJson = {
 		"packages/*"
 	],
 	"devDependencies": {
+		"config": "0.5.3",
 		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"prettier": "^2.5.1",
@@ -40,6 +41,9 @@ const packageJson = {
 				"outputs": []
 			},
 			"dev": {
+				"cache": false
+			},
+			"clean": {
 				"cache": false
 			}
 		}
