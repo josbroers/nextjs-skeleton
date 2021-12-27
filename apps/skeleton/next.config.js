@@ -49,6 +49,11 @@ const nextConfig = {
 				destination: 'https://github.com/SirRedDAB/nextjs-skeleton',
 				permanent: true,
 			},
+			{
+				source: '/npm',
+				destination: 'https://www.npmjs.com/package/create-nextjs-skeleton',
+				permanent: true,
+			},
 		]
 	},
 }

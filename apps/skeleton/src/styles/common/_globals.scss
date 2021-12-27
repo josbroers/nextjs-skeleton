@@ -12,6 +12,10 @@ body {
 	}
 }
 
+::selection {
+	@apply bg-blue text-white;
+}
+
 a {
 	@apply no-underline text-inherit;
 }

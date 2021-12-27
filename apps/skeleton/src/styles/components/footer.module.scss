@@ -1,4 +1,12 @@
 .footer {
 	@apply border-t border-gray-200 items-center flex justify-center;
 	padding: calc(theme('spacing') * 3) 0;
+
+	a:not(:first-of-type) {
+		margin-left: calc(theme('spacing') * 2);
+	}
+
+	a svg {
+		@apply fill-gray-500 hover:fill-black transition-colors;
+	}
 }
