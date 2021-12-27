@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nextjs-skeleton.jobrodo.nl
+
+# Sitemaps
+Sitemap: https://nextjs-skeleton.jobrodo.nl/sitemap.xml
