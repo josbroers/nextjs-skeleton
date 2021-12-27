@@ -27,7 +27,6 @@ and has the following features:
 - [5. Search engine optimization](#5-search-engine-optimization)
     - [5.1 Meta](#51-meta)
     - [5.2 Schema](#52-schema)
-    - [5.3 Sitemap](#53-sitemap)
 - [6. Environment variables](#6-environment-variables)
 - [7. Vercel CLI](#7-vercel-cli)
 
@@ -74,7 +73,7 @@ webpack: (config, {dev}) => {
 - Use `yarn dev` to start a local dev server for all projects
 - Use `yarn dev --scope=<app>` to start a local dev server for that project on e.g: [http://localhost:3000](http://localhost:3000)
 - To test the code using ESLint, use `yarn lint`
-- To build the application for production, use `yarn build`
+- To build the application for production, use `yarn build lint --scope=<app>`
 - To start a production server, open an app folder and use `yarn start`
 
 ## 3. Security
@@ -100,10 +99,6 @@ I've created a `Meta.tsx` component which adds all the properties required regar
 ### 5.2 Schema
 
 I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also set up default props or feed it dynamically with data.
-
-### 5.3 Sitemap
-
-On production builds we generate a sitemap for the application. To configure the sitemap we need to set the `WEBSITE_URL` environment variable.
 
 ## 6. Environment variables
 
