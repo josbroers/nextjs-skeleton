@@ -1,6 +1,6 @@
 {
 	"name": "ui",
-	"version": "0.5.3",
+	"version": "0.5.4",
 	"main": "index.ts",
 	"author": "Jos Broers",
 	"license": "MIT",
@@ -11,7 +11,7 @@
 		"@types/react": "^17.0.37",
 		"@types/react-dom": "^17.0.11",
 		"next": "latest",
-		"tsconfig": "0.5.3",
+		"tsconfig": "0.5.4",
 		"typescript": "^4.5.4"
 	}
 }
