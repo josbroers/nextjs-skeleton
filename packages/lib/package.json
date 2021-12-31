@@ -6,7 +6,7 @@
 	"author": "Jos Broers",
 	"license": "MIT",
 	"scripts": {
-		"lint": "eslint \"*.ts\""
+		"lint": "eslint '*.ts'"
 	},
 	"devDependencies": {
 		"tsconfig": "1.0.0",

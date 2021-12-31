@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"private": true,
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
-	"main": "scripts/create-nextjs-skeleton/index.mjs",
-	"bin": "scripts/create-nextjs-skeleton/index.mjs",
+	"bin": {
+		"create-nextjs-skeleton": "scripts/create-nextjs-skeleton/create-project.js"
+	},
 	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"bugs": {
 		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
@@ -19,6 +20,9 @@
 		"url": "git+https://github.com/SirRedDAB/nextjs-skeleton.git",
 		"type": "git"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel --continue",
@@ -30,17 +34,17 @@
 	},
 	"workspaces": [
 		"apps/*",
-		"packages/*"
+		"packages/*",
+		"scripts/*"
 	],
 	"devDependencies": {
-		"chalk": "^5.0.0",
 		"config": "1.0.0",
 		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"json": "^11.0.0",
 		"lerna": "^4.0.0",
 		"prettier": "^2.5.1",
-		"turbo": "1.0.23"
+		"turbo": "1.0.24"
 	},
 	"volta": {
 		"node": "14.18.2",
