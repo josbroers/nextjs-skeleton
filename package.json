@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"private": true,
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
+	"main": "scripts/create-project/",
 	"bin": {
-		"create-nextjs-skeleton": "scripts/create-nextjs-skeleton/create-project.js"
+		"create-nextjs-skeleton": "scripts/create-project/"
 	},
 	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"bugs": {
@@ -37,6 +38,16 @@
 		"packages/*",
 		"scripts/*"
 	],
+	"dependencies": {
+		"adm-zip": "^0.5.9",
+		"arg": "^5.0.1",
+		"chalk": "^5.0.0",
+		"edit-json-file": "^1.7.0",
+		"esm": "^3.2.25",
+		"inquirer": "^8.2.0",
+		"listr": "^0.14.3",
+		"request": "^2.88.2"
+	},
 	"devDependencies": {
 		"config": "1.0.1-canary.1",
 		"eslint": "^8.5.0",

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn
+      - run: yarn install
       - run: yarn lint
 
   publish-gpr:
@@ -30,7 +30,7 @@ jobs:
       - name: Get tagname
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - run: yarn
+      - run: yarn install
       - run: yarn make_public
       - name: Publish canary
         env:
@@ -40,4 +40,5 @@ jobs:
       - name: Publish latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: "!contains(steps.vars.outputs.tag, 'canary')"
         run: yarn publish
