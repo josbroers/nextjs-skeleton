@@ -1,5 +1,7 @@
 # Next.js Skeleton
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/SirRedDAB/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
+
 A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app)
 and has the following features:
 
@@ -70,11 +72,11 @@ webpack: (config, {dev}) => {
 
 ## 2. Scripts
 
-- Use `yarn dev` to start a local dev server for all projects
-- Use `yarn dev --scope=<app>` to start a local dev server for that project on e.g: [http://localhost:3000](http://localhost:3000)
-- To test the code using ESLint, use `yarn lint`
-- To build the application for production, use `yarn build lint --scope=<app>`
-- To start a production server, open an app folder and use `yarn start`
+- Use `npm run dev` to start a local dev server for all projects
+- Use `npm run dev --scope=<app>` to start a local dev server for that project on e.g: [http://localhost:3000](http://localhost:3000)
+- To test the code using ESLint, use `npm run lint`
+- To build the application for production, use `npm run lint --scope=<app>`
+- To start a production server, open an app folder and use `npm run start`
 
 ## 3. Security
 

@@ -48,7 +48,7 @@ async function promptForMissingOptions(options) {
 		questions.push({
 			type: 'confirm',
 			name: 'runInstall',
-			message: 'Install dependencies with Yarn?',
+			message: 'Install dependencies?',
 			default: true,
 		});
 	}

@@ -3,7 +3,6 @@
 	"version": "1.0.1-canary.0",
 	"author": "Jos Broers",
 	"license": "MIT",
-	"private": true,
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
 	"bin": {
 		"create-nextjs-skeleton": "scripts/create-nextjs-skeleton/create-project.js"
@@ -28,27 +27,25 @@
 		"dev": "turbo run dev --parallel --continue",
 		"clean": "turbo run clean && sh scripts/clean.sh",
 		"lint": "turbo run lint",
-		"prepare": "husky install",
-		"upgrade_all": "yarn upgrade-interactive --latest",
-		"make_public": "json -I -f package.json -e 'this.private=false'"
+		"prepare": "husky install"
 	},
 	"workspaces": [
-		"apps/*",
-		"packages/*",
-		"scripts/*"
+		"apps/skeleton",
+		"packages/config",
+		"packages/lib",
+		"packages/tsconfig",
+		"packages/ui",
+		"scripts/create-nextjs-skeleton"
 	],
 	"devDependencies": {
-		"config": "1.0.1-canary.0",
-		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
-		"json": "^11.0.0",
 		"lerna": "^4.0.0",
 		"prettier": "^2.5.1",
 		"turbo": "1.0.24"
 	},
 	"volta": {
 		"node": "14.18.2",
-		"yarn": "1.22.17"
+		"npm": "8.3.0"
 	},
 	"engines": {
 		"node": ">=14.18.0"

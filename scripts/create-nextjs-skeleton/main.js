@@ -45,6 +45,7 @@ async function configure(options, resolve, reject) {
 		"lerna.json",
 		"LICENSE",
 		"yarn.lock",
+		"package-lock.json",
 		".github",
 		"scripts",
 	]
@@ -65,7 +66,6 @@ async function configure(options, resolve, reject) {
 		file.unset('keywords')
 		file.unset('repository')
 		file.unset('publishConfig')
-		file.unset('scripts.make_public')
 		file.pop('workspaces')
 		file.unset('devDependencies.json')
 		file.unset('devDependencies.lerna')
@@ -108,9 +108,9 @@ export async function createProject(options) {
 		}
 
 		try {
-			execSync('yarn -v', {stdio: 'pipe'})
+			execSync('npm -v', {stdio: 'pipe'})
 		} catch (error) {
-			console.error('%s Please install Yarn to install the dependencies', chalk.red.bold('ERROR'))
+			console.error('%s Please install Npm to install the dependencies', chalk.red.bold('ERROR'))
 			process.exit(1)
 		}
 	}
@@ -130,7 +130,7 @@ export async function createProject(options) {
 		},
 		{
 			title: 'Install dependencies',
-			task: () => execSync('yarn', {stdio: 'pipe'}),
+			task: () => execSync('npm i', {stdio: 'pipe'}),
 			skip: () => !options.runInstall ? 'Pass --install to automatically install dependencies' : undefined,
 		},
 		{
@@ -144,11 +144,10 @@ export async function createProject(options) {
 	console.log('%s Project ready', chalk.green.bold('DONE'))
 	console.log('You can use the following commands to develop, test and build:')
 	console.log()
-	console.log(`    - ${chalk.cyan('yarn dev')} ${chalk.dim('                     # Start a local dev server for all projects')}`)
-	console.log(`    - ${chalk.cyan('yarn dev --scope=<app>')} ${chalk.dim('       # Start a local dev server for a specific project')}`)
-	console.log(`    - ${chalk.cyan('yarn lint')} ${chalk.dim('                    # Test code using ESLint')}`)
-	console.log(`    - ${chalk.cyan('yarn build lint --scope=<app>')} ${chalk.dim('# Build the application for production')}`)
-	console.log(`    - ${chalk.cyan('yarn clean')} ${chalk.dim('                   # Remove `node_modules` and `yarn.lock`')}`)
-	console.log(`    - ${chalk.cyan('yarn upgrade_all')} ${chalk.dim('             # Upgrade all packages in the project to the latest version')}`)
+	console.log(`    - ${chalk.cyan('npm run dev')} ${chalk.dim('                     # Start a local dev server for all projects')}`)
+	console.log(`    - ${chalk.cyan('npm run dev --scope=<app>')} ${chalk.dim('       # Start a local dev server for a specific project')}`)
+	console.log(`    - ${chalk.cyan('npm run lint')} ${chalk.dim('                    # Test code using ESLint')}`)
+	console.log(`    - ${chalk.cyan('npm run build lint --scope=<app>')} ${chalk.dim('# Build the application for production')}`)
+	console.log(`    - ${chalk.cyan('npm run clean')} ${chalk.dim('                   # Remove `node_modules` and `yarn.lock`')}`)
 	return true;
 }

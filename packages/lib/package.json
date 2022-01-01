@@ -9,7 +9,7 @@
 		"lint": "eslint '*.ts'"
 	},
 	"devDependencies": {
-		"tsconfig": "1.0.1-canary.0",
+		"tsconfig": "*",
 		"typescript": "^4.5.4"
 	}
 }
