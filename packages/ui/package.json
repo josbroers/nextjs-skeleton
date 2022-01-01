@@ -1,17 +1,17 @@
 {
 	"name": "ui",
-	"version": "1.0.0",
+	"version": "1.0.1-canary.0",
 	"main": "index.ts",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"scripts": {
-		"lint": "eslint \"*.tsx\""
+		"lint": "eslint '*.tsx'"
 	},
 	"devDependencies": {
 		"@types/react": "^17.0.37",
 		"@types/react-dom": "^17.0.11",
 		"next": "latest",
-		"tsconfig": "1.0.0",
+		"tsconfig": "1.0.1-canary.0",
 		"typescript": "^4.5.4"
 	}
 }

@@ -1,11 +1,12 @@
 {
-	"version": "1.0.0",
+	"version": "1.0.1-canary.0",
 	"npmClient": "yarn",
 	"useWorkspaces": false,
 	"packages": [
 		".",
 		"apps/*",
-		"packages/*"
+		"packages/*",
+		"scripts/*"
 	],
 	"command": {
 		"version": {
