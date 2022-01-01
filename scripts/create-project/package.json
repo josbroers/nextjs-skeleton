@@ -1,0 +1,10 @@
+{
+	"name": "create-project",
+	"version": "1.0.1-canary.1",
+	"main": "index.js",
+	"author": "Jos Broers",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint '*.js'"
+	}
+}
