@@ -1,6 +1,6 @@
 {
 	"name": "create-project",
-	"version": "1.0.1-canary.0",
+	"version": "1.0.1-canary.1",
 	"main": "create-project.js",
 	"author": "Jos Broers",
 	"license": "MIT",
