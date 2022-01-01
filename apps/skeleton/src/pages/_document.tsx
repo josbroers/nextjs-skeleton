@@ -10,13 +10,9 @@ const Document = () => {
 	return (
 		<Html lang={options.inLanguage}>
 			<Head>
-				<link
-					rel="preload"
-					href="/fonts/Inter-roman.var.woff2"
-					type="font/woff2"
-					as="font"
-					crossOrigin=""
-				/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin=""/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
+				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=optional" rel="stylesheet"/>
 			</Head>
 			<body>
 			<Main/>

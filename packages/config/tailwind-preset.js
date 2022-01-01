@@ -27,9 +27,8 @@ const theme = {
 		purple: '#D400FF',
 	},
 	fontFamily: {
-		inter: 'inter',
-		interVar: 'inter var',
 		sans: [
+			'Inter',
 			'-apple-system',
 			'BlinkMacSystemFont',
 			'avenir next',
@@ -41,6 +40,7 @@ const theme = {
 			'roboto',
 			'noto',
 			'arial',
+			'sans-serif'
 		],
 		serif: [
 			'Iowan Old Style',
@@ -54,6 +54,7 @@ const theme = {
 			'Apple Color Emoji',
 			'Segoe UI Emoji',
 			'Segoe UI Symbol',
+			'serif'
 		],
 		mono: [
 			'Menlo',
