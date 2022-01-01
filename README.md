@@ -13,7 +13,7 @@ and has the following features:
 - [Sass](https://sass-lang.com/)
 - [Turborepo](https://turborepo.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [ReactSVG](https://www.npmjs.com/package/react-svg)
+- [SVGR](https://react-svgr.com/)
 
 ## Table of contents
 
@@ -44,6 +44,8 @@ After successfully installing Node.js you can create an app using this skeleton.
 
 ```bash
 npx create-nextjs-skeleton
+# or
+npm init nextjs-skeleton
 # or
 yarn create nextjs-skeleton
 ```
