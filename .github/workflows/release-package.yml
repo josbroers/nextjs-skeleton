@@ -2,7 +2,7 @@ name: nextjs-skeleton
 
 on:
   release:
-    types: [created]
+    types: [ created ]
 
 jobs:
   build:
@@ -25,10 +25,19 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: '14.x'
           registry-url: https://registry.npmjs.org/
+      - name: Get tagname
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - run: yarn
       - run: yarn make_public
-      - run: npm publish
+      - name: Publish canary
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: contains(steps.vars.outputs.tag, 'canary')
+        run: yarn publish --tag canary
+      - name: Publish latest
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: yarn publish
