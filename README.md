@@ -1,5 +1,7 @@
 # Next.js Skeleton
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/SirRedDAB/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
+
 A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app)
 and has the following features:
 
