@@ -1,6 +1,6 @@
 {
 	"name": "config",
-	"version": "1.0.1-canary.2",
+	"version": "1.0.1-canary.3",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"main": "index.js",
