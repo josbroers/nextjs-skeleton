@@ -1,53 +1,22 @@
 {
-	"name": "create-nextjs-skeleton",
+	"name": "nextjs-skeleton",
 	"version": "1.0.1",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
-	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
-	"main": "scripts/create-project/index.js",
-	"bin": {
-		"create-nextjs-skeleton": "scripts/create-project/index.js"
-	},
-	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
-	"bugs": {
-		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
-	},
-	"keywords": [
-		"nextjs",
-		"skeleton"
-	],
-	"repository": {
-		"url": "git+https://github.com/SirRedDAB/nextjs-skeleton.git",
-		"type": "git"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel --continue",
-		"clean": "turbo run clean && sh scripts/clean.sh",
+		"clean": "node scripts/clean/clean.mjs",
 		"lint": "turbo run lint",
 		"prepare": "husky install",
-		"upgrade_all": "yarn upgrade-interactive --latest",
-		"make_public": "json -I -f package.json -e 'this.private=false'"
+		"upgrade_all": "yarn upgrade-interactive --latest"
 	},
 	"workspaces": [
 		"apps/*",
 		"packages/*",
 		"scripts/*"
 	],
-	"dependencies": {
-		"adm-zip": "^0.5.9",
-		"arg": "^5.0.1",
-		"chalk": "^5.0.0",
-		"edit-json-file": "^1.7.0",
-		"esm": "^3.2.25",
-		"inquirer": "^8.2.0",
-		"listr": "^0.14.3",
-		"request": "^2.88.2"
-	},
 	"devDependencies": {
 		"config": "1.0.1",
 		"eslint": "^8.5.0",

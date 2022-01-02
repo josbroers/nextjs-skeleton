@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import arg from 'arg';
 import inquirer from 'inquirer';
-import {createProject} from './main';
+import {createProject} from "./main.mjs";
 
 function parseArgumentsIntoOptions(rawArgs) {
 	const args = arg(
@@ -63,8 +65,10 @@ async function promptForMissingOptions(options) {
 	};
 }
 
-export async function cli(args) {
+async function cli(args) {
 	let options = parseArgumentsIntoOptions(args);
 	options = await promptForMissingOptions(options);
 	await createProject(options);
 }
+
+cli(process.argv)

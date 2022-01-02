@@ -1,0 +1,12 @@
+{
+	"name": "clean",
+	"version": "1.0.1",
+	"main": "clean.mjs",
+	"author": "Jos Broers",
+	"license": "MIT",
+	"dependencies": {
+		"chalk": "^5.0.0",
+		"glob": "^7.2.0",
+		"listr": "^0.14.3"
+	}
+}

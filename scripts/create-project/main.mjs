@@ -2,41 +2,15 @@ import chalk from 'chalk';
 import fs from 'fs';
 import {execSync} from "child_process";
 import Listr from 'listr';
-import request from 'request';
-import admZip from "adm-zip";
 import editJsonFile from "edit-json-file";
 
-async function downloadFiles(options, resolve, reject) {
+async function downloadFiles(options) {
 	try {
-		const req = await request(
-				{
-					method: 'GET',
-					uri: 'https://github.com/SirRedDAB/nextjs-skeleton/archive/refs/heads/main.zip',
-					headers: {
-						"User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11",
-						"Referer": "http://www.nseindia.com/products/content/all_daily_reports.htm",
-						"Accept-Encoding": "gzip,deflate,sdch",
-						"encoding": "null",
-						"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-						"Cookie": "cookie"
-					}
-				}
-		);
-
-		req.pipe(fs.createWriteStream(`main.zip`));
-		req.on('end', function () {
-			new admZip(`main.zip`).extractAllTo(`./`, true);
-			fs.unlink(`main.zip`, error => {
-				if (error) throw new Error("Can't remove main.zip");
-			});
-			fs.rename('nextjs-skeleton-main', options.name, status => {
-				if (status) throw new Error("Can't rename the directory");
-				process.chdir(options.name)
-				resolve(true)
-			})
-		});
+		execSync(`git clone https://github.com/SirRedDAB/nextjs-skeleton.git ${options.name}`, {stdio: 'pipe'});
+		process.chdir(options.name)
 	} catch (error) {
-		reject(error)
+		console.error('%s Failed to download the files', chalk.red.bold('ERROR'))
+		process.exit(1)
 	}
 }
 
@@ -44,7 +18,6 @@ async function configure(options, resolve, reject) {
 	const remove = [
 		"lerna.json",
 		"LICENSE",
-		"yarn.lock",
 		".github",
 		"scripts",
 	]
@@ -95,13 +68,11 @@ export async function createProject(options) {
 		process.exit(1);
 	}
 
-	if (options.git) {
-		try {
-			execSync('git --version', {stdio: 'pipe'});
-		} catch (error) {
-			console.error('%s Please install git', chalk.red.bold('ERROR'));
-			process.exit(1);
-		}
+	try {
+		execSync('git --version', {stdio: 'pipe'});
+	} catch (error) {
+		console.error('%s Please install git', chalk.red.bold('ERROR'));
+		process.exit(1);
 	}
 
 	if (options.runInstall) {
@@ -121,9 +92,7 @@ export async function createProject(options) {
 	const tasks = new Listr([
 		{
 			title: 'Downloading files',
-			task: () => new Promise((resolve, reject) => {
-				downloadFiles(options, resolve, reject)
-			})
+			task: () => downloadFiles(options)
 		},
 		{
 			title: 'Configure project',
