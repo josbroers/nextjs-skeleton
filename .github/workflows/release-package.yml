@@ -30,6 +30,7 @@ jobs:
       - name: Get tagname
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - run: yarn make_public
       - run: yarn install
       - name: Publish canary
         env:
