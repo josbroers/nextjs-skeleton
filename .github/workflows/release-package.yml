@@ -36,9 +36,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: contains(steps.vars.outputs.tag, 'canary')
-        run: yarn publish scripts/create-project/package.json --tag canary
+        run: yarn publish scripts/create-project --tag canary
       - name: Publish latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: "!contains(steps.vars.outputs.tag, 'canary')"
-        run: yarn publish scripts/create-project/package.json
+        run: yarn publish scripts/create-project
