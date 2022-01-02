@@ -30,8 +30,8 @@ jobs:
       - name: Get tagname
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - run: yarn make_public
       - run: yarn install
+      - run: yarn make_public
       - name: Publish canary
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
