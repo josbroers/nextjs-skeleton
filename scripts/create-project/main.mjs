@@ -42,7 +42,6 @@ async function configure(options, resolve, reject) {
 		file.unset('publishConfig')
 		file.unset('scripts.make_public')
 		file.pop('workspaces')
-		file.unset('dependencies')
 		file.unset('devDependencies.json')
 		file.unset('devDependencies.lerna')
 		file.unset('volta')

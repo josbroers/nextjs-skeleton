@@ -10,6 +10,7 @@
 		"clean": "node scripts/clean/clean.mjs",
 		"lint": "turbo run lint",
 		"prepare": "husky install",
+		"make_public": "json -I -f package.json -e 'this.private=false'",
 		"upgrade_all": "yarn upgrade-interactive --latest"
 	},
 	"workspaces": [
