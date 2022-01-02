@@ -31,14 +31,13 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - run: yarn install
-      - run: yarn make_public
       - name: Publish canary
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: contains(steps.vars.outputs.tag, 'canary')
-        run: yarn publish --tag canary
+        run: yarn publish scripts/create-project/package.json --tag canary
       - name: Publish latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: "!contains(steps.vars.outputs.tag, 'canary')"
-        run: yarn publish
+        run: yarn publish scripts/create-project/package.json

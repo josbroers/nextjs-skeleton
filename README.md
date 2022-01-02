@@ -30,7 +30,7 @@ and has the following features:
     - [5.1 Meta](#51-meta)
     - [5.2 Schema](#52-schema)
 - [6. Environment variables](#6-environment-variables)
-- [7. Vercel CLI](#7-vercel-cli)
+- [7. Vercel CLI](#7-vercel-index)
 
 ## 1. Setup
 
