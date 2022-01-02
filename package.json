@@ -11,7 +11,8 @@
 		"lint": "turbo run lint",
 		"prepare": "husky install",
 		"make_public": "json -I -f package.json -e 'this.private=false'",
-		"upgrade_all": "yarn upgrade-interactive --latest"
+		"upgrade_all": "yarn upgrade-interactive --latest",
+		"copy_readme": "copy README.md scripts/create-project/"
 	},
 	"workspaces": [
 		"apps/*",
@@ -20,6 +21,7 @@
 	],
 	"devDependencies": {
 		"config": "1.0.2",
+		"copy": "^0.3.2",
 		"eslint": "^8.5.0",
 		"husky": "^7.0.4",
 		"json": "^11.0.0",
