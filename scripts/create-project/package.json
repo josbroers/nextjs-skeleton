@@ -1,6 +1,6 @@
 {
 	"name": "create-nextjs-skeleton",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "create.mjs",
 	"author": "Jos Broers",
 	"license": "MIT",
