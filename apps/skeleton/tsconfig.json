@@ -8,7 +8,6 @@
 			"@public/*": ["./public/*"],
 			"@data/*": ["./src/data/*"]
 		},
-		"incremental": true
 	},
 	"rootDir": "src",
 	"extends": "tsconfig/nextjs.json",
