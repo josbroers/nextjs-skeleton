@@ -17,20 +17,21 @@ and has the following features:
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
-- [1. Setup](#1-setup)
-    - [1.1 Node.js](#11-nodejs)
-    - [1.2 How to install this template](#12-how-to-install-this-template)
-    - [1.3 TypeScript](#13-typescript)
-    - [1.4 Preact](#14-preact)
-- [2. Scripts](#2-scripts)
-- [3. Security](#3-security)
-- [4. Styling](#4-styling)
-- [5. Search engine optimization](#5-search-engine-optimization)
-    - [5.1 Meta](#51-meta)
-    - [5.2 Schema](#52-schema)
-- [6. Environment variables](#6-environment-variables)
-- [7. Vercel CLI](#7-vercel-cli)
+- [Next.js Skeleton](#nextjs-skeleton)
+	- [Table of contents](#table-of-contents)
+	- [1. Setup](#1-setup)
+		- [1.1 Node.js](#11-nodejs)
+		- [1.2 How to install this template](#12-how-to-install-this-template)
+		- [1.3 TypeScript](#13-typescript)
+		- [1.4 Preact](#14-preact)
+	- [2. Scripts](#2-scripts)
+	- [3. Security](#3-security)
+	- [4. Styling](#4-styling)
+	- [5. Search engine optimization](#5-search-engine-optimization)
+		- [5.1 Meta](#51-meta)
+		- [5.2 Schema](#52-schema)
+	- [6. Environment variables](#6-environment-variables)
+	- [7. Vercel CLI](#7-vercel-cli)
 
 ## 1. Setup
 
@@ -59,12 +60,12 @@ This skeleton uses **TypeScript** out of the box. If you don't feel comfortable 
 Besides TypeScript, this skeleton uses **Preact** over React for production builds. This results in smaller build and the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, {dev}) => {
+webpack: (config, { dev }) => {
 	if (!dev) {
 		Object.assign(config.resolve.alias, {
 			react: 'preact/compat',
 			'react-dom/test-utils': 'preact/test-utils',
-			'react-dom': 'preact/compat'
+			'react-dom': 'preact/compat',
 		})
 	}
 

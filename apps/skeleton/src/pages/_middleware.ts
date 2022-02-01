@@ -4,6 +4,7 @@ import {Headers} from 'lib'
 
 /**
  * Add security headers
+ *
  * @constructor
  */
 const Response = () => {
@@ -23,6 +24,7 @@ const Response = () => {
  * - Modify the response by rewriting
  * - Redirecting, adding headers
  * - Or even streaming HTML
+ *
  * @param req
  * @param ev
  * @constructor

@@ -6,12 +6,14 @@
 			"@lib/*": ["./src/lib/*"],
 			"@styles/*": ["./src/styles/*"],
 			"@public/*": ["./public/*"],
-			"@data/*": ["./src/data/*"]
-		},
+			"@data/*": ["./src/data/*"],
+			"lib": ["../../packages/lib/"],
+			"ui": ["../../packages/ui/"],
+			"config": ["../../packages/config/"]
+		}
 	},
 	"rootDir": "src",
-	"extends": "tsconfig/nextjs.json",
-	"include": [
-		"types.d.ts", "**/*.ts", "**/*.tsx"],
+	"extends": "../../packages/tsconfig/nextjs.json",
+	"include": ["types.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
 }

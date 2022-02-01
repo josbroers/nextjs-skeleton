@@ -1,3 +1,4 @@
+/* Default viewport styling */
 html,
 body {
 	@apply font-sans;
@@ -17,6 +18,12 @@ a {
 	@apply box-border;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	letter-spacing: -.04em;
+/* Default header styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -0.04em;
 }

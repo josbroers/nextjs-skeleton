@@ -11,6 +11,7 @@ import type {AppProps} from 'next/app'
  * - Custom error handling using componentDidCatch
  * - Inject additional data into pages
  * - Add global CSS
+ *
  * @param Component
  * @param pageProps
  * @constructor

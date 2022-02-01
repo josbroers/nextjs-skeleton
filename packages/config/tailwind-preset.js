@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors'),
-		forms = require('@tailwindcss/forms'),
-		lineClamp = require('@tailwindcss/line-clamp')
+	forms = require('@tailwindcss/forms'),
+	lineClamp = require('@tailwindcss/line-clamp')
 
 const theme = {
 	borderRadius: {
@@ -40,7 +40,7 @@ const theme = {
 			'roboto',
 			'noto',
 			'arial',
-			'sans-serif'
+			'sans-serif',
 		],
 		serif: [
 			'Iowan Old Style',
@@ -54,26 +54,16 @@ const theme = {
 			'Apple Color Emoji',
 			'Segoe UI Emoji',
 			'Segoe UI Symbol',
-			'serif'
+			'serif',
 		],
-		mono: [
-			'Menlo',
-			'Consolas',
-			'Monaco',
-			'Liberation Mono',
-			'Lucida Console',
-			'monospace'
-		],
+		mono: ['Menlo', 'Consolas', 'Monaco', 'Liberation Mono', 'Lucida Console', 'monospace'],
 	},
 	spacing: '0.625rem', // 10px
 }
 
-const plugins = [
-	forms,
-	lineClamp
-]
+const plugins = [forms, lineClamp]
 
 module.exports = {
 	theme,
-	plugins
+	plugins,
 }

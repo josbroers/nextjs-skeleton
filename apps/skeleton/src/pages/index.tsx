@@ -1,9 +1,7 @@
-import {Code} from 'ui'
+import {Code, ExternalLink, Container} from 'ui'
 import styles from '@styles/pages/home.module.scss'
-import {ExternalLink} from 'ui'
 import Meta from '@components/Meta'
 import Schema from '@components/Schema'
-import Container from "ui/Container";
 
 const Home = () => (
 	<Container size={"small"}>

@@ -1,6 +1,6 @@
 {
 	"name": "lib",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"main": "./index.ts",
 	"types": "./index.ts",
 	"author": "Jos Broers",
@@ -9,7 +9,6 @@
 		"lint": "eslint '*.ts'"
 	},
 	"devDependencies": {
-		"tsconfig": "1.0.5",
-		"typescript": "^4.5.4"
+		"typescript": "^4.5.5"
 	}
 }
