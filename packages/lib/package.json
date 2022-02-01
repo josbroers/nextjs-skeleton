@@ -9,7 +9,6 @@
 		"lint": "eslint '*.ts'"
 	},
 	"devDependencies": {
-		"tsconfig": "1.0.5",
-		"typescript": "^4.5.4"
+		"typescript": "^4.5.5"
 	}
 }

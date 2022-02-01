@@ -2,12 +2,7 @@
 	"version": "1.0.5",
 	"npmClient": "yarn",
 	"useWorkspaces": false,
-	"packages": [
-		".",
-		"apps/*",
-		"packages/*",
-		"scripts/*"
-	],
+	"packages": [".", "apps/*", "packages/*", "scripts/*"],
 	"command": {
 		"version": {
 			"exact": true,

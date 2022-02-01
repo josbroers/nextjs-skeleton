@@ -1,9 +1,9 @@
-import React from "react";
 import {GetServerSideProps} from "next"
 
 /**
  * Create a sitemap on page load
  * Docs: https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
+ *
  * @constructor
  */
 const Sitemap = () => {

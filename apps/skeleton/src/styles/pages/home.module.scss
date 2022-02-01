@@ -17,6 +17,7 @@
 .cta-link {
 	@apply text-blue;
 
+	/* Remove underline for multiple psuedo options */
 	&,
 	&:hover,
 	&:focus,
