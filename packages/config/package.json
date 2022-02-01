@@ -1,14 +1,14 @@
 {
 	"name": "config",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"main": "index.js",
 	"devDependencies": {
 		"@tailwindcss/forms": "^0.4.0",
-		"@tailwindcss/line-clamp": "^0.3.0",
-		"eslint-config-next": "^12.0.7",
+		"@tailwindcss/line-clamp": "^0.3.1",
+		"eslint-config-next": "^12.0.10",
 		"eslint-config-prettier": "^8.3.0",
-		"typescript": "^4.5.4"
+		"typescript": "^4.5.5"
 	}
 }
