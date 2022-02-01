@@ -4,6 +4,12 @@ import arg from 'arg'
 import inquirer from 'inquirer'
 import { createProject } from './main.mjs'
 
+/**
+ * Pass arguments into CLI options
+ *
+ * @param {*} rawArgs
+ * @returns
+ */
 function parseArgumentsIntoOptions(rawArgs) {
 	const args = arg(
 		{
@@ -24,10 +30,17 @@ function parseArgumentsIntoOptions(rawArgs) {
 	}
 }
 
+/**
+ * Show prompt for missing options
+ *
+ * @param {*} options
+ * @returns
+ */
 async function promptForMissingOptions(options) {
 	const defaultTemplate = 'nextjs-skeleton',
 		questions = []
 
+	// Specify a projectname
 	if (!options.name) {
 		questions.push({
 			type: 'string',
@@ -37,6 +50,7 @@ async function promptForMissingOptions(options) {
 		})
 	}
 
+	// Ask to initialize a git repository
 	if (!options.git) {
 		questions.push({
 			type: 'confirm',
@@ -46,6 +60,7 @@ async function promptForMissingOptions(options) {
 		})
 	}
 
+	// Ask to install dependencies with Yarn
 	if (!options.runInstall) {
 		questions.push({
 			type: 'confirm',
@@ -55,6 +70,7 @@ async function promptForMissingOptions(options) {
 		})
 	}
 
+	// Add answers to prompt
 	const answers = await inquirer.prompt(questions)
 
 	return {
@@ -65,6 +81,11 @@ async function promptForMissingOptions(options) {
 	}
 }
 
+/**
+ * Execute script
+ *
+ * @param {*} args
+ */
 async function cli(args) {
 	let options = parseArgumentsIntoOptions(args)
 	options = await promptForMissingOptions(options)

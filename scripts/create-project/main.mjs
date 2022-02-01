@@ -4,6 +4,11 @@ import { execSync } from 'child_process'
 import Listr from 'listr'
 import editJsonFile from 'edit-json-file'
 
+/**
+ * Download the files from git
+ *
+ * @param {*} options
+ */
 async function downloadFiles(options) {
 	try {
 		execSync(`git clone https://github.com/SirRedDAB/nextjs-skeleton.git ${options.name}`, {
@@ -16,22 +21,32 @@ async function downloadFiles(options) {
 	}
 }
 
+/**
+ * Configure the project
+ *
+ * @param {*} options
+ * @param {*} resolve
+ * @param {*} reject
+ */
 async function configure(options, resolve, reject) {
 	const remove = ['lerna.json', 'LICENSE', '.github', '.git']
 
 	try {
+		// Remove files and directories
 		remove.forEach(object => {
 			fs.rm(object, { force: true, recursive: true }, error => {
 				if (error) throw new Error(`Can't remove ${object}`)
 			})
 		})
 
+		// Remove `yarn.lock` if chosen not to install dependencies
 		if (!options.runInstall) {
 			fs.rm('yarn.lock', { force: true, recursive: true }, error => {
 				if (error) throw new Error(`Can't remove yarn.lock`)
 			})
 		}
 
+		// Remove all scripts except clean
 		fs.readdir('scripts', (error, files) => {
 			if (error) throw new Error(`Can't remove scripts`)
 
@@ -44,6 +59,7 @@ async function configure(options, resolve, reject) {
 			})
 		})
 
+		// Change the main `package.json`
 		const file = editJsonFile('package.json')
 		file.set('name', options.name)
 		file.set('private', true)
@@ -69,6 +85,9 @@ async function configure(options, resolve, reject) {
 	}
 }
 
+/**
+ * Initialize a git repository
+ */
 async function initGit() {
 	try {
 		execSync('git init && git add . && git commit -m "Initial commit"', { stdio: 'pipe' })
@@ -78,12 +97,20 @@ async function initGit() {
 	}
 }
 
+/**
+ * Create a new directory using the projectname
+ *
+ * @param {*} options
+ * @returns
+ */
 export async function createProject(options) {
+	// Exit when directory already exists
 	if (fs.existsSync(options.name)) {
 		console.error('%s Directory already exists', chalk.red.bold('ERROR'))
 		process.exit(1)
 	}
 
+	// Exit when git is not installed
 	try {
 		execSync('git --version', { stdio: 'pipe' })
 	} catch (error) {
@@ -92,6 +119,7 @@ export async function createProject(options) {
 	}
 
 	if (options.runInstall) {
+		// Check if Node.js 14 or higher is installed
 		if (
 			!execSync('node -v', { stdio: 'pipe' })
 				.toString()
@@ -101,6 +129,7 @@ export async function createProject(options) {
 			process.exit(1)
 		}
 
+		// Check if Yarn is installed
 		try {
 			execSync('yarn -v', { stdio: 'pipe' })
 		} catch (error) {
@@ -109,6 +138,9 @@ export async function createProject(options) {
 		}
 	}
 
+	/**
+	 * Run tasks in specific order
+	 */
 	const tasks = new Listr([
 		{
 			title: 'Downloading files',
@@ -134,6 +166,7 @@ export async function createProject(options) {
 		},
 	])
 
+	// Execute tasks and log results
 	await tasks.run()
 	console.log('%s Project ready', chalk.green.bold('DONE'))
 	console.log('You can use the following commands to develop, test and build:')

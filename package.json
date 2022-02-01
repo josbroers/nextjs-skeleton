@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-skeleton",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"private": true,
@@ -20,7 +20,7 @@
 		"scripts/*"
 	],
 	"devDependencies": {
-		"config": "1.0.5",
+		"config": "1.0.6",
 		"copy": "^0.3.2",
 		"eslint": "^8.8.0",
 		"husky": "^7.0.4",
