@@ -7,6 +7,7 @@ import {ExternalLink} from 'ui'
 
 /**
  * Renders the `<footer>` element
+ *
  * @constructor
  */
 const Footer = () => (

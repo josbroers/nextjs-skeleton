@@ -1,9 +1,9 @@
 import {Meta as DefaultMeta} from "ui"
-import type {Data} from "ui/Meta"
+import type {MetaData} from "ui"
 import options from '@data/seo.json'
 import {useEffect, useState} from "react";
 
-const defaultProps: Data = {
+const defaultProps: MetaData = {
 	title: options.title,
 	keywords: options.keywords,
 	description: options.description,
@@ -16,10 +16,11 @@ const defaultProps: Data = {
 
 /**
  * Renders all relevant SEO `<meta>` and `<link>` elements
+ *
  * @param props
  * @constructor
  */
-const Meta = (props: Data) => {
+const Meta = (props: MetaData) => {
 	const [origin, setOrigin] = useState('')
 
 	useEffect(() => {

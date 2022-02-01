@@ -1,7 +1,7 @@
+import React from 'react'
 import Footer from './Footer'
 import styles from '@styles/components/layout.module.scss'
 import {GoogleTagManager} from 'ui'
-import React from 'react'
 
 type Data = {
 	children: React.ReactNode
@@ -9,6 +9,7 @@ type Data = {
 
 /**
  * Default Layout
+ *
  * @param children
  * @constructor
  */

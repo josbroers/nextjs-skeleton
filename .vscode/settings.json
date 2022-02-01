@@ -1,0 +1,24 @@
+{
+	"editor.tabSize": 2,
+	"editor.fontLigatures": true,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.lineHeight": 25,
+	"bashBeautify.tabSize": 2,
+	"better-comments.highlightPlainText": true,
+	"reactSnippets.settings.prettierEnabled": true,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.packageManager": "yarn",
+	"html.format.endWithNewline": true,
+	"html-css-class-completion.enableEmmetSupport": true,
+	"markdown.preview.breaks": true,
+	"prettier.configPath": ".prettierrc",
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	"sass.disableUnitCompletion": false,
+	"tslint.packageManager": "yarn"
+}

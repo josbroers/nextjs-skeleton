@@ -1,8 +1,8 @@
 import {Schema as DefaultSchema} from "ui"
-import type {Data} from "ui/Schema"
+import type {SchemaData} from "ui"
 import options from '@data/seo.json'
 
-const defaultProps: Data = {
+const defaultProps: SchemaData = {
 	siteName: options.siteName,
 	siteDescription: options.description,
 	inLanguage: options.inLanguage,
@@ -10,10 +10,11 @@ const defaultProps: Data = {
 
 /**
  * Renders WebSite and WebPage schema
+ *
  * @param props
  * @constructor
  */
-const Schema = (props: Data) => (
+const Schema = (props: SchemaData) => (
 	<DefaultSchema {...props}/>
 )
 
