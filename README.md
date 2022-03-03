@@ -107,7 +107,7 @@ I've also created a `Schema.tsx` component to add schema markup for WebSite and 
 
 ## 6. Environment variables
 
-Next has built-in support for environment variables and the option to expose variables to the browser by prefixing with `NEXT_PUBLIC_`. In this skeleton we use a variable for the Google Tag Manager container-ID: `NEXT_PUBLIC_GTM`. Setup this variable inside a `.env` file to start using Google Tag Manager.
+Next has built-in support for environment variables and the option to expose variables to the browser by prefixing with `NEXT_PUBLIC_`.
 
 ## 7. Vercel CLI
 
