@@ -1,7 +1,7 @@
 {
 	"title": "Next.js Skeleton: ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
 	"keywords": "next, next.js, skeleton, turborepo",
-	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more! ",
+	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
 	"type": "website",
 	"siteName": "Next.js Skeleton",
 	"imageSource": "/thumbnail.png",

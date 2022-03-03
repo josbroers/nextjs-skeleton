@@ -2,7 +2,6 @@
  * Export components
  */
 export {default as ExternalLink} from "./ExternalLink"
-export {default as GoogleTagManager} from "./GoogleTagManager"
 export {default as Meta} from "./Meta"
 export {default as Schema} from "./Schema"
 export {default as Code} from "./Code"
