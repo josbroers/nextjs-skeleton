@@ -4,12 +4,15 @@
  */
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
     media-src 'none';
-    connect-src *;
+    connect-src 'self' vitals.vercel-insights.com;
     font-src 'self' *.gstatic.com;
+    object-src 'none';
+    base-uri 'none';
+    require-trusted-types-for 'script';
   `
 
 /**
