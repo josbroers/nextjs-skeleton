@@ -20,6 +20,14 @@ const nextConfig = {
 	eslint: {
 		dirs: ['src'],
 	},
+	compiler: {
+		removeConsole: {
+			exclude: ['error'],
+		},
+	},
+	experimental: {
+		outputStandalone: true,
+	},
 	webpack: (config, { dev }) => {
 		if (!dev) {
 			Object.assign(config.resolve.alias, {
