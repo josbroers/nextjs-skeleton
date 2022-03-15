@@ -21,9 +21,7 @@ const nextConfig = {
 		dirs: ['src'],
 	},
 	compiler: {
-		removeConsole: {
-			exclude: ['error'],
-		},
+		removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
 	},
 	experimental: {
 		outputStandalone: true,
