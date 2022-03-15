@@ -20,12 +20,12 @@ const Schema = (props: Data) => {
 		[origin, setOrigin] = useState('')
 
 	useEffect(() => {
-		if (window.location.href !== currentUrl) {
-			setCurrentUrl(window.location.href)
-		}
-
 		if (window.location.origin !== origin) {
 			setOrigin(window.location.origin)
+		}
+
+		if (window.location.href !== currentUrl) {
+			setCurrentUrl(origin + encodeURIComponent(window.location.pathname))
 		}
 	}, [currentUrl, origin])
 
