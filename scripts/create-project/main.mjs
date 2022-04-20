@@ -16,7 +16,9 @@ async function downloadFiles(options) {
 		})
 		process.chdir(options.name)
 	} catch (error) {
+		console.log()
 		console.error('%s Failed to download the files', chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 }
@@ -86,18 +88,6 @@ async function configure(options, resolve, reject) {
 }
 
 /**
- * Initialize a git repository
- */
-async function initGit() {
-	try {
-		execSync('git init && git add . && git commit -m "Initial commit"', {stdio: 'pipe'})
-	} catch (error) {
-		console.error('%s Failed to initialize git', chalk.red.bold('ERROR'))
-		process.exit(1)
-	}
-}
-
-/**
  * Create a new directory using the project-name
  *
  * @param {*} options
@@ -106,7 +96,9 @@ async function initGit() {
 export async function createProject(options) {
 	// Exit when directory already exists
 	if (fs.existsSync(options.name)) {
+		console.log()
 		console.error('%s Directory already exists', chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -114,7 +106,9 @@ export async function createProject(options) {
 	try {
 		execSync('git --version', {stdio: 'pipe'})
 	} catch (error) {
+		console.log()
 		console.error('%s Please install git', chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -125,7 +119,9 @@ export async function createProject(options) {
 				.toString()
 				.match(/v14\.\d*\.\d*/g)
 		) {
+			console.log()
 			console.error('%s Please install Node.js 14 or higher', chalk.red.bold('ERROR'))
+			console.log()
 			process.exit(1)
 		}
 
@@ -133,7 +129,9 @@ export async function createProject(options) {
 		try {
 			execSync('yarn -v', {stdio: 'pipe'})
 		} catch (error) {
+			console.log()
 			console.error('%s Please install Yarn to install the dependencies', chalk.red.bold('ERROR'))
+			console.log()
 			process.exit(1)
 		}
 	}
@@ -159,45 +157,10 @@ export async function createProject(options) {
 			skip: () =>
 				!options.runInstall ? 'Pass --install to automatically install dependencies' : undefined,
 		},
-		{
-			title: 'Initialize git',
-			task: () => initGit(options),
-			enabled: () => options.git,
-		},
 	])
 
 	// Execute tasks and log results
-	await tasks.run()
-	console.log('%s Project ready', chalk.green.bold('DONE'))
-	console.log('You can use the following commands to develop, test and build:')
 	console.log()
-	console.log(
-		`    - ${chalk.cyan('yarn dev')} ${chalk.dim(
-			'                     # Start a local dev server for all projects'
-		)}`
-	)
-	console.log(
-		`    - ${chalk.cyan('yarn dev --scope=<app>')} ${chalk.dim(
-			'       # Start a local dev server for a specific project'
-		)}`
-	)
-	console.log(
-		`    - ${chalk.cyan('yarn lint')} ${chalk.dim('                    # Test code using ESLint')}`
-	)
-	console.log(
-		`    - ${chalk.cyan('yarn build lint --scope=<app>')} ${chalk.dim(
-			'# Build the application for production'
-		)}`
-	)
-	console.log(
-		`    - ${chalk.cyan('yarn clean')} ${chalk.dim(
-			'                   # Remove `node_modules` and `yarn.lock`'
-		)}`
-	)
-	console.log(
-		`    - ${chalk.cyan('yarn upgrade_all')} ${chalk.dim(
-			'             # Upgrade all packages in the project to the latest version'
-		)}`
-	)
+	await tasks.run()
 	return true
 }
