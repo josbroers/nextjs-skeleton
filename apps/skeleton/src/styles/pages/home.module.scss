@@ -6,12 +6,8 @@
 .title {
 	@apply font-extrabold;
 	margin: 0;
-	font-size: rem-calc(60px);
+	font-size: fluid-range(60px, 90px, 640px, 768px);
 	line-height: 1.15;
-
-	@screen md {
-		font-size: rem-calc(90px);
-	}
 }
 
 .cta-link {
@@ -28,9 +24,9 @@
 
 .description {
 	@apply leading-normal;
-	font-size: rem-calc(22px);
 	margin: calc(theme('spacing') * 6.5) 0 0;
 
+	&,
 	code {
 		font-size: rem-calc(22px);
 	}
