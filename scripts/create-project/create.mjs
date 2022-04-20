@@ -2,7 +2,10 @@
 
 import arg from 'arg'
 import inquirer from 'inquirer'
-import { createProject } from './main.mjs'
+import {createProject} from './main.mjs'
+import chalk from 'chalk'
+
+let templateName = 'nextjs-skeleton'
 
 /**
  * Pass arguments into CLI options
@@ -13,9 +16,7 @@ import { createProject } from './main.mjs'
 function parseArgumentsIntoOptions(rawArgs) {
 	const args = arg(
 		{
-			'--git': Boolean,
 			'--install': Boolean,
-			'-g': '--git',
 			'-i': '--install',
 		},
 		{
@@ -25,7 +26,6 @@ function parseArgumentsIntoOptions(rawArgs) {
 
 	return {
 		name: args._[0],
-		git: args['--git'] || false,
 		runInstall: args['--install'] || false,
 	}
 }
@@ -37,26 +37,15 @@ function parseArgumentsIntoOptions(rawArgs) {
  * @returns
  */
 async function promptForMissingOptions(options) {
-	const defaultTemplate = 'nextjs-skeleton',
-		questions = []
+	const questions = []
 
-	// Specify a projectname
+	// Specify a project-name
 	if (!options.name) {
 		questions.push({
 			type: 'string',
 			name: 'name',
 			message: 'Please choose a name for your project',
-			default: defaultTemplate,
-		})
-	}
-
-	// Ask to initialize a git repository
-	if (!options.git) {
-		questions.push({
-			type: 'confirm',
-			name: 'git',
-			message: 'Initialize a git repository?',
-			default: true,
+			default: templateName,
 		})
 	}
 
@@ -73,10 +62,11 @@ async function promptForMissingOptions(options) {
 	// Add answers to prompt
 	const answers = await inquirer.prompt(questions)
 
+	templateName = options.name || answers.name
+
 	return {
 		...options,
 		name: options.name || answers.name,
-		git: options.git || answers.git,
 		runInstall: options.runInstall || answers.runInstall,
 	}
 }
@@ -87,9 +77,52 @@ async function promptForMissingOptions(options) {
  * @param {*} args
  */
 async function cli(args) {
+	console.log()
 	let options = parseArgumentsIntoOptions(args)
 	options = await promptForMissingOptions(options)
 	await createProject(options)
 }
 
-cli(process.argv)
+cli(process.argv).then(() => {
+	console.log()
+	console.log('%s Project ready', chalk.green.bold('DONE'))
+	console.log()
+	console.log(`%s Use ${chalk.cyan(`cd ${templateName}`)} to open your new Next.js project`, chalk.magenta.bold('INFO'))
+	console.log(`%s Use ${chalk.cyan('git init && git add . && git commit -m "Initial commit"')} to initialize a git repository`, chalk.magenta.bold('INFO'))
+	console.log()
+	console.log('You can use the following commands to develop, test and build:')
+	console.log()
+	console.log(
+		`    - ${chalk.cyan('yarn dev')} ${chalk.dim(
+			'                     # Start a local dev server for all projects'
+		)}`
+	)
+	console.log(
+		`    - ${chalk.cyan('yarn dev --scope=<app>')} ${chalk.dim(
+			'       # Start a local dev server for a specific project'
+		)}`
+	)
+	console.log(
+		`    - ${chalk.cyan('yarn lint')} ${chalk.dim('                    # Test code using ESLint')}`
+	)
+	console.log(
+		`    - ${chalk.cyan('yarn build lint --scope=<app>')} ${chalk.dim(
+			'# Build the application for production'
+		)}`
+	)
+	console.log(
+		`    - ${chalk.cyan('yarn clean')} ${chalk.dim(
+			'                   # Remove `node_modules` and `yarn.lock`'
+		)}`
+	)
+	console.log(
+		`    - ${chalk.cyan('yarn upgrade_all')} ${chalk.dim(
+			'             # Upgrade all packages in the project to the latest version'
+		)}`
+	)
+	console.log()
+}).catch(() => {
+	console.log()
+	console.log('%s Something went wrong', chalk.red.bold('ERROR'))
+	console.log()
+})
