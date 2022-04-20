@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import fs from 'fs'
-import { execSync } from 'child_process'
+import {execSync} from 'child_process'
 import Listr from 'listr'
 import editJsonFile from 'edit-json-file'
 
@@ -29,19 +29,19 @@ async function downloadFiles(options) {
  * @param {*} reject
  */
 async function configure(options, resolve, reject) {
-	const remove = ['lerna.json', 'LICENSE', '.github', '.git']
+	const remove = ['lerna.json', 'LICENSE', '.github', '.git', 'patches']
 
 	try {
 		// Remove files and directories
 		remove.forEach(object => {
-			fs.rm(object, { force: true, recursive: true }, error => {
+			fs.rm(object, {force: true, recursive: true}, error => {
 				if (error) throw new Error(`Can't remove ${object}`)
 			})
 		})
 
 		// Remove `yarn.lock` if chosen not to install dependencies
 		if (!options.runInstall) {
-			fs.rm('yarn.lock', { force: true, recursive: true }, error => {
+			fs.rm('yarn.lock', {force: true, recursive: true}, error => {
 				if (error) throw new Error(`Can't remove yarn.lock`)
 			})
 		}
@@ -52,7 +52,7 @@ async function configure(options, resolve, reject) {
 
 			files.forEach(file => {
 				if (file !== 'clean') {
-					fs.rm(`scripts/${file}`, { force: true, recursive: true }, error => {
+					fs.rm(`scripts/${file}`, {force: true, recursive: true}, error => {
 						if (error) throw new Error(`Can't remove ${file}`)
 					})
 				}
@@ -90,7 +90,7 @@ async function configure(options, resolve, reject) {
  */
 async function initGit() {
 	try {
-		execSync('git init && git add . && git commit -m "Initial commit"', { stdio: 'pipe' })
+		execSync('git init && git add . && git commit -m "Initial commit"', {stdio: 'pipe'})
 	} catch (error) {
 		console.error('%s Failed to initialize git', chalk.red.bold('ERROR'))
 		process.exit(1)
@@ -98,7 +98,7 @@ async function initGit() {
 }
 
 /**
- * Create a new directory using the projectname
+ * Create a new directory using the project-name
  *
  * @param {*} options
  * @returns
@@ -112,7 +112,7 @@ export async function createProject(options) {
 
 	// Exit when git is not installed
 	try {
-		execSync('git --version', { stdio: 'pipe' })
+		execSync('git --version', {stdio: 'pipe'})
 	} catch (error) {
 		console.error('%s Please install git', chalk.red.bold('ERROR'))
 		process.exit(1)
@@ -121,7 +121,7 @@ export async function createProject(options) {
 	if (options.runInstall) {
 		// Check if Node.js 14 or higher is installed
 		if (
-			!execSync('node -v', { stdio: 'pipe' })
+			!execSync('node -v', {stdio: 'pipe'})
 				.toString()
 				.match(/v14\.\d*\.\d*/g)
 		) {
@@ -131,7 +131,7 @@ export async function createProject(options) {
 
 		// Check if Yarn is installed
 		try {
-			execSync('yarn -v', { stdio: 'pipe' })
+			execSync('yarn -v', {stdio: 'pipe'})
 		} catch (error) {
 			console.error('%s Please install Yarn to install the dependencies', chalk.red.bold('ERROR'))
 			process.exit(1)
@@ -155,7 +155,7 @@ export async function createProject(options) {
 		},
 		{
 			title: 'Install dependencies',
-			task: () => execSync('yarn', { stdio: 'pipe' }),
+			task: () => execSync('yarn', {stdio: 'pipe'}),
 			skip: () =>
 				!options.runInstall ? 'Pass --install to automatically install dependencies' : undefined,
 		},
