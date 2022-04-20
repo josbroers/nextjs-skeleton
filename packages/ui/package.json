@@ -1,6 +1,6 @@
 {
 	"name": "ui",
-	"version": "1.0.7",
+	"version": "1.0.8-canary.0",
 	"main": "index.ts",
 	"author": "Jos Broers",
 	"license": "MIT",
