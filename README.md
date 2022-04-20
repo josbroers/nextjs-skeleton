@@ -6,7 +6,6 @@ A simple and highly customizable skeleton build with Turborepo and Next. The ske
 and has the following features:
 
 - [ESLint](https://eslint.org/)
-- [Google Tag Manager](https://tagmanager.google.com/#/homeeslint)
 - [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
 - [Preact](https://preactjs.com/)
 - [Prettier](https://prettier.io/)
@@ -88,7 +87,7 @@ By default, Next doesn't provide all the **security headers** which results in a
 ## 4. Styling
 
 With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/)
-Modules**, **[Tailwind CSS](https://tailwindcss.com/)** and some unit functions from **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you. For example:
+Modules**, **[Tailwind CSS](https://tailwindcss.com/)** and some unit functions inspired by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
 - [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)

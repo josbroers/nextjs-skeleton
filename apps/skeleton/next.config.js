@@ -14,19 +14,19 @@ const nextConfig = {
 	},
 	sassOptions: {
 		prependData: `
-      @import "~foundation-sites/scss/util/unit";
+      @import "../../packages/mixins/unit";
     `,
 	},
 	eslint: {
 		dirs: ['src'],
 	},
 	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+		removeConsole: process.env.NODE_ENV === 'production' ? {exclude: ['error']} : false,
 	},
 	experimental: {
 		outputStandalone: true,
 	},
-	webpack: (config, { dev }) => {
+	webpack: (config, {dev}) => {
 		if (!dev) {
 			Object.assign(config.resolve.alias, {
 				react: 'preact/compat',
@@ -52,7 +52,7 @@ const nextConfig = {
 			},
 			{
 				source: '/github',
-				destination: 'https://github.com/SirRedDAB/nextjs-skeleton',
+				destination: 'https://github.com/jos-broers/nextjs-skeleton',
 				permanent: true,
 			},
 			{

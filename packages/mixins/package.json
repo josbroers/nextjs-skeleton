@@ -1,0 +1,9 @@
+{
+	"name": "mixins",
+	"version": "1.0.8-canary.0",
+	"author": "Jos Broers",
+	"license": "MIT",
+	"files": [
+		"_unit.scss"
+	]
+}
