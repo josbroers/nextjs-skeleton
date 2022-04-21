@@ -75,6 +75,7 @@ async function configure(options, resolve, reject) {
 		file.unset('publishConfig')
 		file.unset('scripts.make_public')
 		file.unset('scripts.copy_readme')
+		file.unset('scripts.lerna')
 		file.pop('workspaces')
 		file.unset('devDependencies.json')
 		file.unset('devDependencies.lerna')

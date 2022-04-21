@@ -11,7 +11,9 @@ import glob from 'glob'
 async function cli() {
 	// Skip when the file `yarn.lock` doesn't exists
 	if (!fs.existsSync('yarn.lock')) {
+		console.log()
 		console.error("%s Can't execute script", chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -19,7 +21,9 @@ async function cli() {
 	try {
 		execSync('turbo run clean', { stdio: 'pipe' })
 	} catch (error) {
+		console.log()
 		console.error(`%s Can't execute turbo run clean`, chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -29,7 +33,9 @@ async function cli() {
 			if (error) throw new Error(`Failed to remove yarn.lock`)
 		})
 	} catch (error) {
+		console.log()
 		console.error(`%s ${error}`, chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -44,7 +50,9 @@ async function cli() {
 			})
 		})
 	} catch (error) {
+		console.log()
 		console.error(`%s ${error}`, chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -59,7 +67,9 @@ async function cli() {
 			})
 		})
 	} catch (error) {
+		console.log()
 		console.error(`%s ${error}`, chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
@@ -74,12 +84,16 @@ async function cli() {
 			})
 		})
 	} catch (error) {
+		console.log()
 		console.error(`%s ${error}`, chalk.red.bold('ERROR'))
+		console.log()
 		process.exit(1)
 	}
 
 	// Show log when finished
+	console.log()
 	console.log('%s Removed files and folders', chalk.green.bold('DONE'))
+	console.log()
 }
 
 await cli()
