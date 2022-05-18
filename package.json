@@ -23,12 +23,12 @@
 	"devDependencies": {
 		"config": "1.0.8-canary.2",
 		"copy": "^0.3.2",
-		"eslint": "^8.13.0",
-		"husky": "^7.0.4",
+		"eslint": "^8.15.0",
+		"husky": "^8.0.1",
 		"json": "^11.0.0",
 		"lerna": "^4.0.0",
 		"prettier": "^2.6.2",
-		"turbo": "1.2.4"
+		"turbo": "1.2.9"
 	},
 	"volta": {
 		"node": "14.18.2",

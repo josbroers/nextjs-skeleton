@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"chalk": "^5.0.1",
-		"glob": "^8.0.1",
+		"glob": "^8.0.3",
 		"listr": "^0.14.3"
 	}
 }
