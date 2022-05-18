@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
 
-export type Data = {
+// Typecasting logic for the `<Meta>` component
+export type MetaData = {
 	title: string
 	keywords?: string
 	description: string
@@ -20,7 +21,7 @@ export type Data = {
  * @param props
  * @constructor
  */
-const Meta = (props: Data) => {
+export const Meta = (props: MetaData) => {
 	const {
 			title,
 			keywords,
@@ -74,5 +75,3 @@ const Meta = (props: Data) => {
 		</Head>
 	)
 }
-
-export default Meta

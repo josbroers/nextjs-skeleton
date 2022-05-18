@@ -1,5 +1,6 @@
-import styles from './styles/code.module.scss'
+import styles from './code.module.scss'
 
+// Typecasting logic for the `<Code>` component
 type Data = {
 	content: string
 }
