@@ -1,6 +1,6 @@
 {
 	"name": "lib",
-	"version": "1.0.8-canary.3",
+	"version": "1.0.8",
 	"author": "Jos Broers",
 	"license": "MIT",
 	"scripts": {
