@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
 
-export type Data = {
+// Typecasting logic for the `<Schema>` component
+export type SchemaData = {
 	siteName?: string
 	description?: string
 	inLanguage?: string
@@ -14,7 +15,7 @@ export type Data = {
  * @param props
  * @constructor
  */
-const Schema = (props: Data) => {
+export const Schema = (props: SchemaData) => {
 	const {siteName, description, siteDescription, inLanguage, title} = props,
 		[currentUrl, setCurrentUrl] = useState(''),
 		[origin, setOrigin] = useState('')
@@ -69,5 +70,3 @@ const Schema = (props: Data) => {
 		</Head>
 	)
 }
-
-export default Schema

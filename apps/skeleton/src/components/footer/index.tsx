@@ -1,13 +1,12 @@
-import styles from '@styles/components/footer.module.scss'
+import styles from './footer.module.scss'
 import Github from "@public/icons/github.svg"
 import Npm from "@public/icons/npm.svg"
 import Vercel from "@public/icons/vercel.svg"
 import Nextjs from "@public/icons/nextjs.svg"
-import {ExternalLink} from 'ui'
+import ExternalLink from 'ui/link'
 
 /**
  * Renders the `<footer>` element
- *
  * @constructor
  */
 const Footer = () => (

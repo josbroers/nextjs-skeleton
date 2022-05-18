@@ -1,8 +1,9 @@
-import {Meta as DefaultMeta} from "ui"
-import type {MetaData} from "ui"
+import {Meta as DefaultMeta} from "ui/seo"
+import type {MetaData} from "ui/seo"
 import options from '@data/seo.json'
 import {useEffect, useState} from "react";
 
+// Default props for the `<Meta>` component
 const defaultProps: MetaData = {
 	title: options.title,
 	keywords: options.keywords,
@@ -35,5 +36,4 @@ const Meta = (props: MetaData) => {
 }
 
 Meta.defaultProps = defaultProps
-
 export default Meta

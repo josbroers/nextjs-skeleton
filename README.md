@@ -98,11 +98,11 @@ Modules**, **[Tailwind CSS](https://tailwindcss.com/)** and some unit functions 
 
 ### 5.1 Meta
 
-I've created a `Meta.tsx` component which adds all the properties required regarding SEO. You can set up default props or feed it dynamically with data.
+I've created a `<Meta>` component which adds all the properties required regarding SEO. You can set up default props or feed it dynamically with data.
 
 ### 5.2 Schema
 
-I've also created a `Schema.tsx` component to add schema markup for WebSite and WebPage to your side. You can also set up default props or feed it dynamically with data.
+I've also created a `<Schema>` component to add schema markup for WebSite and WebPage to your side. You can also set up default props or feed it dynamically with data.
 
 ## 6. Environment variables
 
