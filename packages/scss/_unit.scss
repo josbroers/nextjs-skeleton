@@ -2,6 +2,7 @@
 
 $unit-warnings: true !default;
 $global-font-size: 100% !default;
+$spacing: 10px !default;
 
 // Remove units from values
 @function strip-unit($num) {
@@ -66,4 +67,15 @@ $global-font-size: 100% !default;
 	$preferred: calc(1rem + ((1vw - rem-calc(math.div(#{$vmin}, 100))) * calc(#{$difference-divided} * 100)));
 
 	@return clamp(#{$min}, #{$preferred}, #{$max});
+}
+
+
+@function spacing($value, $divide: false) {
+	@if $divide == true {
+		$value: math.div($spacing, $value);
+	} @else {
+		$value: $spacing * $value;
+	}
+
+	@return rem-calc($value);
 }

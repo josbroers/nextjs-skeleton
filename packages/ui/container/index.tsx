@@ -20,7 +20,7 @@ const defaultProps: Data = {
  * @constructor
  */
 const Container = ({children, size}: Data) => (
-	<div className={`container ${styles[`container--${size}`]}`}>
+	<div className={`${styles.container} ${styles[`container--${size}`]}`}>
 		{children}
 	</div>
 )

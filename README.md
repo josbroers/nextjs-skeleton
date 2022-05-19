@@ -87,13 +87,13 @@ By default, Next doesn't provide all the **security headers** which results in a
 
 ## 4. Styling
 
-With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/)
-Modules**, **[Tailwind CSS](https://tailwindcss.com/)** and some unit functions inspired by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you. For example:
+With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/) Modules**, **[Modern Normalize](https://www.npmjs.com/package/modern-normalize/)** and some unit functions inspired by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
 - [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)
 - [styled-components](https://styled-components.com/)
 - [Material-UI](https://mui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## 5. Search engine optimization
 

@@ -1,5 +1,8 @@
 .main {
-	@apply flex items-center flex-col justify-center;
 	min-height: calc(100vh - #{rem-calc(91px)});
-	padding: calc(theme('spacing') * 4) 0;
+	padding: spacing(4);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }

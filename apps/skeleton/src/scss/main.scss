@@ -1,7 +1,3 @@
-/* Import Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Import default styling */
-@import 'common/globals';
+@import "modern-normalize/modern-normalize.css";
+@import "../../../../packages/scss/variables";
+@import '../../../../packages/scss/globals';

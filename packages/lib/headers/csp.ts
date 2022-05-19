@@ -1,8 +1,22 @@
-/**
- * Define Content Security Policy
- * https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
- */
-export const contentSecurityPolicy = `
+type Data = {
+	res: any
+	header: string[]
+}
+
+export class CSP {
+	private readonly res
+
+	constructor(res: Data["res"]) {
+		this.res = res.next();
+
+		return this.createResponse()
+	}
+
+	/**
+	 * Content Security Policy based on Next.js and Google tips
+	 * @private
+	 */
+	private contentSecurityPolicy = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline' *.googleapis.com;
@@ -12,4 +26,32 @@ export const contentSecurityPolicy = `
     font-src 'self' *.gstatic.com;
     object-src 'none';
     base-uri 'none';
-  `
+	`
+
+	/**
+	 * Security headers based on Next.js tips
+	 * https://nextjs.org/docs/advanced-features/security-headers
+	 * @private
+	 */
+	private headers = {
+		'Content-Security-Policy': this.contentSecurityPolicy.replace(/\n/g, ''),
+		'Referrer-Policy': 'origin-when-cross-origin',
+		'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+		'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+		'X-Frame-Options': 'DENY',
+		'X-Content-Type-Options': 'nosniff',
+		'X-DNS-Prefetch-Control': 'on',
+		'X-XSS-Protection': '1; mode=block',
+	}
+
+	/**
+	 * Add headers to NextResponse
+	 */
+	private createResponse() {
+		Object.entries(this.headers).forEach(([key, value]: Data['header']) => {
+			this.res.headers.set(key, value)
+		})
+
+		return this.res
+	}
+}
