@@ -4,8 +4,6 @@
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
 	"type": "website",
 	"siteName": "Next.js Skeleton",
-	"imageSource": "/thumbnail.png",
-	"imageAltText": "Next.js wallpaper",
 	"twitterCard": "summary_large_image",
 	"inLanguage": "en",
 	"author": "Jos Broers"

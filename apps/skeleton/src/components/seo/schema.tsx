@@ -1,12 +1,12 @@
 import {Schema as DefaultSchema} from "ui/seo"
 import type {SchemaData} from "ui/seo"
-import options from '@data/seo.json'
+import seo from '@data/seo.json'
 
 // Default props for the `<Schema>` component
 const defaultProps: SchemaData = {
-	siteName: options.siteName,
-	siteDescription: options.description,
-	inLanguage: options.inLanguage,
+	siteName: seo.siteName,
+	siteDescription: seo.description,
+	inLanguage: seo.inLanguage,
 }
 
 /**

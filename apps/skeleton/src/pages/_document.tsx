@@ -1,5 +1,5 @@
 import {Head, Html, Main, NextScript} from 'next/document'
-import options from '@data/seo.json'
+import seo from '@data/seo.json'
 
 /**
  * A custom Document is commonly used to augment your application's `<html>` and `<body>` tags.
@@ -8,7 +8,7 @@ import options from '@data/seo.json'
  */
 const Document = () => {
 	return (
-		<Html lang={options.inLanguage}>
+		<Html lang={seo.inLanguage}>
 			<Head>
 				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 			</Head>
