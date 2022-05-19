@@ -14,7 +14,7 @@ const nextConfig = {
 	},
 	sassOptions: {
 		prependData: `
-      @import "../../packages/mixins/unit";
+      @import "../../packages/scss/unit";
     `,
 	},
 	eslint: {

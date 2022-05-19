@@ -1,30 +1,29 @@
 .title,
 .description {
-	@apply text-center;
+	text-align: center;
 }
 
 .title {
-	@apply font-extrabold;
 	margin: 0;
 	font-size: fluid-range(60px, 90px, 640px, 768px);
 	line-height: 1.15;
+	font-weight: 900;
 }
 
 .cta-link {
-	@apply text-blue;
+	color: var(--colors-blue);
 
-	/* Remove underline for multiple psuedo options */
 	&,
 	&:hover,
 	&:focus,
 	&:active {
-		@apply no-underline;
+		text-decoration: none;
 	}
 }
 
 .description {
-	@apply leading-normal;
-	margin: calc(theme('spacing') * 6.5) 0 0;
+	line-height: 1.5;
+	margin: spacing(6.5) 0 0 0;
 
 	&,
 	code {

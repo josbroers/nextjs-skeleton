@@ -1,13 +1,16 @@
 .container {
+	padding: rem-calc(20px);
+	margin-inline: auto;
+
 	&--small {
-		max-width: rem-calc(900px);
+		width: min(100%, rem-calc(900px));
 	}
 
 	&--large {
-		max-width: rem-calc(1280px);
+		width: min(100%, rem-calc(1280px));
 	}
 
 	&--full {
-		max-width: 100%;
+		width: 100%;
 	}
 }
