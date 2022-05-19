@@ -1,6 +1,6 @@
 {
 	"name": "skeleton",
-	"version": "1.0.8",
+	"version": "1.0.9-canary.0",
 	"main": "index.js",
 	"author": "Jos Broers",
 	"license": "MIT",
@@ -21,8 +21,8 @@
 		"@types/react": "^18.0.9",
 		"@types/react-dom": "^18.0.4",
 		"autoprefixer": "^10.4.7",
-		"next-transpile-modules": "^9.0.0",
 		"modern-normalize": "^1.1.0",
+		"next-transpile-modules": "^9.0.0",
 		"postcss": "^8.4.14",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
