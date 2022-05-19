@@ -31,6 +31,7 @@ and has the following features:
 		- [5.2 Schema](#52-schema)
 	- [6. Environment variables](#6-environment-variables)
 	- [7. Vercel CLI](#7-vercel-cli)
+	- [8. Remote caching](#8-remote-caching)
 
 ## 1. Setup
 
@@ -59,13 +60,13 @@ This skeleton uses **TypeScript** out of the box. If you don't feel comfortable 
 Besides TypeScript, this skeleton uses **Preact** over React for production builds. This results in smaller build and the same developer experience. Want to switch back to **React**? Simply delete or comment out the code below in `next.config.js` and uninstall the package.
 
 ```js
-webpack: (config, { dev }) => {
-	if (!dev) {
-		Object.assign(config.resolve.alias, {
+webpack: ( config, { dev } ) => {
+	if ( !dev ) {
+		Object.assign( config.resolve.alias, {
 			react: 'preact/compat',
 			'react-dom/test-utils': 'preact/test-utils',
 			'react-dom': 'preact/compat',
-		})
+		} )
 	}
 
 	return config
@@ -118,3 +119,8 @@ Whenever possible, I recommend deploying to [Vercel](https://vercel.com/). It's 
 - Use `vercel dev` to deploy a local test server at http://localhost:3000
 - Use `vercel` to deploy a preview build
 - Use `vercel --prod` to deploy a production build
+
+## 8. Remote caching
+
+With Turborepo, you can connect to the Vercel Remote Cache to share build artifacts. You first need to authenticate the Turborepo CLI with your Vercel account using `npx turbo login`. Then link your repo to enable the Remote Caching using `npx turbo link`.
+You will get a prompt to enable Remote Caching for the current repo. Enter Y for yes to enable Remote Caching. Next, select the team scope you'd like to connect to. Once completed, Turborepo will use Vercel Remote Caching to store the cache artifacts.
