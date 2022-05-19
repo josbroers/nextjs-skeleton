@@ -1,18 +1,18 @@
 import {Meta as DefaultMeta} from "ui/seo"
 import type {MetaData} from "ui/seo"
-import options from '@data/seo.json'
+import seo from '@data/seo.json'
 import {useEffect, useState} from "react";
 
 // Default props for the `<Meta>` component
 const defaultProps: MetaData = {
-	title: options.title,
-	keywords: options.keywords,
-	description: options.description,
-	imageAltText: options.imageAltText,
-	type: options.type,
-	siteName: options.siteName,
-	twitterCard: options.twitterCard,
-	author: options.author
+	title: seo.title,
+	keywords: seo.keywords,
+	description: seo.description,
+	imageAltText: 'Next.js wallpaper',
+	type: seo.type,
+	siteName: seo.siteName,
+	twitterCard: seo.twitterCard,
+	author: seo.author
 }
 
 /**
@@ -31,7 +31,7 @@ const Meta = (props: MetaData) => {
 	}, [origin])
 
 	return (
-		<DefaultMeta imageSource={props.imageSource ?? `${origin}${options.imageSource}`} {...props}/>
+		<DefaultMeta imageSource={props.imageSource ?? `${origin}/thumbnail.png`} {...props}/>
 	)
 }
 
