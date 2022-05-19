@@ -1,6 +1,6 @@
 import type {NextFetchEvent, NextRequest} from 'next/server'
 import {NextResponse} from 'next/server'
-import {response} from "lib/headers";
+import {CSP} from 'lib/headers/csp';
 
 /**
  * Middleware enables you to use code over configuration.
@@ -14,7 +14,7 @@ import {response} from "lib/headers";
  * @constructor
  */
 const Middleware = (req: NextRequest, ev: NextFetchEvent) => {
-	return response(NextResponse)
+	return new CSP(NextResponse)
 }
 
 export default Middleware
