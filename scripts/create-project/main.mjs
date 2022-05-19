@@ -11,7 +11,7 @@ import editJsonFile from 'edit-json-file'
  */
 async function downloadFiles(options) {
 	try {
-		execSync(`git clone https://github.com/SirRedDAB/nextjs-skeleton.git ${options.name}`, {
+		execSync(`git clone https://github.com/jos-broers/nextjs-skeleton.git ${options.name}`, {
 			stdio: 'pipe',
 		})
 		process.chdir(options.name)

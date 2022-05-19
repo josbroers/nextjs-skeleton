@@ -10,14 +10,14 @@
 	},
 	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
 	"bugs": {
-		"url": "https://github.com/SirRedDAB/nextjs-skeleton/issues"
+		"url": "https://github.com/jos-broers/nextjs-skeleton/issues"
 	},
 	"keywords": [
 		"nextjs",
 		"skeleton"
 	],
 	"repository": {
-		"url": "git+https://github.com/SirRedDAB/nextjs-skeleton.git",
+		"url": "git+https://github.com/jos-broers/nextjs-skeleton.git",
 		"type": "git"
 	},
 	"publishConfig": {
