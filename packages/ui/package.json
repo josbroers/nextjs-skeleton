@@ -4,7 +4,7 @@
 	"author": "Jos Broers",
 	"license": "MIT",
 	"scripts": {
-		"lint": "eslint './**/*.tsx'"
+		"lint": "eslint './**/*.tsx' && stylelint './**/*.scss'"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.9",

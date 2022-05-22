@@ -6,9 +6,9 @@ import Meta from '@components/seo/meta'
 import Schema from '@components/seo/schema'
 
 const Home = () => (
-	<Container size={"small"}>
-		<Meta/>
-		<Schema/>
+	<Container size={'small'}>
+		<Meta />
+		<Schema />
 		<h1 className={styles.title}>
 			Welcome to the{' '}
 			<ExternalLink
@@ -22,7 +22,7 @@ const Home = () => (
 			</ExternalLink>
 		</h1>
 		<p className={styles.description}>
-			Get started by editing <Code content="src/pages/index.tsx"/> in the skeleton app.
+			Get started by editing <Code content="src/pages/index.tsx" /> in the skeleton app.
 		</p>
 	</Container>
 )
