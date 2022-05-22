@@ -14,19 +14,21 @@ const nextConfig = {
 	},
 	sassOptions: {
 		prependData: `
-      @import "../../packages/scss/unit";
+      @import "../../packages/scss/breakpoints";
+			@import "../../packages/scss/line-clamp";
+			@import "../../packages/scss/unit";
     `,
 	},
 	eslint: {
 		dirs: ['src'],
 	},
 	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production' ? {exclude: ['error']} : false,
+		removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
 	},
 	experimental: {
 		outputStandalone: true,
 	},
-	webpack: (config, {dev}) => {
+	webpack: (config, { dev }) => {
 		if (!dev) {
 			Object.assign(config.resolve.alias, {
 				react: 'preact/compat',

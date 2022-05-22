@@ -5,5 +5,8 @@
 	"license": "MIT",
 	"files": [
 		"_unit.scss"
-	]
+	],
+	"scripts": {
+		"lint": "stylelint './**/*.scss'"
+	}
 }
