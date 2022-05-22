@@ -1,18 +1,20 @@
-@import "unit";
+@import 'unit';
 
 :root {
 	// Colors
 	--colors-black: #000;
-	--colors-white: #FFF;
+	--colors-white: #fff;
 	--colors-gray: #737373;
-	--colors-gray-light: #E5E5E5;
-	--colors-blue: #0070F3;
-	--colors-purple: #D400FF;
+	--colors-gray-light: #e5e5e5;
+	--colors-blue: #0070f3;
+	--colors-purple: #d400ff;
 
 	// Fonts
-	--font-sans: Inter, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-	--font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-	--font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--font-sans: inter, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui,
+		helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+	--font-serif: iowan old style, apple garamond, baskerville, times new roman, droid serif, times,
+		source serif pro, serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+	--font-mono: menlo, consolas, monaco, liberation mono, lucida console, monospace;
 
 	// Misc
 	--border-radius: rem-calc(5px);

@@ -1,4 +1,5 @@
-@use "sass:math";
+@use 'sass:math';
+@use 'sass:list';
 
 $unit-warnings: true !default;
 $global-font-size: 100% !default;
@@ -12,7 +13,7 @@ $spacing: 10px !default;
 // Calculate values to REM
 @function rem-calc($values) {
 	$rem-values: ();
-	$count: length($values);
+	$count: list.length($values);
 	$base: $global-font-size;
 
 	@if unit($base) == '%' {
@@ -28,7 +29,7 @@ $spacing: 10px !default;
 	}
 
 	@for $i from 1 through $count {
-		$rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
+		$rem-values: list.append($rem-values, -zf-to-rem(list.nth($values, $i), $base));
 	}
 
 	@return $rem-values;
@@ -52,7 +53,7 @@ $spacing: 10px !default;
 		$value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
 	}
 
-	@if $value == 0rem {
+	@if $value == 0 {
 		$value: 0;
 	}
 
@@ -64,11 +65,12 @@ $spacing: 10px !default;
 	$size-difference: calc(strip-unit($max) - strip-unit($min));
 	$viewport-difference: calc(strip-unit($vmax) - strip-unit($vmin));
 	$difference-divided: math.div($size-difference, $viewport-difference);
-	$preferred: calc(1rem + ((1vw - rem-calc(math.div(#{$vmin}, 100))) * calc(#{$difference-divided} * 100)));
+	$preferred: calc(
+		1rem + ((1vw - rem-calc(math.div(#{$vmin}, 100))) * calc(#{$difference-divided} * 100))
+	);
 
 	@return clamp(#{$min}, #{$preferred}, #{$max});
 }
-
 
 @function spacing($value, $divide: false) {
 	@if $divide == true {
