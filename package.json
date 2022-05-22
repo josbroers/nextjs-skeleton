@@ -28,6 +28,9 @@
 		"json": "^11.0.0",
 		"lerna": "^4.0.0",
 		"prettier": "^2.6.2",
+		"stylelint": "^14.8.3",
+		"stylelint-config-prettier-scss": "^0.0.1",
+		"stylelint-config-standard-scss": "^3.0.0",
 		"turbo": "1.2.9"
 	},
 	"volta": {
