@@ -1,6 +1,6 @@
 {
 	"name": "create-nextjs-skeleton",
-	"version": "1.0.9-canary.1",
+	"version": "1.0.9-canary.2",
 	"main": "create.mjs",
 	"author": "Jos Broers",
 	"license": "MIT",
