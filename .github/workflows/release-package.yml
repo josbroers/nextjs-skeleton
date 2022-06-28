@@ -1,4 +1,4 @@
-name: nextjs-skeleton
+name: Publish to NPM
 
 on:
   release:

@@ -27,7 +27,7 @@
 		"arg": "^5.0.1",
 		"chalk": "^5.0.1",
 		"edit-json-file": "^1.7.0",
-		"inquirer": "^8.2.4",
+		"inquirer": "^9.0.0",
 		"listr": "^0.14.3"
 	}
 }
