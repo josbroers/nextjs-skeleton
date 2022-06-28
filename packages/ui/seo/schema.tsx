@@ -1,21 +1,13 @@
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
-
-// Typecasting logic for the `<Schema>` component
-export type SchemaData = {
-	siteName?: string
-	description?: string
-	inLanguage?: string
-	title?: string
-	siteDescription?: string
-}
+import type {SchemaTypes as Types} from "./types";
 
 /**
  * Renders WebSite and WebPage schema
  * @param props
  * @constructor
  */
-export const Schema = (props: SchemaData) => {
+export const Schema = (props: Types) => {
 	const {siteName, description, siteDescription, inLanguage, title} = props,
 		[currentUrl, setCurrentUrl] = useState(''),
 		[origin, setOrigin] = useState('')

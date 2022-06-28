@@ -1,14 +1,9 @@
 import React from "react"
 import styles from "./container.module.scss"
-
-// Typecasting logic for the `<Container>` component
-interface Data {
-	children: React.ReactNode
-	size: "full" | "large" | "small"
-}
+import type {Types} from './types'
 
 // Default props for the component
-const defaultProps: Data = {
+const defaultProps: Types = {
 	size: "full",
 	children: "",
 }
@@ -19,11 +14,12 @@ const defaultProps: Data = {
  * @param size
  * @constructor
  */
-const Container = ({children, size}: Data) => (
+const Container = ({children, size}: Types) => (
 	<div className={`${styles.container} ${styles[`container--${size}`]}`}>
 		{children}
 	</div>
 )
 
 Container.defaultProps = defaultProps
+
 export default Container
