@@ -13,7 +13,8 @@ export class CSP {
 	}
 
 	/**
-	 * Content Security Policy based on Next.js and Google tips
+	 * Content Security Policy based on Next.js and Google tips.
+	 *
 	 * @private
 	 */
 	private contentSecurityPolicy = `
@@ -29,8 +30,9 @@ export class CSP {
 	`
 
 	/**
-	 * Security headers based on Next.js tips
-	 * https://nextjs.org/docs/advanced-features/security-headers
+	 * Security headers based on Next.js tips.
+	 * @link: https://nextjs.org/docs/advanced-features/security-headers
+	 *
 	 * @private
 	 */
 	private headers = {
@@ -45,7 +47,7 @@ export class CSP {
 	}
 
 	/**
-	 * Add headers to NextResponse
+	 * Add headers to NextResponse.
 	 */
 	private createResponse() {
 		Object.entries(this.headers).forEach(([key, value]: Data['header']) => {

@@ -2,8 +2,9 @@ import {GetServerSideProps} from "next"
 import {Sitemap} from "lib/seo/sitemap"
 
 /**
- * Create a sitemap on page load
- * Docs: https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
+ * Create a sitemap on page load.
+ * @link: https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
+ *
  * @param res
  * @param req
  */

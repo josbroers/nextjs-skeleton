@@ -3,8 +3,12 @@
 	"baseBranch": "origin/main",
 	"pipeline": {
 		"build": {
-			"dependsOn": ["^build"],
-			"outputs": [".next/**"]
+			"dependsOn": [
+				"^build"
+			],
+			"outputs": [
+				".next/**"
+			]
 		},
 		"lint": {
 			"outputs": []

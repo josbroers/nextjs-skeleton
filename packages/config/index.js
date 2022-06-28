@@ -1,5 +1,5 @@
-const eslintPreset = require('./eslint-preset')
+const eslintPreset = require( "./eslint-preset" );
 
 module.exports = {
 	eslintPreset,
-}
+};

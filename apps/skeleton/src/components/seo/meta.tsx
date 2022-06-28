@@ -1,26 +1,26 @@
-import {Meta as DefaultMeta} from "ui/seo"
+import {Meta} from "ui/seo"
 import type {MetaTypes as Types} from "ui/seo/types"
 import {useEffect, useState} from "react";
-import seo from "@data/seo.json";
 
+// Default props for the `<Meta>` component.
 const defaultProps: Types = {
-	title: seo.title,
-	keywords: seo.keywords,
-	description: seo.description,
+	title: "Next.js Skeleton: ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
+	keywords: "next, next.js, skeleton, turborepo",
+	description: "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
 	imageAltText: 'Next.js wallpaper',
-	type: seo.type,
-	siteName: seo.siteName,
-	twitterCard: seo.twitterCard,
-	author: seo.author
+	type: "website",
+	siteName: "Next.js Skeleton",
+	twitterCard: "summary_large_image",
+	author: "Jos Broers"
 }
 
 /**
- * Renders all relevant SEO `<meta>` and `<link>` elements
+ * Renders all relevant SEO `<meta>` and `<link>` elements.
  *
  * @param props
  * @constructor
  */
-const Meta = (props: Types) => {
+export const CustomMeta = (props: Types) => {
 	const [origin, setOrigin] = useState('')
 
 	useEffect(() => {
@@ -30,10 +30,10 @@ const Meta = (props: Types) => {
 	}, [origin])
 
 	return (
-		<DefaultMeta imageSource={props.imageSource ?? `${origin}/thumbnail.png`} {...props}/>
+		<Meta imageSource={props.imageSource ?? `${origin}/thumbnail.png`} {...props}/>
 	)
 }
 
-Meta.defaultProps = defaultProps
+CustomMeta.defaultProps = defaultProps
 
-export default Meta
+export default CustomMeta

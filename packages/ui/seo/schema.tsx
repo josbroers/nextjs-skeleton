@@ -1,16 +1,17 @@
 import {useEffect, useState} from 'react'
-import Head from 'next/head'
 import type {SchemaTypes as Types} from "./types";
+import Head from 'next/head'
 
 /**
- * Renders WebSite and WebPage schema
+ * Renders WebSite and WebPage schema.
+ *
  * @param props
  * @constructor
  */
 export const Schema = (props: Types) => {
-	const {siteName, description, siteDescription, inLanguage, title} = props,
-		[currentUrl, setCurrentUrl] = useState(''),
-		[origin, setOrigin] = useState('')
+	const {siteName, description, siteDescription, inLanguage, title} = props
+	const [currentUrl, setCurrentUrl] = useState('')
+	const [origin, setOrigin] = useState('')
 
 	useEffect(() => {
 		if (window.location.origin !== origin) {

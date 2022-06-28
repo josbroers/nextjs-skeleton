@@ -5,12 +5,12 @@ $unit-warnings: true !default;
 $global-font-size: 100% !default;
 $spacing: 10px !default;
 
-// Remove units from values
+// Remove units from values.
 @function strip-unit($num) {
 	@return math.div($num, $num * 0 + 1);
 }
 
-// Calculate values to REM
+// Calculate values to REM.
 @function rem-calc($values) {
 	$rem-values: ();
 	$count: list.length($values);
@@ -35,7 +35,7 @@ $spacing: 10px !default;
 	@return $rem-values;
 }
 
-// Converts a pixel value to matching REM
+// Converts a pixel value to matching REM.
 @function -zf-to-rem($value, $base: null) {
 	@if type-of($value) != 'number' {
 		@if $unit-warnings {
@@ -60,7 +60,7 @@ $spacing: 10px !default;
 	@return $value;
 }
 
-// Create fluid range using `clamp()`
+// Create fluid range using `clamp()`.
 @function fluid-range($min, $max, $vmin, $vmax) {
 	$size-difference: calc(strip-unit($max) - strip-unit($min));
 	$viewport-difference: calc(strip-unit($vmax) - strip-unit($vmin));

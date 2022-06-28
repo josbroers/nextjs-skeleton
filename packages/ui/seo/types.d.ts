@@ -1,4 +1,4 @@
-// Typecasting logic for the `<Meta>` component
+// Typecasting logic for the `<Meta>` component.
 export type MetaTypes = {
 	title: string
 	keywords?: string
@@ -13,7 +13,7 @@ export type MetaTypes = {
 	publishDate?: string
 }
 
-// Typecasting logic for the `<Schema>` component
+// Typecasting logic for the `<Schema>` component.
 export type SchemaTypes = {
 	siteName?: string
 	description?: string

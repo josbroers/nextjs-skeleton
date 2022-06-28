@@ -1,23 +1,23 @@
-import {Schema as DefaultSchema} from "ui/seo"
+import {Schema} from "ui/seo"
 import type {SchemaTypes as Types} from "ui/seo/types"
-import seo from "@data/seo.json";
 
-// Default props for the `<Schema>` component
+// Default props for the `<Schema>` component.
 const defaultSchemaProps: Types = {
-	siteName: seo.siteName,
-	siteDescription: seo.description,
-	inLanguage: seo.inLanguage,
+	siteName: "Next.js Skeleton",
+	siteDescription: "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!",
+	inLanguage: "en",
 }
 
 /**
- * Renders WebSite and WebPage schema
+ * Renders WebSite and WebPage schema.
  *
  * @param props
  * @constructor
  */
-const Schema = (props: Types) => (
-	<DefaultSchema {...props}/>
+export const CustomSchema = (props: Types) => (
+	<Schema {...props}/>
 )
 
-Schema.defaultProps = defaultSchemaProps
-export default Schema
+CustomSchema.defaultProps = defaultSchemaProps
+
+export default CustomSchema
