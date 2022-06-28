@@ -1,27 +1,13 @@
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
-
-// Typecasting logic for the `<Meta>` component
-export type MetaData = {
-	title: string
-	keywords?: string
-	description: string
-	type: string
-	siteName: string
-	imageSource?: string
-	imageAltText?: string
-	twitterCard?: string
-	canonical?: string
-	author?: string
-	publishDate?: string
-}
+import type {MetaTypes as Types} from "./types";
 
 /**
  * Renders all relevant SEO `<meta>` and `<link>` elements
  * @param props
  * @constructor
  */
-export const Meta = (props: MetaData) => {
+export const Meta = (props: Types) => {
 	const {
 			title,
 			keywords,

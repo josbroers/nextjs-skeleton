@@ -1,17 +1,8 @@
 import React from 'react'
-
-// Typecasting logic for the `<ExternalLink>` component
-interface Data {
-	target?: '_self' | '_blank' | '_parent' | '_top'
-	href: string
-	children: React.ReactNode
-	title: string
-	className?: any
-	rel?: 'nofollow' | 'noreferrer' | 'external'
-}
+import type {Types} from "./types";
 
 // Default props for the `<ExternalLink>` component
-const defaultProps: Data = {
+const defaultProps: Types = {
 	target: '_self',
 	rel: 'external',
 	href: '',
@@ -24,7 +15,7 @@ const defaultProps: Data = {
  * @param props
  * @constructor
  */
-const ExternalLink = (props: Data) => {
+const ExternalLink = (props: Types) => {
 	const {href, children, title, className, target, rel} = props
 
 	return (
@@ -35,4 +26,5 @@ const ExternalLink = (props: Data) => {
 }
 
 ExternalLink.defaultProps = defaultProps
+
 export default ExternalLink

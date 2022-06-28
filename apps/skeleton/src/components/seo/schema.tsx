@@ -1,9 +1,9 @@
 import {Schema as DefaultSchema} from "ui/seo"
-import type {SchemaData} from "ui/seo"
-import seo from '@data/seo.json'
+import type {SchemaTypes as Types} from "ui/seo/types"
+import seo from "@data/seo.json";
 
 // Default props for the `<Schema>` component
-const defaultProps: SchemaData = {
+const defaultSchemaProps: Types = {
 	siteName: seo.siteName,
 	siteDescription: seo.description,
 	inLanguage: seo.inLanguage,
@@ -15,9 +15,9 @@ const defaultProps: SchemaData = {
  * @param props
  * @constructor
  */
-const Schema = (props: SchemaData) => (
+const Schema = (props: Types) => (
 	<DefaultSchema {...props}/>
 )
 
-Schema.defaultProps = defaultProps
+Schema.defaultProps = defaultSchemaProps
 export default Schema

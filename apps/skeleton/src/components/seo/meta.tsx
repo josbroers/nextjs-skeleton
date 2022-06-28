@@ -1,10 +1,9 @@
 import {Meta as DefaultMeta} from "ui/seo"
-import type {MetaData} from "ui/seo"
-import seo from '@data/seo.json'
+import type {MetaTypes as Types} from "ui/seo/types"
 import {useEffect, useState} from "react";
+import seo from "@data/seo.json";
 
-// Default props for the `<Meta>` component
-const defaultProps: MetaData = {
+const defaultProps: Types = {
 	title: seo.title,
 	keywords: seo.keywords,
 	description: seo.description,
@@ -21,7 +20,7 @@ const defaultProps: MetaData = {
  * @param props
  * @constructor
  */
-const Meta = (props: MetaData) => {
+const Meta = (props: Types) => {
 	const [origin, setOrigin] = useState('')
 
 	useEffect(() => {
@@ -36,4 +35,5 @@ const Meta = (props: MetaData) => {
 }
 
 Meta.defaultProps = defaultProps
+
 export default Meta
