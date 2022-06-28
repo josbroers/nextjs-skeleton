@@ -1,16 +1,16 @@
 // @ts-check
 
-const withTM = require('next-transpile-modules')(['ui', 'lib'])
+const withTM = require( "next-transpile-modules" )( [ "ui", "lib" ] );
 
 /**
- * @type {import('next').NextConfig}
+ * @type {import("next").NextConfig}
  **/
 const nextConfig = {
 	swcMinify: true,
 	reactStrictMode: true,
 	trailingSlash: true,
 	images: {
-		formats: ['image/avif', 'image/webp'],
+		formats: [ "image/avif", "image/webp" ],
 	},
 	sassOptions: {
 		prependData: `
@@ -20,50 +20,48 @@ const nextConfig = {
     `,
 	},
 	eslint: {
-		dirs: ['src'],
+		dirs: [ "src" ],
 	},
 	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+		removeConsole: process.env.NODE_ENV === "production" ? { exclude: [ "error" ] } : false,
 	},
-	experimental: {
-		outputStandalone: true,
-	},
-	webpack: (config, { dev }) => {
-		if (!dev) {
-			Object.assign(config.resolve.alias, {
-				react: 'preact/compat',
-				'react-dom/test-utils': 'preact/test-utils',
-				'react-dom': 'preact/compat',
-			})
+	output: "standalone",
+	webpack: ( config, { dev } ) => {
+		if ( !dev ) {
+			Object.assign( config.resolve.alias, {
+				react: "preact/compat",
+				"react-dom/test-utils": "preact/test-utils",
+				"react-dom": "preact/compat",
+			} );
 		}
 
-		config.module.rules.push({
+		config.module.rules.push( {
 			test: /\.svg$/i,
 			issuer: /\.[jt]sx?$/,
-			use: ['@svgr/webpack'],
-		})
+			use: [ "@svgr/webpack" ],
+		} );
 
-		return config
+		return config;
 	},
 	async redirects() {
 		return [
 			{
-				source: '/home',
-				destination: '/',
+				source: "/home",
+				destination: "/",
 				permanent: true,
 			},
 			{
-				source: '/github',
-				destination: 'https://github.com/jos-broers/nextjs-skeleton',
+				source: "/github",
+				destination: "https://github.com/jos-broers/nextjs-skeleton",
 				permanent: true,
 			},
 			{
-				source: '/npm',
-				destination: 'https://www.npmjs.com/package/create-nextjs-skeleton',
+				source: "/npm",
+				destination: "https://www.npmjs.com/package/create-nextjs-skeleton",
 				permanent: true,
 			},
-		]
+		];
 	},
-}
+};
 
-module.exports = withTM(nextConfig)
+module.exports = withTM( nextConfig );

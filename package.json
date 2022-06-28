@@ -13,7 +13,7 @@
 		"make_public": "json -I -f package.json -e 'this.private=false'",
 		"upgrade_all": "yarn upgrade-interactive --latest",
 		"copy_readme": "copy README.md scripts/create-project/",
-		"lerna": "npx lerna version --amend"
+		"lerna": "npx lerna version --force-publish"
 	},
 	"workspaces": [
 		"apps/*",
@@ -26,19 +26,19 @@
 		"eslint": "^8.15.0",
 		"husky": "^8.0.1",
 		"json": "^11.0.0",
-		"lerna": "^4.0.0",
+		"lerna": "^5.1.6",
 		"prettier": "^2.6.2",
 		"stylelint": "^14.8.3",
 		"stylelint-config-prettier-scss": "^0.0.1",
-		"stylelint-config-standard-scss": "^3.0.0",
-		"turbo": "1.2.9"
+		"stylelint-config-standard-scss": "^4.0.0",
+		"turbo": "1.3.1"
 	},
 	"volta": {
-		"node": "14.18.2",
+		"node": "16.15.0",
 		"yarn": "1.22.17"
 	},
 	"engines": {
-		"node": ">=14.18.0"
+		"node": ">=16.15.0"
 	},
 	"packageManager": "yarn@1.22.17"
 }
