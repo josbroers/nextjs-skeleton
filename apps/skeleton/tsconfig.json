@@ -2,18 +2,40 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": {
-			"@components/*": ["./src/components/*"],
-			"@lib/*": ["./src/lib/*"],
-			"@scss/*": ["./src/scss/*"],
-			"@public/*": ["./public/*"],
-			"@data/*": ["./src/data/*"],
-			"lib": ["../../packages/lib/"],
-			"ui": ["../../packages/ui/"],
-			"config": ["../../packages/config/"]
+			"@components/*": [
+				"./src/components/*"
+			],
+			"@lib/*": [
+				"./src/lib/*"
+			],
+			"@scss/*": [
+				"./src/scss/*"
+			],
+			"@public/*": [
+				"./public/*"
+			],
+			"@data/*": [
+				"./src/data/*"
+			],
+			"lib": [
+				"../../packages/lib/"
+			],
+			"ui": [
+				"../../packages/ui/"
+			],
+			"config": [
+				"../../packages/config/"
+			]
 		}
 	},
 	"rootDir": "src",
 	"extends": "../../packages/tsconfig/nextjs.json",
-	"include": ["types.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"include": [
+		"types.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }

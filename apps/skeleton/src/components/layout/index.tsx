@@ -4,7 +4,8 @@ import styles from './layout.module.scss'
 import type {Types} from "./types";
 
 /**
- * Default Layout
+ * Default Layout.
+ *
  * @param children
  * @constructor
  */

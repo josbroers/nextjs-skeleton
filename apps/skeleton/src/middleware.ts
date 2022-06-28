@@ -9,6 +9,7 @@ import {CSP} from 'lib/headers/csp';
  * - Modify the response by rewriting
  * - Redirecting, adding headers
  * - Or even streaming HTML
+ *
  * @param req
  * @param ev
  * @constructor

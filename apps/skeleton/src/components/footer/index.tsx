@@ -25,7 +25,8 @@ const links = {
 }
 
 /**
- * Renders the `<footer>` element
+ * Renders the `<footer>` element.
+ *
  * @constructor
  */
 const Footer = () => (

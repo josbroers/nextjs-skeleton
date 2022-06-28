@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-// Name of the next breakpoint, or null for the last breakpoint
+// Name of the next breakpoint, or null for the last breakpoint.
 @function breakpoint-next(
 	$name,
 	$breakpoints: $grid-breakpoints,
@@ -14,19 +14,19 @@
 	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
-// Minimum breakpoint width
+// Minimum breakpoint width.
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
 	$min: map.get($breakpoints, $name);
 	@return if($min != 0, $min, null);
 }
 
-// Maximum breakpoint width
+// Maximum breakpoint width.
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
 	$max: map.get($breakpoints, $name);
 	@return if($max and $max > 0, $max - 0.02, null);
 }
 
-// Media of at least the minimum breakpoint width
+// Media of at least the minimum breakpoint width.
 @mixin breakpoint-up($name, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
 	@if $min {
@@ -38,7 +38,7 @@
 	}
 }
 
-// Media of at most the maximum breakpoint width
+// Media of at most the maximum breakpoint width.
 @mixin breakpoint-down($name, $breakpoints: $grid-breakpoints) {
 	$max: breakpoint-max($name, $breakpoints);
 	@if $max {
@@ -50,7 +50,7 @@
 	}
 }
 
-// Media that spans multiple breakpoint widths
+// Media that spans multiple breakpoint widths.
 @mixin breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($lower, $breakpoints);
 	$max: breakpoint-max($upper, $breakpoints);
@@ -70,7 +70,7 @@
 	}
 }
 
-// Media between the breakpoint's minimum and maximum widths
+// Media between the breakpoint's minimum and maximum widths.
 @mixin breakpoint-only($name, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
 	$next: breakpoint-next($name, $breakpoints);

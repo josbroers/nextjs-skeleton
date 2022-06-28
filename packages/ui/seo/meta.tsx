@@ -1,28 +1,30 @@
 import {useEffect, useState} from 'react'
-import Head from 'next/head'
 import type {MetaTypes as Types} from "./types";
+import Head from 'next/head'
 
 /**
- * Renders all relevant SEO `<meta>` and `<link>` elements
+ * Renders all relevant SEO `<meta>` and `<link>` elements.
+ *
  * @param props
  * @constructor
  */
 export const Meta = (props: Types) => {
 	const {
-			title,
-			keywords,
-			description,
-			type,
-			siteName,
-			imageAltText,
-			imageSource,
-			twitterCard,
-			author,
-			publishDate
-		} = props,
-		[currentUrl, setCurrentUrl] = useState(''),
-		[origin, setOrigin] = useState(''),
-		canonical = props.canonical ?? currentUrl
+		title,
+		keywords,
+		description,
+		type,
+		siteName,
+		imageAltText,
+		imageSource,
+		twitterCard,
+		author,
+		publishDate
+	} = props
+
+	const [currentUrl, setCurrentUrl] = useState('')
+	const [origin, setOrigin] = useState('')
+	const canonical = props.canonical ?? currentUrl
 
 	useEffect(() => {
 		if (window.location.href !== currentUrl) {
