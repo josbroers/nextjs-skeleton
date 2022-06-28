@@ -4,7 +4,11 @@
 	"author": "Jos Broers",
 	"license": "MIT",
 	"files": [
-		"_unit.scss"
+		"_breakpoints.scss",
+		"_globals.scss",
+		"_line-clamp.scss",
+		"_unit.scss",
+		"_variables.scss"
 	],
 	"scripts": {
 		"lint": "stylelint './**/*.scss'"
