@@ -23,10 +23,10 @@
 	"devDependencies": {
 		"config": "1.1.1-canary.0",
 		"copy": "^0.3.2",
-		"eslint": "^8.15.0",
+		"eslint": "^8.19.0",
 		"husky": "^8.0.1",
 		"json": "^11.0.0",
-		"lerna": "^5.1.6",
+		"lerna": "^5.1.7",
 		"prettier": "^2.6.2",
 		"stylelint": "^14.8.3",
 		"stylelint-config-prettier-scss": "^0.0.1",
