@@ -1,6 +1,6 @@
 {
 	"name": "clean",
-	"version": "1.1.1-canary.0",
+	"version": "1.1.1",
 	"main": "clean.mjs",
 	"author": "Jos Broers",
 	"license": "MIT",
