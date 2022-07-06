@@ -15,9 +15,8 @@ export type MetaTypes = {
 
 // Typecasting logic for the `<Schema>` component.
 export type SchemaTypes = {
-	siteName?: string
-	description?: string
-	inLanguage?: string
-	title?: string
-	siteDescription?: string
+	siteName: string
+	inLanguage: string
+	title: string
+	siteDescription: string
 }

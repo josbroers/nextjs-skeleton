@@ -1,6 +1,5 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from "react";
 import type {SchemaTypes as Types} from "./types";
-import Head from 'next/head'
 
 /**
  * Renders WebSite and WebPage schema.
@@ -9,57 +8,51 @@ import Head from 'next/head'
  * @constructor
  */
 export const Schema = (props: Types) => {
-	const {siteName, description, siteDescription, inLanguage, title} = props
-	const [currentUrl, setCurrentUrl] = useState('')
-	const [origin, setOrigin] = useState('')
+	const {siteName, siteDescription, inLanguage, title} = props
+	const [currentUrl, setCurrentUrl] = useState('');
+	const [origin, setOrigin] = useState('');
 
 	useEffect(() => {
-		if (window.location.origin !== origin) {
-			setOrigin(window.location.origin)
-		}
+		const location = window.location
+		setCurrentUrl(location.href)
+		setOrigin(location.origin)
+	}, [])
 
-		if (window.location.href !== currentUrl) {
-			setCurrentUrl(origin + encodeURIComponent(window.location.pathname))
-		}
-	}, [currentUrl, origin])
+	const webSite = {
+		"@type": "WebSite",
+		"@id": `${origin}/#website`,
+		"url": `${origin}`,
+		"name": `${siteName}`,
+		"description": `${siteDescription}`,
+		"inLanguage": `${inLanguage}`
+	}
 
-	const webPage =
-		currentUrl !== `${origin}/`
-			? `,{
-				"@type": "WebPage",
-				"@id": "${currentUrl}#webpage",
-				"url": "${currentUrl}",
-				"name": "${title}",
-				"isPartOf": {
-					"@id": "${origin}/#website"
-				},
-				"description": "${description}",
-				"breadcrumb": {
-					"@id": "${currentUrl}#breadcrumb"
-				},
-				"inLanguage": "${inLanguage}"
-			}`
-			: ''
+	const webPage = {
+		"@type": "WebPage",
+		"@id": `${currentUrl}#webpage`,
+		"url": `${currentUrl}`,
+		"name": `${title}`,
+		"isPartOf": {
+			"@id": `${origin}/#website`
+		},
+		"description": `${siteDescription}`,
+		"breadcrumb": {
+			"@id": `${currentUrl}#breadcrumb`
+		},
+		"inLanguage": `${inLanguage}`
+	}
+
+	const schema = {
+		"@context": "https://schema.org",
+		"@graph": [
+			webSite,
+			currentUrl !== `${origin}/` ? webPage : ''
+		]
+	}
 
 	return (
-		<Head>
-			<script type="application/ld+json">
-				{`
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "WebSite",
-                "@id": "${origin}/#website",
-                "url": "${origin}",
-                "name": "${siteName}",
-                "description": "${siteDescription}",
-                "inLanguage": "${inLanguage}"
-              }${webPage}
-            ]
-          }
-        `}
-			</script>
-		</Head>
+		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}}/>
+		</>
 	)
 }
