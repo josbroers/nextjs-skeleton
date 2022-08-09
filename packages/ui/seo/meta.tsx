@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import type {MetaTypes as Types} from "./types";
+import useCurrentUrl  from "hooks/useCurrentUrl";
 
 /**
  * Renders all relevant SEO `<meta>` and `<link>` elements.
@@ -21,13 +22,10 @@ export const Meta = (props: Types) => {
 		publishDate
 	} = props
 
-	const [currentUrl, setCurrentUrl] = useState('');
+	const currentUrl = useCurrentUrl()
 	const canonical = props.canonical ?? currentUrl
 
-	useEffect(() => {
-		setCurrentUrl(window.location.href)
-	}, [])
-
+	
 	return (
 		<>
 			{canonical && <link rel="canonical" href={canonical}/>}

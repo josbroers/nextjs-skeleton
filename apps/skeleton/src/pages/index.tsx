@@ -5,16 +5,13 @@ import Container from 'ui/container'
 import styles from '@scss/pages/home.module.scss'
 import Head from "next/head";
 import {Schema, Meta} from "ui/seo";
+import useCurrentUrl  from "hooks/useCurrentUrl";
 import seo from "@data/seo.json"
 
 const Home = () => {
 	const title = "Next.js Skeleton: ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!"
 	const description = "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!"
-	const [origin, setOrigin] = useState('');
-
-	useEffect(() => {
-		setOrigin(window.location.origin)
-	}, [])
+	const origin = useCurrentUrl()
 
 	return (
 		<>
