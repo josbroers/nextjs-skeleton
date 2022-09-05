@@ -3,7 +3,6 @@ import type {MetaTypes as Types} from "./types";
 
 /**
  * Renders all relevant SEO `<meta>` and `<link>` elements.
- *
  * @param props
  * @constructor
  */

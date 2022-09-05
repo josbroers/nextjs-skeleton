@@ -6,15 +6,8 @@ type Data = {
 export class CSP {
 	private readonly res
 
-	constructor(res: Data["res"]) {
-		this.res = res.next();
-
-		return this.createResponse()
-	}
-
 	/**
 	 * Content Security Policy based on Next.js and Google tips.
-	 *
 	 * @private
 	 */
 	private contentSecurityPolicy = `
@@ -28,11 +21,9 @@ export class CSP {
     object-src 'none';
     base-uri 'none';
 	`
-
 	/**
 	 * Security headers based on Next.js tips.
-	 * @link: https://nextjs.org/docs/advanced-features/security-headers
-	 *
+	 * @link https://nextjs.org/docs/advanced-features/security-headers
 	 * @private
 	 */
 	private headers = {
@@ -46,8 +37,15 @@ export class CSP {
 		'X-XSS-Protection': '1; mode=block',
 	}
 
+	constructor(res: Data["res"]) {
+		this.res = res.next();
+
+		return this.createResponse()
+	}
+
 	/**
 	 * Add headers to NextResponse.
+	 * @private
 	 */
 	private createResponse() {
 		Object.entries(this.headers).forEach(([key, value]: Data['header']) => {

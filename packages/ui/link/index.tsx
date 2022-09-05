@@ -1,7 +1,9 @@
 import React from 'react'
 import type {Types} from "./types";
 
-// Default props for the `<ExternalLink>` component.
+/**
+ * Default props for the `<ExternalLink>` component.
+ */
 const defaultProps: Types = {
 	target: '_self',
 	rel: 'external',
@@ -12,7 +14,6 @@ const defaultProps: Types = {
 
 /**
  * Create a link for external URLs.
- *
  * @param props
  * @constructor
  */

@@ -1,6 +1,8 @@
 import React from "react";
 
-// Typecasting logic for the `<ExternalLink>` component.
+/**
+ * Typecasting logic for the `<ExternalLink>` component.
+ */
 export interface Types {
 	target?: '_self' | '_blank' | '_parent' | '_top'
 	href: string
