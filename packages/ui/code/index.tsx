@@ -3,7 +3,6 @@ import type {Types} from './types'
 
 /**
  * Displays content as a short fragment of computer code.
- *
  * @param content
  * @constructor
  */

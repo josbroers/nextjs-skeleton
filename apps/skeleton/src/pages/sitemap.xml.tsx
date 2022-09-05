@@ -3,8 +3,7 @@ import {Sitemap} from "lib/seo/sitemap"
 
 /**
  * Create a sitemap on page load.
- * @link: https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
- *
+ * @link https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
  * @param res
  * @param req
  */

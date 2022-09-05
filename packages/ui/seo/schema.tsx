@@ -3,7 +3,6 @@ import type {SchemaTypes as Types} from "./types";
 
 /**
  * Renders WebSite and WebPage schema.
- *
  * @param props
  * @constructor
  */
@@ -18,6 +17,9 @@ export const Schema = (props: Types) => {
 		setOrigin(location.origin)
 	}, [])
 
+	/**
+	 * @link https://schema.org/WebSite
+	 */
 	const webSite = {
 		"@type": "WebSite",
 		"@id": `${origin}/#website`,
@@ -27,6 +29,9 @@ export const Schema = (props: Types) => {
 		"inLanguage": `${inLanguage}`
 	}
 
+	/**
+	 * @link https://schema.org/WebPage
+	 */
 	const webPage = {
 		"@type": "WebPage",
 		"@id": `${currentUrl}#webpage`,
@@ -41,7 +46,7 @@ export const Schema = (props: Types) => {
 		},
 		"inLanguage": `${inLanguage}`
 	}
-
+	
 	const schema = {
 		"@context": "https://schema.org",
 		"@graph": [

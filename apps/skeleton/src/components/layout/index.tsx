@@ -5,7 +5,6 @@ import type {Types} from "./types";
 
 /**
  * Default Layout.
- *
  * @param children
  * @constructor
  */
