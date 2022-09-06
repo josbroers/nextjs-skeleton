@@ -1,26 +1,23 @@
-import {useEffect, useState} from "react";
-import type {SchemaTypes as Types} from "./types";
+import type {SchemaType} from "./types";
 
 /**
- * Renders WebSite and WebPage schema.
- * @param props
- * @constructor
+ * @link https://schema.org/WebSite
+ * @param origin
+ * @param siteName
+ * @param siteDescription
+ * @param inLanguage
  */
-export const Schema = (props: Types) => {
-	const {siteName, siteDescription, inLanguage, title} = props
-	const [currentUrl, setCurrentUrl] = useState('');
-	const [origin, setOrigin] = useState('');
+const webSite = (
+	origin: SchemaType['origin'],
+	siteName: SchemaType['siteName'],
+	siteDescription: SchemaType['siteDescription'],
+	inLanguage: SchemaType['inLanguage']
+) => {
+	if (!origin) {
+		return
+	}
 
-	useEffect(() => {
-		const location = window.location
-		setCurrentUrl(location.href)
-		setOrigin(location.origin)
-	}, [])
-
-	/**
-	 * @link https://schema.org/WebSite
-	 */
-	const webSite = {
+	return {
 		"@type": "WebSite",
 		"@id": `${origin}/#website`,
 		"url": `${origin}`,
@@ -28,30 +25,57 @@ export const Schema = (props: Types) => {
 		"description": `${siteDescription}`,
 		"inLanguage": `${inLanguage}`
 	}
+}
 
-	/**
-	 * @link https://schema.org/WebPage
-	 */
-	const webPage = {
+/**
+ * @link https://schema.org/WebPage
+ * @param href
+ * @param title
+ * @param origin
+ * @param siteDescription
+ * @param inLanguage
+ */
+const webPage = (
+	href: SchemaType['href'],
+	title: SchemaType['title'],
+	origin: SchemaType['origin'],
+	siteDescription: SchemaType['siteDescription'],
+	inLanguage: SchemaType['inLanguage']
+) => {
+	if (!href || !origin || !title || !siteDescription || !inLanguage) {
+		return;
+	}
+
+	return {
 		"@type": "WebPage",
-		"@id": `${currentUrl}#webpage`,
-		"url": `${currentUrl}`,
+		"@id": `${href}#webpage`,
+		"url": `${href}`,
 		"name": `${title}`,
 		"isPartOf": {
 			"@id": `${origin}/#website`
 		},
 		"description": `${siteDescription}`,
 		"breadcrumb": {
-			"@id": `${currentUrl}#breadcrumb`
+			"@id": `${href}#breadcrumb`
 		},
 		"inLanguage": `${inLanguage}`
 	}
-	
+}
+
+
+/**
+ * Renders WebSite and WebPage schema.
+ * @param props
+ * @constructor
+ */
+export const Schema = (props: SchemaType) => {
+	const {siteName, siteDescription, inLanguage, title, origin, href} = props
+
 	const schema = {
 		"@context": "https://schema.org",
 		"@graph": [
-			webSite,
-			currentUrl !== `${origin}/` ? webPage : ''
+			webSite(origin, siteName, siteDescription, inLanguage),
+			href !== `${origin}/` ? webPage(href, title, origin, siteDescription, inLanguage) : ''
 		]
 	}
 

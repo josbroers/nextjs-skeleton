@@ -1,10 +1,10 @@
 import React from 'react'
-import type {Types} from "./types";
+import type {LinkInterface} from "./types";
 
 /**
  * Default props for the `<ExternalLink>` component.
  */
-const defaultProps: Types = {
+const defaultProps: LinkInterface = {
 	target: '_self',
 	rel: 'external',
 	href: '',
@@ -17,7 +17,7 @@ const defaultProps: Types = {
  * @param props
  * @constructor
  */
-const ExternalLink = (props: Types) => {
+const ExternalLink = (props: LinkInterface) => {
 	const {href, children, title, className, target, rel} = props
 
 	return (

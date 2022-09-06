@@ -1,6 +1,6 @@
 /**
- * Typecasting logic for the `<Code>` component.
+ * Types for the {@link Code()} component.
  */
-export type Types = {
+export type CodeType = {
 	content: string
 }

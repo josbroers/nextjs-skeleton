@@ -1,20 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ExternalLink from 'ui/link'
 import Code from 'ui/code'
 import Container from 'ui/container'
 import styles from '@scss/pages/home.module.scss'
 import Head from "next/head";
-import {Schema, Meta} from "ui/seo";
+import {Meta, Schema} from "ui/seo";
 import seo from "@data/seo.json"
+import {useCurrentUrl} from 'lib/hooks'
 
 const Home = () => {
 	const title = "Next.js Skeleton: ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!"
 	const description = "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Preact, Prettier, Sass, TypeScript and much more!"
-	const [origin, setOrigin] = useState('');
-
-	useEffect(() => {
-		setOrigin(window.location.origin)
-	}, [])
+	const location = useCurrentUrl()
 
 	return (
 		<>
@@ -25,6 +22,8 @@ const Home = () => {
 					siteDescription={description}
 					inLanguage={seo.language}
 					title={title}
+					origin={location.origin}
+					href={location.href}
 				/>
 				<Meta
 					title={title}
@@ -35,7 +34,8 @@ const Home = () => {
 					siteName={seo.siteName}
 					twitterCard={seo.twitterCard}
 					author={seo.author}
-					imageSource={`${origin}/thumbnail.png`}
+					imageSource="thumbnail.png"
+					href={location.href}
 				/>
 			</Head>
 			<Container size={'small'}>

@@ -1,9 +1,9 @@
 import React from "react";
 
 /**
- * Typecasting logic for the `<Container>` component.
+ * Interface for the {@link Container()} component.
  */
-export interface Types {
+export interface ContainerInterface {
 	children: React.ReactNode
 	size: "full" | "large" | "small"
 }

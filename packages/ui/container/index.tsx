@@ -1,11 +1,11 @@
 import React from "react"
 import styles from "./container.module.scss"
-import type {Types} from './types'
+import type {ContainerInterface} from './types'
 
 /**
  * Default props for the component.
  */
-const defaultProps: Types = {
+const defaultProps: ContainerInterface = {
 	size: "full",
 	children: "",
 }
@@ -16,7 +16,7 @@ const defaultProps: Types = {
  * @param size
  * @constructor
  */
-const Container = ({children, size}: Types) => (
+const Container = ({children, size}: ContainerInterface) => (
 	<div className={`${styles.container} ${styles[`container--${size}`]}`}>
 		{children}
 	</div>

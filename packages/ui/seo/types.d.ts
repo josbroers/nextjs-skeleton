@@ -1,7 +1,7 @@
 /**
- * Typecasting logic for the `<Meta>` component.
+ * Types for the {@link Meta()} component.
  */
-export type MetaTypes = {
+export type MetaType = {
 	title: string
 	keywords?: string
 	description: string
@@ -13,14 +13,18 @@ export type MetaTypes = {
 	canonical?: string
 	author?: string
 	publishDate?: string
+	externImage?: boolean
+	href: string | undefined
 }
 
 /**
- * Typecasting logic for the `<Schema>` component.
+ * Types for the {@link Schema()} component.
  */
-export type SchemaTypes = {
+export type SchemaType = {
 	siteName: string
 	inLanguage: string
 	title: string
 	siteDescription: string
+	origin: string | undefined
+	href: string | undefined
 }
