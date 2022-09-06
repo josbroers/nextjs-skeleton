@@ -5,9 +5,6 @@
 			"@components/*": [
 				"./src/components/*"
 			],
-			"@lib/*": [
-				"./src/lib/*"
-			],
 			"@scss/*": [
 				"./src/scss/*"
 			],
@@ -16,15 +13,6 @@
 			],
 			"@data/*": [
 				"./src/data/*"
-			],
-			"lib": [
-				"../../packages/lib/"
-			],
-			"ui": [
-				"../../packages/ui/"
-			],
-			"config": [
-				"../../packages/config/"
 			]
 		}
 	},

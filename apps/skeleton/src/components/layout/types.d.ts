@@ -1,8 +1,8 @@
 import React from "react";
 
 /**
- * Typecasting logic for the `<Layout>` component.
+ * Types for the {@link Layout()} component.
  */
-export type Types = {
+export type LayoutType = {
 	children: React.ReactNode
 }

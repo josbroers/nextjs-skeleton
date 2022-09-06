@@ -1,5 +1,5 @@
 import {GetServerSideProps} from "next"
-import {Sitemap} from "lib/seo/sitemap"
+import {generateSitemap} from "lib/seo"
 
 /**
  * Create a sitemap on page load.
@@ -12,11 +12,11 @@ export const getServerSideProps: GetServerSideProps = async ({res, req}) => {
 		props: {},
 	}
 
-	if (!req || !res) {
+	if (!req || !res || !req.headers.host) {
 		return props
 	}
 
-	const sitemap = new Sitemap(req.headers.host).generateSitemap()
+	const sitemap = generateSitemap(req.headers.host)
 	res.setHeader("Content-Type", "text/xml")
 	res.setHeader("Cache-Control", "public, s-maxage=1, stale-while-revalidate=59")
 	res.write(sitemap);
