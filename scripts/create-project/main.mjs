@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import fs from "fs";
-import {execSync} from "child_process";
+import { execSync } from "child_process";
 import Listr from "listr";
 import editJsonFile from "edit-json-file";
 
@@ -10,8 +10,8 @@ import editJsonFile from "edit-json-file";
  */
 async function downloadFiles(options) {
 	try {
-		execSync(`git clone https://github.com/jos-broers/nextjs-skeleton.git ${options.name}`, {
-			stdio: "pipe",
+		await execSync(`git clone https://github.com/jos-broers/nextjs-skeleton.git ${options.name}`, {
+			stdio: "pipe"
 		});
 		process.chdir(options.name);
 	} catch (error) {
@@ -32,14 +32,14 @@ async function configure(options, resolve, reject) {
 	try {
 		// Remove files and directories.
 		remove.forEach(object => {
-			fs.rm(object, {force: true, recursive: true}, error => {
+			fs.rm(object, { force: true, recursive: true }, error => {
 				if (error) throw new Error(`Can't remove ${object}`);
 			});
 		});
 
 		// Remove `yarn.lock` if chosen not to install dependencies.
 		if (!options.runInstall) {
-			fs.rm("yarn.lock", {force: true, recursive: true}, error => {
+			fs.rm("yarn.lock", { force: true, recursive: true }, error => {
 				if (error) throw new Error(`Can't remove yarn.lock`);
 			});
 		}
@@ -50,7 +50,7 @@ async function configure(options, resolve, reject) {
 
 			files.forEach(file => {
 				if (file !== "clean") {
-					fs.rm(`scripts/${file}`, {force: true, recursive: true}, error => {
+					fs.rm(`scripts/${file}`, { force: true, recursive: true }, error => {
 						if (error) throw new Error(`Can't remove ${file}`);
 					});
 				}
@@ -58,7 +58,7 @@ async function configure(options, resolve, reject) {
 		});
 
 		// Change the main `package.json`.
-		const file = editJsonFile("package.json");
+		const file = await editJsonFile("package.json");
 		file.set("name", options.name);
 		file.set("private", true);
 		file.unset("description");
@@ -98,7 +98,7 @@ export async function createProject(options) {
 
 	// Exit when git is not installed.
 	try {
-		execSync("git --version", {stdio: "pipe"});
+		await execSync("git --version", { stdio: "pipe" });
 	} catch (error) {
 		console.error("%s Please install git", chalk.red.bold("ERROR"));
 		process.exit(1);
@@ -106,7 +106,7 @@ export async function createProject(options) {
 
 	if (options.runInstall) {
 		// Check if Node.js 14 or higher is installed.
-		if (!execSync("node -v", {stdio: "pipe"})
+		if (!await execSync("node -v", { stdio: "pipe" })
 			.toString()
 			.match(/v14\.\d*\.\d*/g)) {
 			console.error("%s Please install Node.js 14 or higher", chalk.red.bold("ERROR"));
@@ -115,7 +115,7 @@ export async function createProject(options) {
 
 		// Check if Yarn is installed.
 		try {
-			execSync("yarn -v", {stdio: "pipe"});
+			await execSync("yarn -v", { stdio: "pipe" });
 		} catch (error) {
 			console.error("%s Please install Yarn to install the dependencies", chalk.red.bold("ERROR"));
 			process.exit(1);
@@ -127,18 +127,26 @@ export async function createProject(options) {
 	 *
 	 * @type {Listr}
 	 */
-	const tasks = new Listr([{
-		title: "Downloading files", task: () => downloadFiles(options),
+	const tasks = await new Listr([{
+		title: "Downloading files", task: () => downloadFiles(options)
 	}, {
 		title: "Configure project", task: () => new Promise((resolve, reject) => {
 			configure(options, resolve, reject);
-		}),
+		})
 	}, {
 		title: "Install dependencies",
-		task: () => execSync("yarn", {stdio: "pipe"}),
-		skip: () => !options.runInstall ? "Pass --install to automatically install dependencies" : undefined,
-	},]);
+		task: () => execSync("yarn", { stdio: "pipe" }),
+		skip: () => !options.runInstall ? "Pass --install to automatically install dependencies" : undefined
+	}]);
 
 	// Execute tasks and log results.
-	await tasks.run().then(() => true);
+	tasks.run().then(() => {
+		console.log("%s Project ready", chalk.green.bold("DONE"));
+		console.log(`%s Use ${chalk.cyan(`cd ${options.templateName}`)} to open your new Next.js project`, chalk.magenta.bold("INFO"));
+		console.log(`%s Use ${chalk.cyan("git init && git add . && git commit -m \"Initial commit\"")} to initialize a git repository`, chalk.magenta.bold("INFO"));
+		console.log("You can use the following commands to develop, test and build:");
+		console.log(`- ${chalk.cyan("yarn dev")} ${chalk.dim("# Start a local dev server for all projects")}`);
+		console.log(`- ${chalk.cyan("yarn dev --scope=<app>")} ${chalk.dim("# Start a local dev server for a specific project")}`);
+		console.log(`- ${chalk.cyan("yarn build lint --scope=<app>")} ${chalk.dim("# Build the application for production")}`);
+	});
 }
