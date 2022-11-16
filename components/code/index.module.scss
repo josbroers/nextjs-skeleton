@@ -1,0 +1,8 @@
+/* Base */
+@import "/scss/base";
+
+.code {
+	font-family: var(--font-mono);
+	font-size: rem-calc(15px);
+	color: var(--colors-purple);
+}

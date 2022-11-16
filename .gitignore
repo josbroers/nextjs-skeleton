@@ -16,6 +16,7 @@ build
 *.pem
 .idea
 .swc
+.vscode
 
 # debug
 yarn-debug.log*

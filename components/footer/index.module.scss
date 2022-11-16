@@ -1,0 +1,27 @@
+/* Base */
+@import "/scss/base";
+
+.footer {
+	padding: spacing(3);
+	border-top: rem-calc(1px) solid var(--colors-gray-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		height: rem-calc(30px);
+
+		svg {
+			fill: var(--colors-gray);
+			transition: fill var(--transition-default);
+
+			&:hover {
+				fill: var(--colors-black);
+			}
+		}
+
+		&:not(:first-of-type) {
+			margin-left: spacing(2);
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/* Base */
+@import "/scss/base";
+
+.title,
+.description {
+	text-align: center;
+}
+
+.title {
+	margin: 0;
+	font-size: fluid-range(60px, 90px, 640px, 768px);
+	line-height: 1.15;
+	font-weight: 800;
+}
+
+.cta-link {
+	color: var(--colors-blue);
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+.description {
+	line-height: 1.5;
+	margin: spacing(6.5) 0 0 0;
+
+	&,
+	code {
+		font-size: rem-calc(22px);
+	}
+}
