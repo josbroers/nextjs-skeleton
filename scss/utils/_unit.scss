@@ -1,0 +1,83 @@
+@use 'sass:math';
+@use 'sass:list';
+
+$unit-warnings: true !default;
+$global-font-size: 100% !default;
+$spacing: 10px !default;
+
+/* Remove units from values */
+@function strip-unit($num) {
+	@return math.div($num, $num * 0 + 1);
+}
+
+/* Calculate values to REM */
+@function rem-calc($values) {
+	$rem-values: ();
+	$count: list.length($values);
+	$base: $global-font-size;
+
+	@if unit($base) == '%' {
+		$base: math.div($base, 100%) * 16px;
+	}
+
+	@if unit($base) == 'rem' {
+		$base: strip-unit($base) * 16px;
+	}
+
+	@if $count == 1 {
+		@return -zf-to-rem($values, $base);
+	}
+
+	@for $i from 1 through $count {
+		$rem-values: list.append($rem-values, -zf-to-rem(list.nth($values, $i), $base));
+	}
+
+	@return $rem-values;
+}
+
+/* Converts a pixel value to matching REM */
+@function -zf-to-rem($value, $base: null) {
+	@if type-of($value) != 'number' {
+		@if $unit-warnings {
+			@warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+		}
+
+		@return $value;
+	}
+
+	@if unit($value) == 'em' {
+		$value: strip-unit($value) * 1rem;
+	}
+
+	@if unit($value) != 'rem' {
+		$value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
+	}
+
+	@if $value == 0 {
+		$value: 0;
+	}
+
+	@return $value;
+}
+
+/* Create fluid range using `clamp()` */
+@function fluid-range($min, $max, $vmin, $vmax) {
+	$size-difference: calc(strip-unit($max) - strip-unit($min));
+	$viewport-difference: calc(strip-unit($vmax) - strip-unit($vmin));
+	$difference-divided: math.div($size-difference, $viewport-difference);
+	$preferred: calc(
+		1rem + ((1vw - rem-calc(math.div(#{$vmin}, 100))) * calc(#{$difference-divided} * 100))
+	);
+
+	@return clamp(#{$min}, #{$preferred}, #{$max});
+}
+
+@function spacing($value, $divide: false) {
+	@if $divide == true {
+		$value: math.div($spacing, $value);
+	} @else {
+		$value: $spacing * $value;
+	}
+
+	@return rem-calc($value);
+}

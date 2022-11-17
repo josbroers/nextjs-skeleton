@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@components/*": [
+        "./components/*"
+      ],
+      "@scss/*": [
+        "./scss/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@data/*": [
+        "./data/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ]
+    },
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es5",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "rootDir": "src",
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "types.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

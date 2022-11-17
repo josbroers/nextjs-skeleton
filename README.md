@@ -1,42 +1,39 @@
-# Next.js Skeleton
+# nextjs-skeleton
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jos-broers/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/josbroers/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
 
 A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped
-with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app)
-and has the following features:
+with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) and has the following features:
 
 - [ESLint](https://eslint.org/)
 - [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
 - [Prettier](https://prettier.io/)
 - [Sass](https://sass-lang.com/)
-- [Turborepo](https://turborepo.org/)
+- [Turborepo](https://turbo.build/repo)
 - [TypeScript](https://www.typescriptlang.org/)
 - [SVGR](https://react-svgr.com/)
 
 ## Table of contents
 
-- [Next.js Skeleton](#nextjs-skeleton)
-	- [Table of contents](#table-of-contents)
-	- [1. Setup](#1-setup)
-		- [1.1 Node.js](#11-nodejs)
-		- [1.2 How to install this template](#12-how-to-install-this-template)
-		- [1.3 TypeScript](#13-typescript)
-	- [2. Scripts](#2-scripts)
-	- [3. Security](#3-security)
-	- [4. Styling](#4-styling)
-	- [5. Search engine optimization](#5-search-engine-optimization)
-		- [5.1 Meta](#51-meta)
-		- [5.2 Schema](#52-schema)
-	- [6. Environment variables](#6-environment-variables)
-	- [7. Vercel CLI](#7-vercel-cli)
-	- [8. Remote caching](#8-remote-caching)
+- [1. Setup](#1-setup)
+	- [1.1 Node.js](#11-nodejs)
+	- [1.2 How to install this template](#12-how-to-install-this-template)
+	- [1.3 TypeScript](#13-typescript)
+- [2. Scripts](#2-scripts)
+- [3. Security](#3-security)
+- [4. Styling](#4-styling)
+- [5. Search engine optimization](#5-search-engine-optimization)
+	- [5.1 Meta](#51-meta)
+	- [5.2 Schema](#52-schema)
+- [6. Environment variables](#6-environment-variables)
+- [7. Vercel CLI](#7-vercel-cli)
+- [8. Remote caching](#8-remote-caching)
 
 ## 1. Setup
 
 ### 1.1 Node.js
 
-First install the Node.js higher or equal to 14.0.0. Use the JavaScript Tool Manager [Volta](https://volta.sh/) or
+First install the Node.js higher or equal to 16.15.0 Use the JavaScript Tool Manager [Volta](https://volta.sh/) or
 the [Node Version Manager](https://github.com/nvm-sh/nvm).
 
 ### 1.2 How to install this template
@@ -60,12 +57,11 @@ the `package.json`.
 
 ## 2. Scripts
 
-- Use `yarn dev` to start a local dev server for all projects
-- Use `yarn dev --scope=<app>` to start a local dev server for that project on
-	e.g: [http://localhost:3000](http://localhost:3000)
-- To test the code using ESLint, use `yarn lint`
-- To build the application for production, use `yarn build lint --scope=<app>`
-- To start a production server, open an app folder and use `yarn start`
+- `npm run dev` - Start a local dev server, e.g: [http://localhost:3000](http://localhost:3000)
+- `npm run lint` - Test your code using ESLint and Stylelint
+- `npm run build` - Build your application
+- `npm run deploy` - Build and test your application to deploy
+- `npm start` - Start a production server
 
 ## 3. Security
 
@@ -75,10 +71,11 @@ your application for security headers, visit [securityheaders.com](https://secur
 
 ## 4. Styling
 
-With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/) Modules**
-, **[Modern Normalize](https://www.npmjs.com/package/modern-normalize/)** and some unit functions inspired
-by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you.
-For example:
+With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/)**,
+**[CSS Modules](https://github.com/css-modules/css-modules)**
+, **[Modern Normalize](https://www.npmjs.com/package/modern-normalize/)** and
+some unit functions inspired by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use
+whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
 - [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)

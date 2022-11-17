@@ -1,0 +1,19 @@
+/* Base */
+@import "/scss/base";
+
+.container {
+	padding: rem-calc(20px);
+	margin-inline: auto;
+
+	&--small {
+		width: min(100%, rem-calc(900px));
+	}
+
+	&--large {
+		width: min(100%, rem-calc(1280px));
+	}
+
+	&--full {
+		width: 100%;
+	}
+}

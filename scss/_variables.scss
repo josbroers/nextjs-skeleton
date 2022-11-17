@@ -1,0 +1,24 @@
+:root {
+	--colors-black: #000;
+	--colors-white: #fff;
+	--colors-gray: #737373;
+	--colors-gray-light: #e5e5e5;
+	--colors-blue: #0070f3;
+	--colors-purple: #d400ff;
+	--font-sans: inter, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui,
+	helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+	--font-serif: iowan old style, apple garamond, baskerville, times new roman, droid serif, times,
+	source serif pro, serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+	--font-mono: menlo, consolas, monaco, liberation mono, lucida console, monospace;
+	--border-radius: rem-calc(5px);
+	--transition-default: 150ms ease-in-out;
+}
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+) !default;
