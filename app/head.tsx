@@ -5,6 +5,8 @@ import Meta from "@components/meta";
 export default async function Head() {
 	return (
 		<>
+			<title>{seo.title}</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<Meta
 				title={seo.title}
 				keywords="next, next.js, skeleton, turborepo"

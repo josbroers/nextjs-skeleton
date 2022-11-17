@@ -1,20 +1,10 @@
 /* Reset */
 @import 'modern-normalize/modern-normalize.css';
 
-/* Utils */
-@import "utils/breakpoints";
-@import "utils/line-clamp";
-@import "utils/unit";
-@import 'utils/variables';
+/* App */
+@import "base";
+@import 'variables';
 
 /* Common */
 @import 'common/globals';
 @import 'common/typography';
-
-/* Components */
-@import "components/code";
-@import "components/container";
-@import "components/footer";
-
-/* Pages */
-@import "pages/home";

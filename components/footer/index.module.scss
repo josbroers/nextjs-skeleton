@@ -1,3 +1,6 @@
+/* Base */
+@import "/scss/base";
+
 .footer {
 	padding: spacing(3);
 	border-top: rem-calc(1px) solid var(--colors-gray-light);

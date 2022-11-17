@@ -1,6 +1,6 @@
-# create-nextjs-skeleton
+# nextjs-skeleton
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jos-broers/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/josbroers/nextjs-skeleton/nextjs-skeleton) ![npm](https://img.shields.io/npm/v/create-nextjs-skeleton)
 
 A simple and highly customizable skeleton build with Turborepo and Next. The skeleton is bootstrapped
 with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) and has the following features:
@@ -9,7 +9,6 @@ with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) an
 - [Security headers](https://nextjs.org/docs/advanced-features/security-headers)
 - [Prettier](https://prettier.io/)
 - [Sass](https://sass-lang.com/)
-- [Turbopack](https://turbo.build/pack)
 - [Turborepo](https://turbo.build/repo)
 - [TypeScript](https://www.typescriptlang.org/)
 - [SVGR](https://react-svgr.com/)
@@ -58,10 +57,11 @@ the `package.json`.
 
 ## 2. Scripts
 
-- Use `npm run dev` to start a local dev server, e.g: [http://localhost:3000](http://localhost:3000)
-- To test the code using ESLint and Stylelint, use `npm run lint`
-- To build the application for production, use `npm run lint && npm run build`
-- To start a production server, use `npm run start`
+- `npm run dev` - Start a local dev server, e.g: [http://localhost:3000](http://localhost:3000)
+- `npm run lint` - Test your code using ESLint and Stylelint
+- `npm run build` - Build your application
+- `npm run deploy` - Build and test your application to deploy
+- `npm start` - Start a production server
 
 ## 3. Security
 
@@ -71,10 +71,11 @@ your application for security headers, visit [securityheaders.com](https://secur
 
 ## 4. Styling
 
-With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/) Modules**
-, **[Modern Normalize](https://www.npmjs.com/package/modern-normalize/)** and some unit functions inspired
-by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use whatever works best for you.
-For example:
+With Next there's a lot of options to style your projects. This skeleton uses **[Sass](https://sass-lang.com/)**,
+**[CSS Modules](https://github.com/css-modules/css-modules)**
+, **[Modern Normalize](https://www.npmjs.com/package/modern-normalize/)** and
+some unit functions inspired by **[Foundation sites](https://get.foundation/sites/docs/sass-functions.html)**, but use
+whatever works best for you. For example:
 
 - [A global stylesheet](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet)
 - [CSS-in-JS](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js)

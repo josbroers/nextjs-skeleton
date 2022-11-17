@@ -1,5 +1,3 @@
-"use client";
-
 export type MetaProps = {
 	title: string
 	keywords?: string

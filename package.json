@@ -4,9 +4,10 @@
 	"license": "MIT",
 	"private": true,
 	"main": "scripts/create.mjs",
-	"author": "Jos Broers",
+	"author": "Jos Broers <jos@jobrodo.nl>",
 	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Prettier, Sass, TypeScript and much more!",
 	"homepage": "https://nextjs-skeleton.jobrodo.nl/",
+	"packageManager": "npm@8.5.0",
 	"bugs": {
 		"url": "https://github.com/josbroers/nextjs-skeleton/issues"
 	},
@@ -15,7 +16,7 @@
 		"skeleton"
 	],
 	"repository": {
-		"url": "git+https://github.com/jos-broers/nextjs-skeleton.git",
+		"url": "https://github.com/josbroers/nextjs-skeleton.git",
 		"type": "git"
 	},
 	"publishConfig": {
@@ -26,17 +27,20 @@
 	},
 	"volta": {
 		"node": "16.15.0",
-		"yarn": "1.22.17"
+		"npm": "8.5.0"
 	},
 	"engines": {
 		"node": ">=16.15.0"
 	},
 	"scripts": {
-		"dev": "next dev --turbo",
-		"build": "next build",
+		"dev": "turbo next-dev",
+		"build": "turbo next-build",
+		"lint": "turbo next-lint",
+		"next-dev": "next dev",
+		"next-build": "next build",
+		"next-lint": "next lint && stylelint 'scss/**/*.scss'",
 		"start": "next start",
-		"lint": "next lint && stylelint 'scss/**/*.scss'",
-		"clean": "node scripts/clean.mjs",
+		"deploy": "turbo next-build next-lint",
 		"prepare": "husky install",
 		"make_public": "json -I -f package.json -e 'this.private=false'",
 		"update": "npx npm-check -u",
@@ -46,20 +50,16 @@
 	"dependencies": {
 		"@next/font": "^13.0.3",
 		"@svgr/webpack": "^6.2.1",
-		"autoprefixer": "^10.4.7",
-		"modern-normalize": "^1.1.0",
 		"next": "^13.0.3",
-		"postcss": "^8.4.14",
 		"react": "^18.1.0",
-		"react-dom": "^18.1.0",
-		"sass": "^1.51.0",
-		"sharp": "^0.31.0"
+		"react-dom": "^18.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^18.0.3",
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"arg": "^5.0.1",
+		"autoprefixer": "^10.4.7",
 		"chalk": "^5.0.1",
 		"copy": "^0.3.2",
 		"edit-json-file": "^1.7.0",
@@ -72,7 +72,11 @@
 		"json": "^11.0.0",
 		"lerna": "^6.0.3",
 		"listr": "^0.14.3",
+		"modern-normalize": "^1.1.0",
+		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
+		"read-pkg-up": "^9.1.0",
+		"sass": "^1.51.0",
 		"stylelint": "^14.8.3",
 		"stylelint-config-prettier-scss": "^0.0.1",
 		"stylelint-config-standard-scss": "^6.1.0",
