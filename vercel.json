@@ -1,0 +1,14 @@
+{
+	"redirects": [
+		{
+			"source": "/github",
+			"destination": "https://github.com/josbroers/nextjs-skeleton",
+			"permanent": true
+		},
+		{
+			"source": "/npm",
+			"destination": "https://www.npmjs.com/package/create-nextjs-skeleton",
+			"permanent": true
+		}
+	]
+}
