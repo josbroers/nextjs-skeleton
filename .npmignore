@@ -19,8 +19,10 @@ scss
 .prettierrc
 .stylelintrc.json
 lerna.json
-LICENSE
 middleware.ts
+next.config.js
+next-sitemap.config.js
 next-env.d.ts
 tsconfig.json
 turbo.json
+vercel.json
