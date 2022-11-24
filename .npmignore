@@ -6,6 +6,7 @@ app
 components
 data
 lib
+!scripts/lib
 public
 scss
 .editorconfig
