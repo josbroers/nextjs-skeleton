@@ -2,7 +2,7 @@ import React from "react";
 import seo from "@data/seo.json";
 import styles from "./layouts.module.scss";
 import Schema from "@components/schema";
-import {Inter} from '@next/font/google';
+import { Inter } from "@next/font/google";
 import "@scss/main.scss";
 import Footer from "@components/footer";
 
@@ -11,13 +11,13 @@ interface RootLayoutProps {
 }
 
 const inter = Inter({
-	variable: '--font-sans',
+	variable: "--font-inter"
 });
 
-export default function RootLayout({children}: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang={seo.language} className={inter.variable}>
-		<head/>
+		<head />
 		<body>
 		<Schema
 			siteName={seo.siteName}
@@ -28,7 +28,7 @@ export default function RootLayout({children}: RootLayoutProps) {
 			href={`${process.env.NEXT_PUBLIC_ORIGIN}/`}
 		/>
 		<main className={styles.main}>{children}</main>
-		<Footer/>
+		<Footer />
 		</body>
 		</html>
 	);
