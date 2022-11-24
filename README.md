@@ -33,7 +33,7 @@ with [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) an
 
 ### 1.1 Node.js
 
-First install the Node.js higher or equal to 16.15.0 Use the JavaScript Tool Manager [Volta](https://volta.sh/) or
+First install the Node.js higher or equal to ^18.x Use the JavaScript Tool Manager [Volta](https://volta.sh/) or
 the [Node Version Manager](https://github.com/nvm-sh/nvm).
 
 ### 1.2 How to install this template

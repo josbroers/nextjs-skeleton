@@ -4,7 +4,6 @@ import {
 	checkForExistingPath,
 	checkForGit,
 	checkNodeVersion,
-	checkNpmVersion,
 	installDeps,
 	removePaths,
 	renderMessage,
@@ -115,7 +114,6 @@ const create = async () => {
 
 	if (install) {
 		await checkNodeVersion();
-		await checkNpmVersion();
 	}
 };
 

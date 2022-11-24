@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import { existsSync, rm } from "fs";
-import { dirAlreadyExists, installGit, installNode, installNpm } from "./messages.mjs";
+import { dirAlreadyExists, installGit, installNode } from "./messages.mjs";
 import { execSync } from "child_process";
 
 export const renderMessage = (message, type, exit, suffix) => {
@@ -42,19 +42,9 @@ export const checkNodeVersion = async () => {
 	if (
 		!await execSync("node -v", { stdio: "pipe" })
 			.toString()
-			.match(/v16\.[1-9][5-9]\.\d*/g)
+			.match(/v18\.\d*\.\d*/g)
 	) {
 		renderMessage(installNode, "error", true);
-	}
-};
-
-export const checkNpmVersion = async () => {
-	if (
-		!await execSync("npm -v", { stdio: "pipe" })
-			.toString()
-			.match(/8\.[5-9]\.\d*/g)
-	) {
-		renderMessage(installNpm, "error", true);
 	}
 };
 

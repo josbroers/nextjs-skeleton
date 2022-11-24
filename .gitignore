@@ -17,6 +17,7 @@ build
 .idea
 .swc
 .vscode
+public/sitemap*
 
 # debug
 yarn-debug.log*
