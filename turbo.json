@@ -12,5 +12,8 @@
 		"next-dev": {
 			"cache": false
 		}
-	}
+	},
+	"globalEnv": [
+		"NEXT_PUBLIC_ORIGIN"
+	]
 }
