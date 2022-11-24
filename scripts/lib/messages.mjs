@@ -4,9 +4,7 @@ export const dirAlreadyExists = (dirName) => `Directory with name '${dirName}' a
 
 export const installGit = "First install git";
 
-export const installNode = "Please install Node.js ^16.15";
-
-export const installNpm = "Please install npm ^8.5";
+export const installNode = "Please install Node.js ^18.0";
 
 export const autoRunInstall = "Pass --install or -i to automatically install dependencies";
 

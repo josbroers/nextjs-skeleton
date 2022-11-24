@@ -9,6 +9,15 @@
 		"next-lint": {
 			"outputs": []
 		},
+		"next-sitemap": {
+			"dependsOn": [
+				"next-build"
+			],
+			"cache": false,
+			"outputs": [
+				"public/sitemap*"
+			]
+		},
 		"next-dev": {
 			"cache": false
 		}
