@@ -30,7 +30,6 @@ import {
 	scriptCommands
 } from "./lib/messages.mjs";
 import editJsonFile from "edit-json-file";
-import { readPackageUp } from "read-pkg-up";
 
 let templateName = "nextjs-skeleton";
 let install = false;
@@ -57,10 +56,8 @@ const prepareScript = async () => {
 };
 
 const downloadFiles = async () => {
-	const { packageJson } = await readPackageUp();
-
 	try {
-		await execSync(`git clone ${packageJson.repository.url.replace("git+", "")} ${templateName}`, { stdio: "pipe" });
+		await execSync(`git clone git@github.com:josbroers/nextjs-skeleton.git ${templateName}`, { stdio: "pipe" });
 		process.chdir(templateName);
 	} catch (error) {
 		renderMessage(failedToDownload, "error", true);
@@ -100,7 +97,7 @@ const configureApp = async () => {
 			.unset("devDependencies.json")
 			.unset("devDependencies.lerna")
 			.unset("devDependencies.listr")
-			.unset("devDependencies.read-pkg-up")
+			.unset("bundledDependencies")
 			.save();
 	} catch ({ message }) {
 		renderMessage(message, "error", true);

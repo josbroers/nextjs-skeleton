@@ -29,7 +29,7 @@ jobs:
 
       - name: Get tagname
         id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        run: echo name=tag::${GITHUB_REF#refs/*/} >> $GITHUB_OUTPUT
       - run: npm ci && npm run make_public
 
       - name: Publish canary
