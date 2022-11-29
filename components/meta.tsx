@@ -5,7 +5,6 @@ export type MetaProps = {
 	type: string
 	siteName: string
 	image?: string
-	imageAltText?: string
 	twitterCard?: string
 	canonical?: string
 	author?: string
@@ -20,7 +19,6 @@ export default function Meta(props: MetaProps) {
 		description,
 		type,
 		siteName,
-		imageAltText,
 		image,
 		twitterCard,
 		author,
@@ -44,12 +42,10 @@ export default function Meta(props: MetaProps) {
 			{description && <meta property="og:description" content={description} />}
 			{title && <meta property="og:title" content={title} />}
 			{image && <meta property="og:image" content={image} />}
-			{image && imageAltText && <meta property="og:image:alt" content={imageAltText} />}
 			{twitterCard && <meta name="twitter:card" content={twitterCard} />}
 			{title && <meta name="twitter:title" content={title} />}
 			{description && <meta name="twitter:description" content={description} />}
 			{image && <meta name="twitter:image" content={image} />}
-			{image && imageAltText && <meta name="twitter:image:alt" content={imageAltText} />}
 		</>
 	);
 };

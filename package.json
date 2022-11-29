@@ -52,6 +52,7 @@
   "dependencies": {
     "@next/font": "^13.0",
     "@svgr/webpack": "^6.2",
+    "@vercel/og": "^0.0.21",
     "next": "^13.0",
     "next-sitemap": "^3.1.32",
     "react": "^18",

@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 export type SchemaProps = {
 	siteName: string
 	inLanguage: string
@@ -69,6 +67,6 @@ export default function Schema(props: SchemaProps) {
 	};
 
 	return (
-		<Script id="schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+		<script id="schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 	);
 };
