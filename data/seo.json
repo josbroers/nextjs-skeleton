@@ -1,9 +1,0 @@
-{
-	"type": "website",
-	"twitterCard": "summary_large_image",
-	"author": "Jos Broers",
-	"language": "en",
-	"siteName": "Next.js Skeleton",
-	"title": "Next.js Skeleton: ESLint, Husky, Prettier, Sass, TypeScript and much more!",
-	"description": "A simple and highly customizable skeleton build with Turborepo and Next.js. Featuring ESLint, Husky, Prettier, Sass, TypeScript and much more!"
-}
